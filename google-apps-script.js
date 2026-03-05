@@ -21,8 +21,8 @@ function doPost(e) {
 
     // Create headers if the sheet is empty
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(['Timestamp', 'Parent Name', 'Child Age', 'City', 'Language', 'Email']);
-      sheet.getRange(1, 1, 1, 6).setFontWeight('bold');
+      sheet.appendRow(['Timestamp', 'Parent Name', 'Child Age', 'Email']);
+      sheet.getRange(1, 1, 1, 4).setFontWeight('bold');
     }
 
     const data = JSON.parse(e.postData.contents);
@@ -31,8 +31,6 @@ function doPost(e) {
       new Date().toISOString(),
       data.name || '',
       data.age || '',
-      data.city || '',
-      data.language || '',
       data.email || ''
     ]);
 

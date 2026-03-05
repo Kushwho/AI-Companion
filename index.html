@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sakhi — AI Companion for Indian Children</title>
+    <meta name="description"
+        content="Sakhi is a personalised AI companion for Indian children aged 4–12. Stories, homework help, and emotional support in 7 languages — with a parent dashboard that shows how your child is truly doing." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -1961,6 +1963,153 @@
             transition-delay: .3s
         }
 
+        /* MID-PAGE CTA */
+        .mid-cta {
+            padding: 80px 48px;
+            position: relative
+        }
+
+        .mid-cta::before,
+        .mid-cta::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border2), transparent)
+        }
+
+        .mid-cta::before {
+            top: 0
+        }
+
+        .mid-cta::after {
+            bottom: 0
+        }
+
+        /* FAQ */
+        #faq {
+            padding: 120px 48px;
+            position: relative
+        }
+
+        #faq::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border2), transparent)
+        }
+
+        .faq-list {
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: border-color .3s
+        }
+
+        .faq-item:hover {
+            border-color: var(--border2)
+        }
+
+        .faq-q {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 22px;
+            background: var(--surface);
+            border: none;
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            text-align: left;
+            gap: 16px;
+            transition: background .2s;
+            min-height: 56px
+        }
+
+        .faq-q:hover {
+            background: var(--surface2)
+        }
+
+        .faq-arrow {
+            font-size: 20px;
+            color: var(--text3);
+            transition: transform .3s;
+            flex-shrink: 0;
+            width: 24px;
+            text-align: center
+        }
+
+        .faq-item.open .faq-arrow {
+            transform: rotate(45deg);
+            color: var(--terra2)
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .35s ease, padding .35s ease
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 200px;
+            padding: 0 22px 18px
+        }
+
+        .faq-a p {
+            font-size: 14px;
+            color: var(--text2);
+            line-height: 1.7
+        }
+
+        /* FORM TIME INDICATOR */
+        .form-time {
+            font-size: 12px;
+            color: var(--text3);
+            text-align: center;
+            margin: 8px 0 0
+        }
+
+        /* STICKY MOBILE CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 12px 20px;
+            background: var(--glass2);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border);
+            z-index: 999;
+            transform: translateY(100%);
+            transition: transform .3s ease
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0)
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cta {
+                display: block
+            }
+        }
+
         /* ── RESPONSIVE ── */
         /* Mobile-first: base styles above are desktop, overrides below handle smaller */
 
@@ -2117,8 +2266,26 @@
             #agents,
             #dashboard,
             #testimonials,
-            #waitlist {
+            #waitlist,
+            #faq {
                 padding: 72px 20px
+            }
+
+            .mid-cta {
+                padding: 60px 20px
+            }
+
+            .faq-q {
+                padding: 16px 18px;
+                font-size: 14px
+            }
+
+            .faq-item.open .faq-a {
+                padding: 0 18px 16px
+            }
+
+            footer {
+                padding-bottom: 80px
             }
 
             .features-grid {
@@ -2432,7 +2599,7 @@
             <li><a href="#agents">Social Layer</a></li>
             <li><a href="#dashboard">Dashboard</a></li>
         </ul>
-        <a class="btn btn-primary" href="#waitlist">Join Waitlist →</a>
+        <a class="btn btn-primary" href="#waitlist">Reserve Your Spot</a>
     </nav>
 
     <!-- HERO -->
@@ -2453,7 +2620,7 @@
                 <div class="proof-faces">
                     <span>👩</span><span>👨</span><span>👩</span><span>👨</span><span>👩</span>
                 </div>
-                <div class="proof-label"><strong>4,200+ parents</strong> already on the waitlist</div>
+                <div class="proof-label"><strong>200+ parents</strong> already on the waitlist</div>
             </div>
         </div>
 
@@ -2747,6 +2914,70 @@
         </div>
     </section>
 
+    <!-- MID-PAGE CTA -->
+    <section class="mid-cta">
+        <div class="max" style="text-align:center">
+            <h2 class="fade-up">Ready to give your child<br /><em>a smarter companion?</em></h2>
+            <p class="fade-up d1"
+                style="color:var(--text3);font-size:17px;max-width:440px;margin:16px auto 28px;line-height:1.7">Join
+                200+ Indian parents. Early access spots are limited.</p>
+            <a class="btn btn-primary-lg fade-up d2" href="#waitlist">Reserve Your Spot — Free →</a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="max">
+            <div class="section-header fade-up" style="text-align:center">
+                <div class="section-tag"
+                    style="color:var(--jade);border-color:rgba(52,211,153,.2);background:rgba(52,211,153,.06);margin:0 auto;display:inline-flex">
+                    ✦ Common Questions</div>
+                <h2 style="text-align:center;margin-top:14px">Parents ask, <em>we answer.</em></h2>
+            </div>
+            <div class="faq-list fade-up">
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)"><span>Is my child's conversation data
+                            safe?</span><span class="faq-arrow">+</span></button>
+                    <div class="faq-a">
+                        <p>Absolutely. Conversations are end-to-end encrypted and never read by us. Emotion tracking
+                            analyses patterns only — not content. We're DPDPA 2023 compliant.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)"><span>What ages is Sakhi designed for?</span><span
+                            class="faq-arrow">+</span></button>
+                    <div class="faq-a">
+                        <p>Sakhi adapts to children aged 4–12, with age-appropriate language, topics, and complexity
+                            levels that grow with your child.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)"><span>Does Sakhi just give homework
+                            answers?</span><span class="faq-arrow">+</span></button>
+                    <div class="faq-a">
+                        <p>Never. Sakhi uses Socratic questioning to guide your child to the answer themselves, building
+                            real understanding. Aligned with CBSE, ICSE, and state boards.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)"><span>What languages does Sakhi speak?</span><span
+                            class="faq-arrow">+</span></button>
+                    <div class="faq-a">
+                        <p>Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, and English — with more coming soon.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)"><span>What devices does Sakhi work on?</span><span
+                            class="faq-arrow">+</span></button>
+                    <div class="faq-a">
+                        <p>Sakhi works on any smartphone or tablet via our app (iOS and Android), and via web browser on
+                            desktop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- TESTIMONIALS -->
     <section id="testimonials">
         <div class="max">
@@ -2796,7 +3027,7 @@
             </div>
             <div class="testi-numbers fade-up">
                 <div>
-                    <div class="tn-val">4,200+</div>
+                    <div class="tn-val">200+</div>
                     <div class="tn-lbl">Families on waitlist</div>
                 </div>
                 <div>
@@ -2822,7 +3053,6 @@
             <div class="wl-trust">
                 <div class="wl-trust-item">Free to join, no credit card</div>
                 <div class="wl-trust-item">Founding pricing locked in forever</div>
-                <div class="wl-trust-item">Limited spots per city</div>
                 <div class="wl-trust-item">DPDPA-compliant, child-safe</div>
             </div>
         </div>
@@ -2837,23 +3067,12 @@
                             <option>6–8 years</option>
                             <option>9–12 years</option>
                         </select></div>
-                    <div class="form-field"><label>City</label><input type="text" id="fcity" placeholder="Bengaluru" />
-                    </div>
-                    <div class="form-field"><label>Language</label><select id="flang">
-                            <option value="" disabled selected>Select</option>
-                            <option>Hindi</option>
-                            <option>Tamil</option>
-                            <option>Telugu</option>
-                            <option>Kannada</option>
-                            <option>Marathi</option>
-                            <option>Bengali</option>
-                            <option>English</option>
-                        </select></div>
                     <div class="form-field form-full"><label>Email Address</label><input type="email" id="femail"
                             placeholder="priya@email.com" /></div>
                 </div>
+                <p class="form-time">Takes 15 seconds</p>
                 <button class="form-submit" onclick="handleSubmit()">Reserve Our Spot →</button>
-                <p class="form-note">4,200 families ahead · Slots limited by city</p>
+                <p class="form-note">200 families ahead.</p>
             </div>
             <div class="form-success" id="formSuccess">
                 <div style="font-size:52px">🌟</div>
@@ -2863,6 +3082,12 @@
             </div>
         </div>
     </section>
+
+    <!-- STICKY MOBILE CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <a class="btn btn-primary-lg" href="#waitlist" style="width:100%;text-align:center">Reserve Your Spot — Free
+            →</a>
+    </div>
 
     <footer>
         <div class="footer-logo">Sakhi</div>
@@ -3193,14 +3418,12 @@
 
 
         // Form — Google Sheets submission
-        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxUcB--FnTgsHjEuTu06ZNqgU3_mmRhgPx9zGjn-8YNEsqD4CKOX6ndfK-Ir10VpYgsLg/exec';
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4fq8_wezF5FMwVmq-wugUcoWzyxiQSDHD9wF86SZNJL3enDcSk4MMP3LblX2STab2ew/exec';
 
         async function handleSubmit() {
             const fname = document.getElementById('fname').value.trim();
             const femail = document.getElementById('femail').value.trim();
             const fage = document.getElementById('fage').value;
-            const fcity = document.getElementById('fcity').value.trim();
-            const flang = document.getElementById('flang').value;
 
             if (!fname || !femail) { alert('Please enter your name and email.'); return; }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(femail)) { alert('Please enter a valid email address.'); return; }
@@ -3216,7 +3439,7 @@
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name: fname, email: femail, age: fage, city: fcity, language: flang })
+                    body: JSON.stringify({ name: fname, email: femail, age: fage })
                 });
                 document.getElementById('formContent').style.display = 'none';
                 document.getElementById('formSuccess').classList.add('show');
@@ -3227,6 +3450,24 @@
                 btn.style.opacity = '1';
             }
         }
+
+        // FAQ toggle
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            item.classList.toggle('open');
+        }
+
+        // Sticky mobile CTA
+        (function () {
+            const sticky = document.getElementById('stickyCta');
+            const waitlist = document.getElementById('waitlist');
+            if (!sticky) return;
+            window.addEventListener('scroll', () => {
+                const show = scrollY > 600;
+                const inWaitlist = waitlist && waitlist.getBoundingClientRect().top < window.innerHeight;
+                sticky.classList.toggle('visible', show && !inWaitlist);
+            }, { passive: true });
+        })();
     </script>
 </body>
 
