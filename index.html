@@ -2166,6 +2166,66 @@
                 display: none
             }
 
+            .db-header {
+                padding: 16px 18px;
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start
+            }
+
+            .db-body {
+                padding: 16px 14px;
+                gap: 14px
+            }
+
+            .db-row-3 {
+                grid-template-columns: 1fr;
+                gap: 10px
+            }
+
+            .db-stat {
+                padding: 16px
+            }
+
+            .db-stat-val {
+                font-size: 28px
+            }
+
+            .db-stat-label {
+                font-size: 10px
+            }
+
+            .db-chart {
+                padding: 14px
+            }
+
+            .db-chart-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px
+            }
+
+            .emotion-grid {
+                grid-template-columns: 1fr;
+                gap: 8px
+            }
+
+            .db-alert {
+                padding: 12px 14px;
+                flex-direction: row;
+                gap: 10px
+            }
+
+            .milestone-item {
+                padding: 10px 12px
+            }
+
+            .dash-privacy {
+                flex-direction: column;
+                text-align: center;
+                padding: 14px 16px
+            }
+
             #waitlist {
                 grid-template-columns: 1fr;
                 gap: 40px
@@ -2300,6 +2360,22 @@
 
             .social-caps {
                 grid-template-columns: 1fr
+            }
+
+            .db-row-3 {
+                grid-template-columns: 1fr
+            }
+
+            .db-stat-val {
+                font-size: 24px
+            }
+
+            .db-stat-trend {
+                font-size: 11px
+            }
+
+            .bar-chart {
+                height: 70px
             }
 
             .form-grid {
@@ -3115,7 +3191,7 @@
         }
         renderDash(0);
 
-        
+
         // Form — Google Sheets submission
         const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxUcB--FnTgsHjEuTu06ZNqgU3_mmRhgPx9zGjn-8YNEsqD4CKOX6ndfK-Ir10VpYgsLg/exec';
 
