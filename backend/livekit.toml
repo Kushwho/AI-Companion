@@ -1,0 +1,3 @@
+[agent]
+name = "sakhi-demo-agent"
+entrypoint = "agent_main.py"

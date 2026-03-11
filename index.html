@@ -200,10 +200,10 @@
         #hero {
             min-height: 100vh;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.4fr;
             align-items: center;
             padding: 100px 48px 60px;
-            gap: 40px;
+            gap: 24px;
             position: relative;
             overflow: hidden
         }
@@ -2586,6 +2586,480 @@
                 gap: 16px
             }
         }
+
+        /* ── TRY SAKHI VOICE CHAT ── */
+        .try-sakhi-card {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: flex-start;
+            gap: 20px;
+            transition: filter .5s ease;
+        }
+
+        .try-sakhi-card.calm-mode {
+            filter: grayscale(100%);
+        }
+
+        .sakhi-voice-box {
+            position: relative;
+            /* overflow: visible for orbits */
+            flex: 1;
+            min-width: 380px;
+            max-width: 480px;
+            min-height: 540px;
+            background: rgba(18, 17, 31, .65);
+            backdrop-filter: blur(24px);
+            border: 1px solid var(--border2);
+            border-radius: var(--radius-lg);
+            padding: 32px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            box-shadow: 0 12px 48px rgba(0,0,0,.5), 0 0 40px rgba(232,101,58,.04);
+            transition: all .4s;
+        }
+
+        .sakhi-voice-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.05), transparent 50%),
+                        radial-gradient(circle at 50% 100%, rgba(232, 101, 58, 0.03), transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .sakhi-voice-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sakhi-voice-box.active {
+            border-color: rgba(232,101,58,.35);
+            box-shadow: 0 12px 48px rgba(0,0,0,.5), 0 0 60px rgba(232,101,58,.08);
+        }
+
+        .sakhi-side-panels {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 280px;
+            flex-shrink: 0;
+            opacity: 1;
+            transition: opacity 0.4s;
+        }
+
+        .sakhi-voice-title {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            text-align: center;
+        }
+
+        .sakhi-voice-sub {
+            font-size: 13px;
+            color: var(--text3);
+            text-align: center;
+            margin-top: -8px;
+        }
+
+        /* ── CALM MODE TOGGLE ── */
+        .calm-mode-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        .calm-toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all .25s;
+            user-select: none;
+        }
+
+        .calm-toggle-row:hover {
+            border-color: var(--border2);
+            background: var(--surface2);
+        }
+
+        .calm-toggle-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text2);
+        }
+
+        .calm-toggle-label .calm-icon {
+            font-size: 15px;
+        }
+
+        .calm-switch {
+            position: relative;
+            width: 42px;
+            height: 24px;
+            background: var(--surface2);
+            border: 1px solid var(--border2);
+            border-radius: 12px;
+            transition: all .3s;
+            flex-shrink: 0;
+        }
+
+        .calm-switch::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--text3);
+            transition: all .3s;
+        }
+
+        .calm-switch.active {
+            background: linear-gradient(135deg, var(--terra), var(--purple));
+            border-color: rgba(232,101,58,.4);
+        }
+
+        .calm-switch.active::after {
+            left: 21px;
+            background: #fff;
+        }
+
+        /* Calm Mode stat popups */
+        .calm-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height .4s ease, opacity .3s ease;
+        }
+
+        .calm-stats.show {
+            max-height: 200px;
+            opacity: 1;
+        }
+
+        .calm-stat-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            background: rgba(139, 92, 246, .08);
+            border: 1px solid rgba(139, 92, 246, .15);
+            border-radius: 10px;
+            font-size: 12px;
+            color: var(--text2);
+            line-height: 1.45;
+        }
+
+        .calm-stat-box .stat-icon {
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .calm-stat-box strong {
+            color: var(--purple2);
+        }
+
+        /* Mic Button */
+        .sakhi-mic-area {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sakhi-mic-ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid rgba(232,101,58,.2);
+            transition: all .4s;
+        }
+
+        .sakhi-mic-area.speaking .sakhi-mic-ring {
+            animation: micPulseRing 1.5s ease-in-out infinite;
+            border-color: rgba(232,101,58,.4);
+        }
+
+        .sakhi-mic-ring-outer {
+            position: absolute;
+            inset: -12px;
+            border-radius: 50%;
+            border: 1px solid rgba(139,92,246,.1);
+            opacity: 0;
+            transition: opacity .4s;
+        }
+
+        .sakhi-mic-area.speaking .sakhi-mic-ring-outer {
+            opacity: 1;
+            animation: micPulseRing 2s ease-in-out infinite .3s;
+        }
+
+        @keyframes micPulseRing {
+            0%, 100% { transform: scale(1); opacity: .6; }
+            50% { transform: scale(1.12); opacity: 1; }
+        }
+
+        .sakhi-mic-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(145deg, var(--terra), #D4442A);
+            color: #fff;
+            font-size: 32px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 28px var(--terra-glow), 0 0 0 4px rgba(232,101,58,.1);
+            transition: all .3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sakhi-mic-btn:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 36px rgba(232,101,58,.4), 0 0 0 6px rgba(232,101,58,.15);
+        }
+
+        .sakhi-mic-btn.end-call {
+            background: linear-gradient(145deg, #E8384A, #C0293A);
+            box-shadow: 0 6px 28px rgba(232,56,74,.3), 0 0 0 4px rgba(232,56,74,.1);
+        }
+
+        .sakhi-mic-btn svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        /* Audio Visualizer */
+        .sakhi-visualizer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            height: 24px;
+            margin: -4px 0;
+            opacity: 0;
+            transition: opacity .4s;
+        }
+
+        .sakhi-visualizer.active {
+            opacity: 1;
+        }
+
+        .viz-bar {
+            width: 4px;
+            border-radius: 2px;
+            background: linear-gradient(180deg, var(--terra), var(--purple));
+            transition: height .1s ease;
+            height: 6px;
+        }
+
+        /* Status */
+        .sakhi-status {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 20px;
+        }
+
+        .sakhi-status .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text3);
+            transition: background .3s;
+        }
+
+        .sakhi-status.connected .status-dot {
+            background: var(--jade);
+            box-shadow: 0 0 8px var(--jade-glow);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .sakhi-status.connecting .status-dot {
+            background: var(--gold);
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        /* Emotion Readout */
+        .sakhi-emotion-panel {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 16px 20px;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sakhi-emotion-panel.show {
+            display: flex;
+        }
+
+        .sakhi-emotion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sakhi-emotion-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--text3);
+        }
+
+        .sakhi-emotion-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--terra2);
+        }
+
+        .sakhi-emotion-bar-track {
+            width: 100%;
+            height: 6px;
+            background: var(--surface2);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .sakhi-emotion-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--terra), var(--purple));
+            border-radius: 3px;
+            transition: width .5s ease;
+            width: 0%;
+        }
+
+        .sakhi-emotion-caption {
+            font-size: 11px;
+            color: var(--text3);
+            font-style: italic;
+        }
+
+        .sakhi-topics-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .sakhi-topic-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--text2);
+            text-transform: capitalize;
+        }
+
+        .sakhi-voice-mascot-container {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            animation: mascotContainerFloat 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+        }
+
+        /* Large Orbit styles are inherited from .mascot-scene CSS block (e.g. .orbit, .mascot-halo). */
+
+        @keyframes mascotContainerFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-18px); }
+        }
+
+        .sakhi-voice-mascot {
+            position: relative;
+            z-index: 2;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .4s;
+        }
+
+        .sakhi-voice-mascot img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,.4)) drop-shadow(0 0 15px rgba(232,101,58,.15));
+            animation: mascotWobble 3.5s ease-in-out infinite;
+        }
+
+        @keyframes mascotWobble {
+            0%, 100% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-12px) rotate(6deg); }
+        }
+
+        .sakhi-voice-mascot.expr-happy img { filter: drop-shadow(0 8px 16px rgba(0,0,0,.4)) drop-shadow(0 0 25px rgba(255,217,176,0.4)); }
+        .sakhi-voice-mascot.expr-excited img { filter: drop-shadow(0 8px 16px rgba(0,0,0,.4)) drop-shadow(0 0 25px rgba(255,224,102,0.4)); }
+        .sakhi-voice-mascot.expr-thinking img { filter: drop-shadow(0 8px 16px rgba(0,0,0,.4)) drop-shadow(0 0 25px rgba(196,216,248,0.4)); }
+        .sakhi-voice-mascot.expr-celebrating img { filter: drop-shadow(0 8px 16px rgba(0,0,0,.4)) drop-shadow(0 0 25px rgba(255,215,0,0.4)); }
+        .sakhi-voice-mascot.expr-sad img { filter: drop-shadow(0 8px 16px rgba(0,0,0,.4)) drop-shadow(0 0 25px rgba(192,200,224,0.4)); }
+        .sakhi-voice-mascot.expr-concerned img { filter: drop-shadow(0 8px 16px rgba(0,0,0,.4)) drop-shadow(0 0 25px rgba(232,208,240,0.4)); }
+
+        @media (max-width: 768px) {
+            .try-sakhi-card { 
+                flex-direction: column; 
+                max-width: 100%; 
+                gap: 16px;
+            }
+            .sakhi-voice-box { 
+                min-width: 0; 
+                width: 100%; 
+                min-height: 460px;
+                padding: 32px 20px 24px; 
+                overflow: hidden; 
+                gap: 16px;
+            }
+            .sakhi-side-panels {
+                width: 100%;
+            }
+            .sakhi-voice-mascot-container {
+                transform: scale(0.65);
+                margin-bottom: -20px;
+            }
+            .msg-bubble { 
+                display: none; 
+            }
+            .sakhi-mic-area { width: 100px; height: 100px; }
+            .sakhi-mic-btn { width: 68px; height: 68px; font-size: 26px; }
+        }
     </style>
 </head>
 
@@ -2610,8 +3084,8 @@
         <div class="hero-left">
             <div class="hero-eyebrow"><span class="pulse"></span> Early Access · India</div>
             <h1>The AI companion<br />your child will<br /><em>grow up with.</em></h1>
-            <p class="hero-sub">Personalised stories, homework guidance, and real emotional support — with a parent
-                dashboard that tells you how your child is truly doing.</p>
+            <p class="hero-sub">Get back 5 hours a week while Sakhi handles bedtime stories, safe answers, and patient
+                homework help — all while you get real-time insights into your child's learning and emotions.</p>
             <div class="hero-actions">
                 <a class="btn btn-primary-lg" href="#waitlist">Reserve Your Spot — Free</a>
                 <a class="btn btn-ghost" href="#features">See Features</a>
@@ -2624,32 +3098,123 @@
             </div>
         </div>
 
-        <!-- MASCOT SCENE -->
-        <div class="mascot-scene" id="mascotScene">
-            <canvas class="mascot-canvas" id="mascotCanvas"></canvas>
-            <div class="mascot-halo"></div>
-            <div class="mascot-halo-inner"></div>
-            <div class="orbit orbit-1">
-                <div class="orbit-pip"></div>
-                <div class="orbit-pip p2"></div>
+        <!-- TRY SAKHI VOICE CHAT -->
+        <div class="try-sakhi-card" id="trySakhiCard">
+            <div class="sakhi-voice-box" id="sakhiVoiceBox">
+                <div class="sakhi-voice-mascot-container">
+                    <div class="mascot-halo" style="top:50%; left:50%; margin-top:-160px; margin-left:-160px; width: 320px; height: 320px; opacity: 0.3;"></div>
+                    <div class="mascot-halo-inner" style="top:50%; left:50%; margin-top:-100px; margin-left:-100px; width: 200px; height: 200px; opacity: 0.3;"></div>
+                    
+                    <div class="orbit orbit-1" style="width: 180px; height: 180px; opacity: 0.7;">
+                        <div class="orbit-pip"></div>
+                        <div class="orbit-pip p2"></div>
+                    </div>
+                    <div class="orbit orbit-2" style="width: 260px; height: 260px; opacity: 0.6;">
+                        <div class="orbit-pip"></div>
+                        <div class="orbit-pip p2"></div>
+                    </div>
+                    <div class="orbit orbit-3" style="width: 340px; height: 340px; opacity: 0.5;">
+                        <div class="orbit-pip"></div>
+                        <div class="orbit-pip p2"></div>
+                    </div>
+                    
+                    <!-- Message Bubbles Popouts (offset relative to the mascot container) -->
+                    <div class="msg-bubble b1" style="top: -10px; left: -140px;"><span class="msg-icon">📖</span> Tell me a story!</div>
+                    <div class="msg-bubble b2" style="top: 10px; right: -150px;"><span class="msg-icon">🌟</span> I got 95 in maths!</div>
+                    <div class="msg-bubble b3" style="top: 110px; left: -150px;"><span class="msg-icon">😊</span> I'm feeling happy today</div>
+                    <div class="msg-bubble b6" style="top: 130px; right: -130px;"><span class="msg-icon">🌙</span> Bedtime story...</div>
+                    <div class="sakhi-voice-mascot" id="sakhiMascot">
+                        <img src="sakhi-mascot.png" alt="Sakhi" />
+                    </div>
+                </div>
+                <div class="sakhi-voice-title">Talk to Sakhi</div>
+                <div class="sakhi-voice-sub">Experience Sakhi live — tap the mic and start talking</div>
+
+                <!-- Audio Visualizer -->
+                <div class="sakhi-visualizer" id="sakhiVisualizer">
+                    <div class="viz-bar"></div><div class="viz-bar"></div><div class="viz-bar"></div>
+                    <div class="viz-bar"></div><div class="viz-bar"></div><div class="viz-bar"></div>
+                    <div class="viz-bar"></div><div class="viz-bar"></div><div class="viz-bar"></div>
+                    <div class="viz-bar"></div><div class="viz-bar"></div><div class="viz-bar"></div>
+                    <div class="viz-bar"></div><div class="viz-bar"></div><div class="viz-bar"></div>
+                    <div class="viz-bar"></div><div class="viz-bar"></div><div class="viz-bar"></div>
+                    <div class="viz-bar"></div><div class="viz-bar"></div>
+                </div>
+
+                <!-- Mic Button -->
+                <div class="sakhi-mic-area" id="sakhiMicArea">
+                    <div class="sakhi-mic-ring"></div>
+                    <div class="sakhi-mic-ring-outer"></div>
+                    <button class="sakhi-mic-btn" id="sakhiMicBtn" onclick="toggleSakhiCall()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="22"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Status -->
+                <div class="sakhi-status" id="sakhiStatus">
+                    <span class="status-dot"></span>
+                    <span id="sakhiStatusText">Tap the mic to start</span>
+                </div>
+            </div> <!-- Close sakhiVoiceBox -->
+
+            <!-- Side Panels (Right Column) -->
+            <div class="sakhi-side-panels" id="sakhiSidePanels">
+                <!-- Emotion Readout Panel -->
+                <div class="sakhi-emotion-panel" id="sakhiEmotionPanel">
+                    <div class="sakhi-emotion-header">
+                        <span class="sakhi-emotion-label">Detected Emotion</span>
+                        <span class="sakhi-emotion-name" id="sakhiEmotionName">—</span>
+                    </div>
+                    <div class="sakhi-emotion-bar-track">
+                        <div class="sakhi-emotion-bar-fill" id="sakhiEmotionBar"></div>
+                    </div>
+                    <div class="sakhi-emotion-caption">Sakhi senses how you feel and adapts in real time</div>
+                </div>
+
+                <!-- Alerts Panel -->
+                <div class="sakhi-emotion-panel" id="sakhiAlertPanel">
+                    <div class="sakhi-emotion-header">
+                        <span class="sakhi-emotion-label">Alerts</span>
+                        <span class="sakhi-emotion-name" id="sakhiAlertText" style="color: var(--text3); font-size: 12px;">No concerns</span>
+                    </div>
+                    <div class="sakhi-emotion-caption" style="margin-top: 8px;">Detects depressive or distress signals</div>
+                </div>
+
+                <!-- Topics Panel -->
+                <div class="sakhi-emotion-panel" id="sakhiTopicsPanel">
+                    <div class="sakhi-emotion-header">
+                        <span class="sakhi-emotion-label">Topics Explored</span>
+                    </div>
+                    <div class="sakhi-topics-list" id="sakhiTopicsList">
+                        <div class="sakhi-emotion-caption">Listening...</div>
+                    </div>
+                </div>
+
+                <!-- Calm Mode Toggle -->
+                <div class="calm-mode-wrapper">
+                    <div class="calm-toggle-row" onclick="toggleCalmMode()">
+                        <div class="calm-toggle-label">
+                            <span class="calm-icon">🌙</span>
+                            Calm Mode
+                        </div>
+                        <div class="calm-switch" id="calmSwitch"></div>
+                    </div>
+                    <div class="calm-stats" id="calmStats">
+                        <div class="calm-stat-box">
+                            <span class="stat-icon">📉</span>
+                            <span>Grayscale reduces screen time by <strong>27%</strong></span>
+                        </div>
+                        <div class="calm-stat-box">
+                            <span class="stat-icon">🧠</span>
+                            <span>Decreases perceived reward by <strong>20%</strong></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="orbit orbit-2">
-                <div class="orbit-pip"></div>
-                <div class="orbit-pip p2"></div>
-            </div>
-            <div class="orbit orbit-3">
-                <div class="orbit-pip"></div>
-                <div class="orbit-pip p2"></div>
-            </div>
-            <div class="mascot-body">
-                <img src="sakhi-mascot.png" alt="Sakhi AI Companion" class="mascot-img" />
-            </div>
-            <div class="msg-bubble b1"><span class="msg-icon">📖</span>Tell me a story!</div>
-            <div class="msg-bubble b2"><span class="msg-icon">🌟</span>I got 95 in maths!</div>
-            <div class="msg-bubble b3"><span class="msg-icon">😊</span>I'm feeling happy today</div>
-            <div class="msg-bubble b4"><span class="msg-icon">🎯</span>Help me with fractions</div>
-            <div class="msg-bubble b5"><span class="msg-icon">🤝</span>My friend Rohan joined!</div>
-            <div class="msg-bubble b6"><span class="msg-icon">🌙</span>Bedtime story time…</div>
         </div>
     </section>
 
@@ -2870,8 +3435,8 @@
                     style="color:var(--terra2);border-color:rgba(232,101,58,.15);background:rgba(232,101,58,.05)">✦
                     Parent Dashboard</div>
                 <h2>Know how your child<br /><em>is really doing.</em></h2>
-                <p class="sub">Not screen time reports — real insight into emotions, learning, and social health.
-                    Professional-grade analytics, built for parents.</p>
+                <p class="sub">Spot learning gaps before report cards, catch social anxiety early, and celebrate small
+                    wins daily. Professional-grade insights right on your phone.</p>
             </div>
             <div class="dash-layout">
                 <div class="dash-tabs" id="dashTabs">
@@ -2919,8 +3484,9 @@
         <div class="max" style="text-align:center">
             <h2 class="fade-up">Ready to give your child<br /><em>a smarter companion?</em></h2>
             <p class="fade-up d1"
-                style="color:var(--text3);font-size:17px;max-width:440px;margin:16px auto 28px;line-height:1.7">Join
-                200+ Indian parents. Early access spots are limited.</p>
+                style="color:var(--text3);font-size:17px;max-width:440px;margin:16px auto 28px;line-height:1.7">The beta
+                is closing soon for our 7 active cities. Join 200+ Indian parents upgrading their children's daily
+                learning.</p>
             <a class="btn btn-primary-lg fade-up d2" href="#waitlist">Reserve Your Spot — Free →</a>
         </div>
     </section>
@@ -3049,7 +3615,7 @@
                 style="color:var(--terra2);border-color:rgba(232,101,58,.2);background:rgba(232,101,58,.06)">✦ Early
                 Access</div>
             <h2 style="margin-top:14px">Be there before your<br />child's childhood<br /><em>goes by.</em></h2>
-            <p>Join free today. Early access families get founding pricing, locked in for life.</p>
+            <p>Our beta cohort is 85% full. Join free today to secure founding pricing before the public launch.</p>
             <div class="wl-trust">
                 <div class="wl-trust-item">Free to join, no credit card</div>
                 <div class="wl-trust-item">Founding pricing locked in forever</div>
@@ -3468,7 +4034,275 @@
                 sticky.classList.toggle('visible', show && !inWaitlist);
             }, { passive: true });
         })();
+
+        // ── TRY SAKHI — LiveKit Voice Chat Integration ──
+        // Backend URL — change this to your deployed backend URL
+        const SAKHI_BACKEND_URL = 'http://localhost:8000';
+
+        let sakhiRoom = null;
+        let sakhiConnected = false;
+        let sakhiAudioContext = null;
+        let sakhiAnalyser = null;
+        let vizAnimFrame = null;
+
+        async function toggleSakhiCall() {
+            if (sakhiConnected) {
+                await endSakhiCall();
+            } else {
+                await startSakhiCall();
+            }
+        }
+
+        async function startSakhiCall() {
+            const btn = document.getElementById('sakhiMicBtn');
+            const status = document.getElementById('sakhiStatus');
+            const statusText = document.getElementById('sakhiStatusText');
+            const voiceBox = document.getElementById('sakhiVoiceBox');
+            const visualizer = document.getElementById('sakhiVisualizer');
+            const micArea = document.getElementById('sakhiMicArea');
+            const emotionPanel = document.getElementById('sakhiEmotionPanel');
+            const alertPanel = document.getElementById('sakhiAlertPanel');
+            const topicsPanel = document.getElementById('sakhiTopicsPanel');
+
+            // Set connecting state
+            status.className = 'sakhi-status connecting';
+            statusText.textContent = 'Connecting to Sakhi…';
+
+            try {
+                // 1. Get demo token from backend
+                const res = await fetch(`${SAKHI_BACKEND_URL}/api/demo-token`, { method: 'POST' });
+                if (!res.ok) throw new Error('Failed to get demo token');
+                const { token, room_name, livekit_url } = await res.json();
+
+                // 2. Connect to LiveKit room
+                sakhiRoom = new LivekitClient.Room({
+                    adaptiveStream: true,
+                    dynacast: true,
+                });
+
+                // Handle remote audio tracks (agent speaking)
+                sakhiRoom.on(LivekitClient.RoomEvent.TrackSubscribed, (track, pub, participant) => {
+                    if (track.kind === LivekitClient.Track.Kind.Audio) {
+                        const el = track.attach();
+                        el.id = 'sakhi-agent-audio';
+                        document.body.appendChild(el);
+                    }
+                });
+
+                sakhiRoom.on(LivekitClient.RoomEvent.TrackUnsubscribed, (track) => {
+                    track.detach().forEach(el => el.remove());
+                });
+
+                // Register RPC handler for emotion updates
+                sakhiRoom.localParticipant.registerRpcMethod('setEmotionState', async (data) => {
+                    try {
+                        const { expression, raw_emotion, score } = JSON.parse(data.payload);
+                        updateEmotionReadout(raw_emotion, score, expression);
+                    } catch (e) { console.warn('Emotion RPC parse error', e); }
+                    return JSON.stringify({ received: true });
+                });
+
+                // Register RPC handler for topics updates
+                sakhiRoom.localParticipant.registerRpcMethod('setTopics', async (data) => {
+                    try {
+                        const { topics } = JSON.parse(data.payload);
+                        const list = document.getElementById('sakhiTopicsList');
+                        list.innerHTML = '';
+                        topics.forEach(t => {
+                            const pill = document.createElement('div');
+                            pill.className = 'sakhi-topic-pill';
+                            pill.textContent = t;
+                            list.appendChild(pill);
+                        });
+                        if(topics.length === 0) {
+                            list.innerHTML = '<div class="sakhi-emotion-caption">Listening...</div>';
+                        }
+                    } catch (e) { console.warn('Topics RPC parse error', e); }
+                    return JSON.stringify({ received: true });
+                });
+
+                await sakhiRoom.connect(livekit_url, token);
+
+                // 3. Enable microphone
+                await sakhiRoom.localParticipant.setMicrophoneEnabled(true);
+
+                // 4. Set up audio visualizer from mic
+                setupVisualizer();
+
+                // Update UI to connected state
+                sakhiConnected = true;
+                voiceBox.classList.add('active');
+                visualizer.classList.add('active');
+                micArea.classList.add('speaking');
+                emotionPanel.classList.add('show');
+                if (alertPanel) alertPanel.classList.add('show');
+                if (topicsPanel) topicsPanel.classList.add('show');
+                status.className = 'sakhi-status connected';
+                statusText.textContent = 'Connected — speak to Sakhi';
+                btn.classList.add('end-call');
+                btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91"/>
+                    <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>`;
+
+            } catch (err) {
+                console.error('Sakhi call error:', err);
+                status.className = 'sakhi-status';
+                statusText.textContent = 'Connection failed — try again';
+                setTimeout(() => { statusText.textContent = 'Tap the mic to start'; }, 3000);
+            }
+        }
+
+        async function endSakhiCall() {
+            const btn = document.getElementById('sakhiMicBtn');
+            const status = document.getElementById('sakhiStatus');
+            const statusText = document.getElementById('sakhiStatusText');
+            const voiceBox = document.getElementById('sakhiVoiceBox');
+            const visualizer = document.getElementById('sakhiVisualizer');
+            const micArea = document.getElementById('sakhiMicArea');
+            const emotionPanel = document.getElementById('sakhiEmotionPanel');
+            const alertPanel = document.getElementById('sakhiAlertPanel');
+            const topicsPanel = document.getElementById('sakhiTopicsPanel');
+
+            if (sakhiRoom) {
+                await sakhiRoom.disconnect();
+                sakhiRoom = null;
+            }
+
+            // Remove any agent audio elements
+            document.querySelectorAll('#sakhi-agent-audio').forEach(el => el.remove());
+
+            // Stop visualizer
+            if (vizAnimFrame) cancelAnimationFrame(vizAnimFrame);
+            if (sakhiAudioContext) { sakhiAudioContext.close(); sakhiAudioContext = null; }
+
+            // Reset UI
+            sakhiConnected = false;
+            voiceBox.classList.remove('active');
+            visualizer.classList.remove('active');
+            micArea.classList.remove('speaking');
+            
+            // Note: We intentionally DO NOT remove the 'show' class from the panels
+            // so the user can review their final emotions and topics after hanging up.
+            // emotionPanel.classList.remove('show');
+            // if (alertPanel) alertPanel.classList.remove('show');
+            // if (topicsPanel) topicsPanel.classList.remove('show');
+            
+            status.className = 'sakhi-status';
+            statusText.textContent = 'Tap the mic to start';
+            btn.classList.remove('end-call');
+            btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="22"/>
+            </svg>`;
+
+            // Note: We intentionally DO NOT reset the panel contents automatically.
+            // When a NEW call starts, these will naturally reset/overwrite.
+
+            // Reset mascot
+            const mascot = document.getElementById('sakhiMascot');
+            mascot.className = 'sakhi-voice-mascot';
+        }
+
+        function updateEmotionReadout(emotionName, score, expression) {
+            document.getElementById('sakhiEmotionName').textContent = emotionName;
+            document.getElementById('sakhiEmotionBar').style.width = `${Math.round(score * 100)}%`;
+
+            // Update mascot expression
+            const mascot = document.getElementById('sakhiMascot');
+            mascot.className = `sakhi-voice-mascot expr-${expression}`;
+            
+            // Update alerts
+            const lowerEmotion = (emotionName || '').toLowerCase();
+            const alertText = document.getElementById('sakhiAlertText');
+            if (alertText) {
+                if (['sadness', 'distress', 'pain', 'anger', 'fear', 'anxiety', 'disappointment'].some(e => lowerEmotion.includes(e))) {
+                    alertText.textContent = emotionName + ' Detected';
+                    alertText.style.color = 'var(--terra)';
+                } else if (alertText.textContent !== 'No concerns') {
+                    // Decay back to normal on positive emotions
+                    if (['joy', 'happiness', 'amusement', 'excitement', 'calmness', 'neutral', 'contentment'].some(e => lowerEmotion.includes(e))) {
+                        alertText.textContent = 'No concerns';
+                        alertText.style.color = 'var(--text3)';
+                    }
+                }
+            }
+        }
+
+        function setupVisualizer() {
+            try {
+                sakhiAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+                sakhiAnalyser = sakhiAudioContext.createAnalyser();
+                sakhiAnalyser.fftSize = 64;
+
+                navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+                    const source = sakhiAudioContext.createMediaStreamSource(stream);
+                    source.connect(sakhiAnalyser);
+                    animateVisualizer();
+                }).catch(() => {
+                    // Fallback: fake visualizer
+                    animateFakeVisualizer();
+                });
+            } catch (e) {
+                animateFakeVisualizer();
+            }
+        }
+
+        function animateVisualizer() {
+            const bars = document.querySelectorAll('.viz-bar');
+            const dataArray = new Uint8Array(sakhiAnalyser.frequencyBinCount);
+
+            function draw() {
+                if (!sakhiConnected) return;
+                vizAnimFrame = requestAnimationFrame(draw);
+                sakhiAnalyser.getByteFrequencyData(dataArray);
+
+                bars.forEach((bar, i) => {
+                    const idx = Math.floor(i * dataArray.length / bars.length);
+                    const val = dataArray[idx] || 0;
+                    const h = Math.max(6, (val / 255) * 36);
+                    bar.style.height = h + 'px';
+                });
+            }
+            draw();
+        }
+
+        function animateFakeVisualizer() {
+            const bars = document.querySelectorAll('.viz-bar');
+            function draw() {
+                if (!sakhiConnected) return;
+                vizAnimFrame = requestAnimationFrame(draw);
+                bars.forEach(bar => {
+                    const h = Math.max(6, Math.random() * 30 + 6);
+                    bar.style.height = h + 'px';
+                });
+            }
+            draw();
+        }
+
+        // ── CALM MODE ──
+        let calmModeActive = false;
+        function toggleCalmMode() {
+            calmModeActive = !calmModeActive;
+            const card = document.getElementById('trySakhiCard');
+            const sw = document.getElementById('calmSwitch');
+            const stats = document.getElementById('calmStats');
+
+            if (calmModeActive) {
+                card.classList.add('calm-mode');
+                sw.classList.add('active');
+                stats.classList.add('show');
+            } else {
+                card.classList.remove('calm-mode');
+                sw.classList.remove('active');
+                stats.classList.remove('show');
+            }
+        }
     </script>
+
+    <!-- LiveKit Client SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/livekit-client@2/dist/livekit-client.umd.js"></script>
 </body>
 
 </html>
