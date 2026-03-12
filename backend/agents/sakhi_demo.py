@@ -1,20 +1,32 @@
 """
-Sakhi Demo Voice Agent — Parent-Facing Persona
+Sakhi Demo — LiveKit Agent Server Entrypoint + Parent-Facing Voice Agent
 A warm, informative voice agent that explains Sakhi to parents.
 Reads emotion data from the local participant's attributes (set by the
 concurrent emotion detector task) to adapt responses in real-time.
 """
 
+import asyncio
 import logging
+
+from dotenv import load_dotenv
+
+load_dotenv(".env.local")
+
 from livekit import agents, rtc
-from livekit.agents import AgentSession, Agent, RoomInputOptions
+from livekit.agents import AgentServer, AgentSession, Agent, RoomInputOptions
 from livekit.plugins import deepgram, silero, groq
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
+from emotion_detector import run_emotion_detection
+from topic_detector import run_topic_detection
+
 logger = logging.getLogger(__name__)
 
-# Parent-facing system prompt
-SAKHI_DEMO_PROMPT = """You are Sakhi, an AI companion for Indian children aged 4–12.
+# ---------------------------------------------------------------------------
+# System prompt
+# ---------------------------------------------------------------------------
+
+SAKHI_DEMO_PROMPT = """You are Sakhi, an AI companion for Indian children aged 4-12.
 You are currently speaking with a parent who is exploring the Sakhi app on our landing page.
 
 Your goal is to help this parent understand:
@@ -35,6 +47,9 @@ Speak in a way that a parent would trust with their child.
 Do not use any complex formatting, emojis, or special characters in your responses.
 You are having a voice conversation — speak naturally."""
 
+# ---------------------------------------------------------------------------
+# Agent
+# ---------------------------------------------------------------------------
 
 class SakhiDemoAgent(Agent):
     """Parent-facing Sakhi demo agent."""
@@ -51,7 +66,6 @@ class SakhiDemoAgent(Agent):
         the emotion detector task sets these via set_attributes().
         """
         try:
-            # The emotion detector sets attributes on the local participant
             attrs = self._room.local_participant.attributes
             if attrs and "emotion" in attrs:
                 self._current_emotion = attrs.get("emotion")
@@ -70,6 +84,9 @@ class SakhiDemoAgent(Agent):
         except Exception as e:
             logger.debug(f"Emotion injection skipped: {e}")
 
+# ---------------------------------------------------------------------------
+# Session factory
+# ---------------------------------------------------------------------------
 
 async def create_sakhi_demo_session(ctx: agents.JobContext) -> AgentSession:
     """Create, start, and return the Sakhi demo voice session."""
@@ -88,7 +105,6 @@ async def create_sakhi_demo_session(ctx: agents.JobContext) -> AgentSession:
         room_input_options=RoomInputOptions(),
     )
 
-    # Greet the parent when they join
     await session.generate_reply(
         instructions=(
             "Greet the parent warmly. Tell them you're Sakhi, an AI companion for Indian children, "
@@ -97,3 +113,32 @@ async def create_sakhi_demo_session(ctx: agents.JobContext) -> AgentSession:
     )
 
     return session
+
+# ---------------------------------------------------------------------------
+# Server entrypoint
+# ---------------------------------------------------------------------------
+
+server = AgentServer()
+
+
+@server.rtc_session(agent_name="sakhi-demo-agent")
+async def sakhi_demo_entrypoint(ctx: agents.JobContext):
+    """
+    Single session that runs the Sakhi voice agent,
+    then starts emotion and topic detection once the session is ready.
+    """
+    session = await create_sakhi_demo_session(ctx)
+
+    asyncio.create_task(
+        run_emotion_detection(ctx, session),
+        name="emotion-detection",
+    )
+
+    asyncio.create_task(
+        run_topic_detection(ctx, session),
+        name="topic-detection",
+    )
+
+
+if __name__ == "__main__":
+    agents.cli.run_app(server)
