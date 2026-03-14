@@ -5311,17 +5311,22 @@
         const skipBtn = document.getElementById("tourSkipBtn");
         const startBtn = document.getElementById("tourStartBtn");
 
-        // Show the popup soon after load
-        setTimeout(() => {
-          overlay.classList.add("show");
-        }, 1500);
+        // Show the popup soon after load, only if they haven't seen it
+        const hasSeenTour = localStorage.getItem("sakhi_tour_seen");
+        if (!hasSeenTour) {
+          setTimeout(() => {
+            overlay.classList.add("show");
+          }, 3000);
+        }
 
         skipBtn.addEventListener("click", () => {
           overlay.classList.remove("show");
+          localStorage.setItem("sakhi_tour_seen", "true");
         });
 
         startBtn.addEventListener("click", () => {
           overlay.classList.remove("show");
+          localStorage.setItem("sakhi_tour_seen", "true");
           startTour();
         });
 
