@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sakhi — AI Companion for Indian Children</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --ink:#0E0C1A;--ink2:#1E1B2E;
+  --cream:#F8F4EE;--cream2:#F2EBE0;
+  --terra:#C8512A;--terra2:#E0663A;--terra-pale:#FAE8E0;
+  --jade:#2A8A5E;--jade-pale:#E2F2EA;
+  --gold:#C68A1A;--gold-pale:#FBF2DC;
+  --blue:#4A72E8;--blue-pale:#EAF0FC;
+  --muted:#7A7290;--border:rgba(14,12,26,0.1);
+  --card-shadow:0 2px 16px rgba(14,12,26,0.07);
+}
+body{font-family:'Instrument Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;background:rgba(248,244,238,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(14,12,26,0.1)}
+.nav-logo{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--terra);display:inline-block}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:6px;font-family:'Instrument Sans',sans-serif;font-weight:600;cursor:pointer;text-decoration:none;transition:all .2s;border:none}
+.btn-terra{background:var(--terra);color:#fff;padding:10px 22px;border-radius:8px;font-size:14px;box-shadow:0 4px 14px rgba(200,81,42,.3)}
+.btn-terra:hover{background:var(--terra2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(200,81,42,.38)}
+.btn-terra-lg{background:var(--terra);color:#fff;padding:15px 32px;border-radius:10px;font-size:16px;box-shadow:0 6px 22px rgba(200,81,42,.32)}
+.btn-terra-lg:hover{background:var(--terra2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(200,81,42,.4)}
+.btn-ghost{background:transparent;color:var(--ink);padding:14px 28px;border-radius:10px;font-size:16px;border:1.5px solid var(--border)}
+.btn-ghost:hover{border-color:var(--terra);color:var(--terra)}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px 48px 60px;gap:32px;position:relative;overflow:hidden;background:var(--cream)}
+.hero-glow{position:absolute;right:-100px;top:-60px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,#FAE8E0 0%,transparent 65%);pointer-events:none}
+.hero-left{position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:var(--terra-pale);color:var(--terra);border:1px solid rgba(200,81,42,.2);padding:5px 14px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:24px}
+h1{font-family:'Fraunces',serif;font-size:clamp(36px,4.2vw,56px);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:20px;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--terra)}
+.hero-sub{font-size:17px;line-height:1.65;color:var(--muted);max-width:420px;margin-bottom:36px}
+.hero-actions{display:flex;gap:12px;align-items:center;margin-bottom:40px;flex-wrap:wrap}
+.hero-proof{display:flex;align-items:center;gap:12px;padding-top:24px;border-top:1px solid var(--border)}
+.proof-faces{display:flex}
+.proof-faces span{width:32px;height:32px;border-radius:50%;border:2px solid var(--cream);background:var(--cream2);display:flex;align-items:center;justify-content:center;font-size:15px;margin-left:-7px}
+.proof-faces span:first-child{margin-left:0}
+.proof-label{font-size:13px;color:var(--muted)}
+.proof-label strong{color:var(--ink)}
+
+/* ── MASCOT SCENE ── */
+.mascot-scene{position:relative;width:100%;height:520px;display:flex;align-items:center;justify-content:center;z-index:2}
+
+/* Orbit rings */
+.orbit{position:absolute;border-radius:50%;border:1.5px dashed rgba(200,81,42,.18);top:50%;left:50%;transform:translate(-50%,-50%)}
+.orbit-1{width:200px;height:200px;animation:spinOrbit 18s linear infinite}
+.orbit-2{width:320px;height:320px;animation:spinOrbit 28s linear infinite reverse}
+.orbit-3{width:440px;height:440px;animation:spinOrbit 40s linear infinite}
+@keyframes spinOrbit{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+/* Mascot body */
+.mascot-body{position:relative;z-index:10;width:130px;height:130px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0}
+.mascot-face{
+  width:110px;height:110px;border-radius:50%;
+  background:linear-gradient(145deg,#FFD4A8,#FFB87A);
+  box-shadow:0 8px 32px rgba(200,81,42,.25), inset 0 -4px 12px rgba(160,60,10,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:48px;
+  animation:mascotBob 3s ease-in-out infinite;
+  position:relative;
+}
+@keyframes mascotBob{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-10px) scale(1.03)}}
+.mascot-face::after{
+  content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);
+  width:60px;height:12px;border-radius:50%;
+  background:rgba(200,81,42,.15);filter:blur(4px);
+}
+.mascot-eyes{position:absolute;top:34px;left:50%;transform:translateX(-50%);display:flex;gap:16px}
+.mascot-eye{width:10px;height:10px;border-radius:50%;background:#3A2010;position:relative;overflow:hidden;animation:blink 4s ease-in-out infinite}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.mascot-eye::after{content:'';position:absolute;top:1px;right:2px;width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.7)}
+.mascot-smile{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);width:28px;height:14px;border:0 solid transparent;border-bottom:3px solid #3A2010;border-radius:0 0 50% 50%}
+.mascot-cheeks{position:absolute;top:42px;display:flex;gap:42px;left:50%;transform:translateX(-50%)}
+.mascot-cheek{width:12px;height:8px;border-radius:50%;background:rgba(255,120,80,.35)}
+/* Ears */
+.mascot-ear{position:absolute;top:22px;width:20px;height:26px;border-radius:50%;background:linear-gradient(145deg,#FFD4A8,#FFB87A);box-shadow:inset 0 2px 6px rgba(160,60,10,.15)}
+.mascot-ear.left{left:-8px}
+.mascot-ear.right{right:-8px}
+/* Antenna */
+.mascot-antenna{position:absolute;top:-22px;left:50%;transform:translateX(-50%);width:3px;height:20px;background:linear-gradient(#FFB87A,#FF8C50);border-radius:2px}
+.mascot-antenna::after{content:'✦';position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:14px;color:var(--terra);animation:twinkle 1.5s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:1;transform:translateX(-50%) scale(1)}50%{opacity:.5;transform:translateX(-50%) scale(.8)}}
+
+/* Orbiting dots on ring */
+.orbit-dot{position:absolute;width:10px;height:10px;border-radius:50%;top:50%;left:50%;margin:-5px}
+
+/* Floating message bubbles */
+.msg-bubble{
+  position:absolute;
+  background:#fff;border-radius:16px;padding:10px 16px;
+  box-shadow:0 4px 20px rgba(14,12,26,.1);
+  font-size:13px;font-weight:500;color:var(--ink);
+  display:flex;align-items:center;gap:8px;
+  white-space:nowrap;
+  border:1px solid rgba(14,12,26,.07);
+  animation:bubbleFloat var(--dur,5s) ease-in-out infinite;
+  animation-delay:var(--delay,0s);
+  opacity:0;
+  animation-fill-mode:forwards;
+}
+@keyframes bubbleFloat{
+  0%{opacity:0;transform:translateY(8px) scale(.95)}
+  15%{opacity:1;transform:translateY(0) scale(1)}
+  80%{opacity:1;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-8px) scale(.95)}
+}
+.msg-icon{font-size:16px;flex-shrink:0}
+.msg-bubble.b1{top:10%;left:5%;--dur:5s;--delay:.3s}
+.msg-bubble.b2{top:8%;right:4%;--dur:5.5s;--delay:1.2s}
+.msg-bubble.b3{top:38%;left:0%;--dur:6s;--delay:2.1s}
+.msg-bubble.b4{top:38%;right:0%;--dur:5.2s;--delay:.7s}
+.msg-bubble.b5{bottom:15%;left:8%;--dur:5.8s;--delay:1.5s}
+.msg-bubble.b6{bottom:12%;right:6%;--dur:6.2s;--delay:.4s}
+
+/* ── FEATURES ── */
+#features{padding:96px 48px;background:var(--ink)}
+.eyebrow{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
+h2{font-family:'Fraunces',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:12px}
+h2 em{font-style:italic;color:var(--terra)}
+.feat-header{margin-bottom:48px}
+.feat-header h2{color:#fff}
+.feat-header p{font-size:15px;color:rgba(255,255,255,.42);max-width:460px}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.feat-tile{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:30px 26px;transition:background .25s}
+.feat-tile:hover{background:rgba(255,255,255,.07)}
+.feat-tile:nth-child(1){border-radius:16px 0 0 0}.feat-tile:nth-child(4){border-radius:0 16px 0 0}.feat-tile:nth-child(5){border-radius:0 0 0 16px}.feat-tile:last-child{border-radius:0 0 16px 0}
+.feat-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:16px}
+.feat-tile h3{font-size:14px;font-weight:600;color:#fff;margin-bottom:7px}
+.feat-tile p{font-size:12.5px;color:rgba(255,255,255,.42);line-height:1.65}
+
+/* ── AGENT NETWORK ── */
+#agents{padding:96px 48px;background:var(--ink2);position:relative;overflow:hidden}
+#agents::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(74,114,232,.08) 0%,transparent 70%)}
+#agents .eyebrow{color:rgba(106,160,232,.8)}
+#agents h2{color:#fff;margin-bottom:12px}
+.agents-sub{font-size:16px;color:rgba(255,255,255,.42);max-width:520px;margin-bottom:56px;line-height:1.65}
+.agent-network{position:relative;width:100%;height:440px;margin:0 auto;max-width:860px}
+/* SVG lines via absolute divs */
+.net-canvas{position:absolute;inset:0;width:100%;height:100%}
+/* Friend agents — top row */
+.agent-node{position:absolute;display:flex;flex-direction:column;align-items:center;gap:8px}
+.agent-avatar{
+  width:72px;height:72px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:28px;
+  position:relative;
+  box-shadow:0 4px 20px rgba(0,0,0,.3);
+}
+.agent-avatar::after{
+  content:'';position:absolute;inset:-4px;border-radius:50%;
+  border:2px solid transparent;
+  animation:avatarPulse 2.5s ease-in-out infinite;
+}
+@keyframes avatarPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.9;transform:scale(1.06)}}
+.agent-label{font-size:12px;font-weight:600;color:rgba(255,255,255,.75);text-align:center;line-height:1.3}
+.agent-sublabel{font-size:10px;color:rgba(255,255,255,.35);text-align:center}
+/* Central Sakhi node */
+.sakhi-node{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  display:flex;flex-direction:column;align-items:center;gap:10px;z-index:10;
+}
+.sakhi-avatar{
+  width:100px;height:100px;border-radius:50%;
+  background:linear-gradient(145deg,#FFD4A8,#FFB87A);
+  display:flex;align-items:center;justify-content:center;font-size:40px;
+  box-shadow:0 0 0 8px rgba(200,81,42,.15),0 0 0 16px rgba(200,81,42,.07),0 8px 32px rgba(200,81,42,.3);
+  animation:sakhiPulse 3s ease-in-out infinite;
+}
+@keyframes sakhiPulse{0%,100%{box-shadow:0 0 0 8px rgba(200,81,42,.15),0 0 0 16px rgba(200,81,42,.07),0 8px 32px rgba(200,81,42,.3)}50%{box-shadow:0 0 0 12px rgba(200,81,42,.2),0 0 0 24px rgba(200,81,42,.08),0 12px 40px rgba(200,81,42,.35)}}
+.sakhi-node-label{font-size:14px;font-weight:700;color:#fff}
+.sakhi-node-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:-6px}
+/* Connection lines */
+.conn-line{position:absolute;background:transparent;pointer-events:none;z-index:1}
+/* Animated data packets */
+.packet{position:absolute;width:8px;height:8px;border-radius:50%;z-index:5;animation:travelPacket var(--t,2s) var(--delay,0s) ease-in-out infinite}
+@keyframes travelPacket{0%{opacity:0;transform:translate(var(--x0),var(--y0)) scale(.5)}20%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translate(var(--x1),var(--y1)) scale(.5)}}
+/* Status pills */
+.agent-status{
+  position:absolute;bottom:-8px;right:-4px;
+  background:var(--jade);border-radius:20px;padding:2px 8px;
+  font-size:9px;font-weight:700;color:#fff;
+  border:2px solid var(--ink2);
+}
+/* Connection activity */
+.conn-activity{
+  position:absolute;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:12px 16px;min-width:160px;
+  animation:bubbleFloat 6s ease-in-out infinite;
+}
+.conn-activity-title{font-size:10px;font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+.conn-activity-item{font-size:12px;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:6px;padding:2px 0}
+.conn-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* ── DASHBOARD ── */
+#dashboard{padding:96px 48px;background:#fff}
+.dash-layout{display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start}
+.dash-tabs{display:flex;flex-direction:column;gap:6px}
+.dash-tab{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:10px;cursor:pointer;transition:all .2s;border:1.5px solid transparent}
+.dash-tab:hover{background:var(--cream)}
+.dash-tab.active{background:var(--cream);border-color:var(--terra)}
+.dt-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.dt-text h4{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.dt-text p{font-size:11px;color:var(--muted);line-height:1.4}
+.dash-main{background:var(--ink);border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(14,12,26,.18)}
+/* Dashboard header */
+.db-header{padding:18px 24px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.03)}
+.db-header-left{display:flex;align-items:center;gap:12px}
+.db-child-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#FAE8E0,#FFD4A8);display:flex;align-items:center;justify-content:center;font-size:18px}
+.db-child-name{font-size:14px;font-weight:600;color:#fff}
+.db-child-meta{font-size:11px;color:rgba(255,255,255,.35);margin-top:1px}
+.db-date-range{font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);padding:5px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.08)}
+.db-status-row{display:flex;gap:6px}
+.db-status-dot{width:7px;height:7px;border-radius:50%}
+/* Dashboard body */
+.db-body{padding:20px 24px;display:flex;flex-direction:column;gap:16px}
+.db-row{display:grid;gap:12px}
+.db-row-3{grid-template-columns:repeat(3,1fr)}
+.db-row-2{grid-template-columns:repeat(2,1fr)}
+.db-row-free{display:flex;gap:12px}
+/* Stat cards */
+.db-stat{background:rgba(255,255,255,.05);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,.07)}
+.db-stat-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.db-stat-label{font-size:10px;color:rgba(255,255,255,.35);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.db-stat-badge{font-size:9px;padding:2px 8px;border-radius:20px;font-weight:600}
+.db-stat-val{font-size:26px;font-weight:700;color:#fff;line-height:1;margin-bottom:4px}
+.db-stat-sub{font-size:11px;color:rgba(255,255,255,.35)}
+.db-stat-trend{display:flex;align-items:center;gap:4px;font-size:11px;margin-top:8px}
+.trend-up{color:#2A8A5E}.trend-dn{color:#C8512A}.trend-nt{color:rgba(255,255,255,.35)}
+/* Chart card */
+.db-chart{background:rgba(255,255,255,.04);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,.07)}
+.db-chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.db-chart-title{font-size:11px;font-weight:600;color:rgba(255,255,255,.45);letter-spacing:.05em;text-transform:uppercase}
+.db-chart-legend{display:flex;gap:10px}
+.db-legend-item{display:flex;align-items:center;gap:4px;font-size:10px;color:rgba(255,255,255,.35)}
+.db-legend-dot{width:6px;height:6px;border-radius:50%}
+/* Bar chart */
+.bar-chart{display:flex;align-items:flex-end;gap:6px;height:80px}
+.bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
+.bar{width:100%;border-radius:4px 4px 0 0;transition:height .5s ease}
+.bar-lbl{font-size:9px;color:rgba(255,255,255,.25)}
+/* Line chart mini */
+.mini-line-chart{position:relative;height:60px;overflow:hidden}
+.mini-line-chart svg{width:100%;height:100%}
+/* Progress bars */
+.prog-row{display:flex;flex-direction:column;gap:10px}
+.prog-item{display:flex;flex-direction:column;gap:5px}
+.prog-top{display:flex;justify-content:space-between;align-items:center}
+.prog-name{font-size:12px;color:rgba(255,255,255,.65);font-weight:500}
+.prog-pct{font-size:11px;font-weight:700}
+.prog-track{height:6px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;border-radius:3px}
+/* Emotion wheel */
+.emotion-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.emotion-item{background:rgba(255,255,255,.04);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:8px}
+.emotion-emoji{font-size:18px}
+.emotion-info{flex:1}
+.emotion-name{font-size:11px;font-weight:600;color:rgba(255,255,255,.7)}
+.emotion-bar{height:4px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden;margin-top:4px}
+.emotion-bar-fill{height:100%;border-radius:2px}
+/* Alert */
+.db-alert{border-radius:10px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;border:1px solid}
+.db-alert-icon{font-size:15px;flex-shrink:0;margin-top:1px}
+.db-alert-body{flex:1}
+.db-alert-title{font-size:11px;font-weight:700;margin-bottom:3px}
+.db-alert-msg{font-size:11px;line-height:1.55;color:rgba(255,255,255,.5)}
+/* Milestone list */
+.milestone-list{display:flex;flex-direction:column;gap:8px}
+.milestone-item{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(255,255,255,.06)}
+.milestone-icon{font-size:16px;flex-shrink:0}
+.milestone-text{font-size:12px;color:rgba(255,255,255,.65);line-height:1.5}
+.milestone-text strong{color:#fff;font-size:12px}
+
+/* ── TESTIMONIALS ── */
+#testimonials{padding:80px 48px;background:var(--cream2)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.testi-card{background:#fff;border-radius:16px;padding:26px 22px;box-shadow:var(--card-shadow);border:1px solid var(--border);display:flex;flex-direction:column;gap:14px;transition:transform .2s,box-shadow .2s}
+.testi-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(14,12,26,.1)}
+.stars{color:var(--gold);font-size:13px;letter-spacing:2px}
+.testi-text{font-size:14px;color:var(--ink);line-height:1.7;flex:1}
+.testi-bottom{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--border)}
+.t-avatar{width:36px;height:36px;border-radius:50%;background:var(--cream2);display:flex;align-items:center;justify-content:center;font-size:18px}
+.t-name{font-size:13px;font-weight:600;color:var(--ink)}
+.t-meta{font-size:11px;color:var(--muted)}
+.testi-numbers{display:flex;justify-content:center;gap:48px;margin-top:40px;padding:24px 48px;background:#fff;border-radius:16px;box-shadow:var(--card-shadow);max-width:580px;margin-left:auto;margin-right:auto}
+.tn-val{font-family:'Fraunces',serif;font-size:30px;font-weight:700;color:var(--terra);text-align:center}
+.tn-lbl{font-size:12px;color:var(--muted);text-align:center;margin-top:3px}
+
+/* ── WAITLIST ── */
+#waitlist{padding:96px 48px;background:var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.wl-left h2{font-family:'Fraunces',serif;color:#fff;font-size:clamp(28px,3.5vw,42px);margin-bottom:14px}
+.wl-left p{font-size:15px;color:rgba(255,255,255,.42);line-height:1.65;margin-bottom:28px}
+.wl-trust{display:flex;flex-direction:column;gap:10px}
+.wl-trust-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.5)}
+.wl-trust-item::before{content:'✓';color:var(--jade);font-size:13px;font-weight:700}
+.wl-form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:34px 30px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-full{grid-column:1/-1}
+.form-field{display:flex;flex-direction:column;gap:6px}
+.form-field label{font-size:11px;font-weight:600;color:rgba(255,255,255,.35);letter-spacing:.06em;text-transform:uppercase}
+.form-field input,.form-field select{background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.1);border-radius:8px;padding:11px 14px;color:#fff;font-family:'Instrument Sans',sans-serif;font-size:14px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.form-field input::placeholder{color:rgba(255,255,255,.2)}
+.form-field input:focus,.form-field select:focus{border-color:var(--terra)}
+.form-field select option{background:#1E1B2E}
+.form-submit{width:100%;margin-top:6px;background:var(--terra);color:#fff;border:none;padding:15px;border-radius:10px;font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 6px 22px rgba(200,81,42,.38);transition:all .2s}
+.form-submit:hover{background:var(--terra2);transform:translateY(-1px)}
+.form-note{font-size:11px;color:rgba(255,255,255,.22);text-align:center;margin-top:10px}
+.form-success{display:none;text-align:center;padding:16px 0}
+.form-success.show{display:block}
+.form-success h3{font-family:'Fraunces',serif;font-size:24px;color:#fff;margin:14px 0 8px}
+.form-success p{font-size:14px;color:rgba(255,255,255,.42);line-height:1.7}
+
+/* ── FOOTER ── */
+footer{background:#080611;padding:28px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Fraunces',serif;font-size:18px;color:rgba(255,255,255,.6);font-weight:700}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:rgba(255,255,255,.6)}
+.footer-note{font-size:11px;color:rgba(255,255,255,.18)}
+
+/* ── UTILS ── */
+.max{max-width:1100px;margin:0 auto}
+.sub{font-size:16px;color:var(--muted);max-width:520px;line-height:1.65}
+.section-header{margin-bottom:52px}
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.in{opacity:1;transform:none}
+.d1{transition-delay:.05s}.d2{transition-delay:.13s}.d3{transition-delay:.21s}.d4{transition-delay:.29s}
+
+@media(max-width:860px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  #hero{grid-template-columns:1fr;padding:88px 20px 48px}
+  .mascot-scene{height:380px}
+  #features,#agents,#dashboard,#testimonials,#waitlist{padding:72px 20px}
+  .features-grid{grid-template-columns:1fr 1fr}
+  .agent-network{height:560px}
+  .dash-layout{grid-template-columns:1fr}
+  .dash-main-wrap{display:none}
+  #waitlist{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  footer{padding:24px 20px;flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#"><span class="logo-dot"></span> Sakhi</a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#agents">Social Layer</a></li>
+    <li><a href="#dashboard">Dashboard</a></li>
+  </ul>
+  <a class="btn btn-terra" href="#waitlist">Join Waitlist →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">✦ Early Access · India</div>
+    <h1>The AI companion<br/>your child will<br/><em>grow up with.</em></h1>
+    <p class="hero-sub">Personalised stories, homework guidance, and real emotional support — with a parent dashboard that tells you how your child is truly doing.</p>
+    <div class="hero-actions">
+      <a class="btn btn-terra-lg" href="#waitlist">Reserve Your Spot — Free</a>
+      <a class="btn btn-ghost" href="#features">See Features</a>
+    </div>
+    <div class="hero-proof">
+      <div class="proof-faces">
+        <span>👩</span><span>👨</span><span>👩</span><span>👨</span><span>👩</span>
+      </div>
+      <div class="proof-label"><strong>4,200+ parents</strong> already on the waitlist</div>
+    </div>
+  </div>
+
+  <!-- ── MASCOT SCENE ── -->
+  <div class="mascot-scene">
+    <!-- Orbit rings -->
+    <div class="orbit orbit-1"></div>
+    <div class="orbit orbit-2"></div>
+    <div class="orbit orbit-3"></div>
+
+    <!-- Central mascot -->
+    <div class="mascot-body">
+      <div class="mascot-face">
+        <div class="mascot-antenna"></div>
+        <div class="mascot-ear left"></div>
+        <div class="mascot-ear right"></div>
+        <div class="mascot-eyes">
+          <div class="mascot-eye"></div>
+          <div class="mascot-eye"></div>
+        </div>
+        <div class="mascot-cheeks">
+          <div class="mascot-cheek"></div>
+          <div class="mascot-cheek"></div>
+        </div>
+        <div class="mascot-smile"></div>
+      </div>
+    </div>
+
+    <!-- Message bubbles -->
+    <div class="msg-bubble b1"><span class="msg-icon">📖</span>Tell me a story!</div>
+    <div class="msg-bubble b2"><span class="msg-icon">🌟</span>I got 95 in maths!</div>
+    <div class="msg-bubble b3"><span class="msg-icon">😊</span>I'm feeling happy today</div>
+    <div class="msg-bubble b4"><span class="msg-icon">🎯</span>Help me with fractions</div>
+    <div class="msg-bubble b5"><span class="msg-icon">🤝</span>My friend Rohan joined!</div>
+    <div class="msg-bubble b6"><span class="msg-icon">🌙</span>Bedtime story time…</div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="max">
+    <div class="feat-header">
+      <div class="eyebrow" style="color:rgba(200,81,42,.75)">Everything in one place</div>
+      <h2 style="color:#fff">Built for the whole child,<br/>not just one subject.</h2>
+      <p>Four capabilities working together — a companion, not another app to manage.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-tile fade-up d1"><div class="feat-icon" style="background:rgba(200,81,42,.15)">🎙️</div><h3>Stories & Conversation</h3><p>Personalised bedtime stories and voice conversations in Hindi, Tamil, Telugu, Kannada, Marathi, Bengali & English.</p></div>
+      <div class="feat-tile fade-up d2"><div class="feat-icon" style="background:rgba(42,138,94,.15)">📖</div><h3>Homework Companion</h3><p>Guides with Socratic questions — never just gives the answer. Aligned with CBSE, ICSE, and state boards.</p></div>
+      <div class="feat-tile fade-up d3"><div class="feat-icon" style="background:rgba(198,138,26,.15)">💚</div><h3>Emotion Awareness</h3><p>Detects mood patterns through conversation. Flags concerns to parents before they escalate.</p></div>
+      <div class="feat-tile fade-up d4"><div class="feat-icon" style="background:rgba(74,114,232,.15)">👥</div><h3>Friend Social Layer</h3><p>Your child's Sakhi connects with friends' companions for group projects, study circles, and story worlds.</p></div>
+      <div class="feat-tile fade-up d1"><div class="feat-icon" style="background:rgba(200,81,42,.12)">📊</div><h3>Parent Dashboard</h3><p>Emotion trends, mastery heatmaps, social health. Know everything, hover over nothing.</p></div>
+      <div class="feat-tile fade-up d2"><div class="feat-icon" style="background:rgba(42,138,94,.12)">🎮</div><h3>Gamified Learning</h3><p>Progress unlocks story chapters. Achievements tied to real learning, not arbitrary dopamine.</p></div>
+      <div class="feat-tile fade-up d3"><div class="feat-icon" style="background:rgba(198,138,26,.12)">🌍</div><h3>Indian Culture Built-In</h3><p>Panchatantra, Jataka tales, festivals, regional folklore. Sakhi doesn't feel foreign — it feels like home.</p></div>
+      <div class="feat-tile fade-up d4"><div class="feat-icon" style="background:rgba(100,80,200,.12)">🔒</div><h3>Child-Safe by Design</h3><p>DPDPA-compliant, no ads, no data sold. Conversations never read by us. Privacy is foundational.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENT NETWORK -->
+<section id="agents">
+  <div class="max">
+    <div class="section-header fade-up">
+      <div class="eyebrow" style="color:rgba(106,160,232,.8)">The Social Layer</div>
+      <h2 style="color:#fff">Four children. Four Sakhis.<br/><em>One shared world.</em></h2>
+      <p class="agents-sub">Each child's Sakhi has a unique personality. When real friends connect on Sakhi, their AI companions link up — collaborating on projects, sharing stories, and growing together.</p>
+    </div>
+
+    <div class="agent-network fade-up" id="agentNetwork">
+      <svg id="netSvg" style="position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none"></svg>
+
+      <!-- Friend agents -->
+      <div class="agent-node" style="top:2%;left:10%" id="a1">
+        <div class="agent-avatar" style="background:linear-gradient(135deg,#FFD4A8,#FFB87A);box-shadow:0 4px 20px rgba(200,120,50,.35)">
+          🧒
+          <div class="agent-status" style="background:#C8512A">📖</div>
+        </div>
+        <div class="agent-label">Aarav's Sakhi</div>
+        <div class="agent-sublabel">Age 8 · Hindi</div>
+      </div>
+      <div class="agent-node" style="top:2%;right:10%" id="a2">
+        <div class="agent-avatar" style="background:linear-gradient(135deg,#B8E4D0,#7ACCAA);box-shadow:0 4px 20px rgba(42,138,94,.3)">
+          👧
+          <div class="agent-status" style="background:#C68A1A">🎨</div>
+        </div>
+        <div class="agent-label">Priya's Sakhi</div>
+        <div class="agent-sublabel">Age 9 · Tamil</div>
+      </div>
+      <div class="agent-node" style="bottom:8%;left:10%" id="a3">
+        <div class="agent-avatar" style="background:linear-gradient(135deg,#C4D8F8,#8AB4EC);box-shadow:0 4px 20px rgba(74,114,232,.3)">
+          👦
+          <div class="agent-status" style="background:#2A8A5E">✅</div>
+        </div>
+        <div class="agent-label">Rohan's Sakhi</div>
+        <div class="agent-sublabel">Age 8 · Telugu</div>
+      </div>
+      <div class="agent-node" style="bottom:8%;right:10%" id="a4">
+        <div class="agent-avatar" style="background:linear-gradient(135deg,#E8D0F0,#C8A0E0);box-shadow:0 4px 20px rgba(160,100,220,.3)">
+          👧
+          <div class="agent-status" style="background:#6A8AE8">💬</div>
+        </div>
+        <div class="agent-label">Meera's Sakhi</div>
+        <div class="agent-sublabel">Age 10 · Kannada</div>
+      </div>
+
+      <!-- Central Sakhi node -->
+      <div class="sakhi-node" id="sakhiCenter">
+        <div class="sakhi-avatar">🌟</div>
+        <div class="sakhi-node-label">Sakhi Hub</div>
+        <div class="sakhi-node-sub">Orchestrating collaboration</div>
+      </div>
+
+      <!-- Activity cards floating -->
+      <div class="conn-activity" style="top:36%;left:0%;--delay:-1s;animation-duration:7s">
+        <div class="conn-activity-title">📚 Live: Study Session</div>
+        <div class="conn-activity-item"><div class="conn-dot" style="background:#C8512A"></div>Aarav sharing notes</div>
+        <div class="conn-activity-item"><div class="conn-dot" style="background:#2A8A5E"></div>Rohan reviewing</div>
+      </div>
+      <div class="conn-activity" style="top:36%;right:0%;--delay:-3s;animation-duration:8s">
+        <div class="conn-activity-title">🌍 Story World</div>
+        <div class="conn-activity-item"><div class="conn-dot" style="background:#C68A1A"></div>Priya: Ch.4 written</div>
+        <div class="conn-activity-item"><div class="conn-dot" style="background:#6A8AE8"></div>Meera: Ch.5 pending</div>
+      </div>
+    </div>
+
+    <!-- Bottom capabilities row -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px" class="fade-up">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px 18px;text-align:center">
+        <div style="font-size:22px;margin-bottom:8px">📚</div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:4px">Group Projects</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.38);line-height:1.5">Tasks split by strength. Every child contributes.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px 18px;text-align:center">
+        <div style="font-size:22px;margin-bottom:8px">🌍</div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:4px">Story Worlds</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.38);line-height:1.5">Co-created universes. New chapters need everyone.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px 18px;text-align:center">
+        <div style="font-size:22px;margin-bottom:8px">🧠</div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:4px">Study Circles</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.38);line-height:1.5">Group quizzes and peer explanations.</div>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px 18px;text-align:center">
+        <div style="font-size:22px;margin-bottom:8px">🤝</div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:4px">Social Health</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.38);line-height:1.5">Kindness tracking. Group dynamic alerts for parents.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+  <div class="max">
+    <div class="section-header fade-up">
+      <div class="eyebrow">Parent Dashboard</div>
+      <h2>Know how your child<br/><em>is really doing.</em></h2>
+      <p class="sub">Not screen time reports — real insight into emotions, learning, and social health. Professional-grade analytics, built for parents.</p>
+    </div>
+    <div class="dash-layout">
+      <div class="dash-tabs" id="dashTabs">
+        <div class="dash-tab active" onclick="setTab(0,this)"><div class="dt-icon" style="background:#FAE8E0">🧠</div><div class="dt-text"><h4>Learning Progress</h4><p>Mastery maps, weak spots, skill growth</p></div></div>
+        <div class="dash-tab" onclick="setTab(1,this)"><div class="dt-icon" style="background:#E2F2EA">💚</div><div class="dt-text"><h4>Emotional Health</h4><p>Mood trends, triggers, crisis alerts</p></div></div>
+        <div class="dash-tab" onclick="setTab(2,this)"><div class="dt-icon" style="background:#EAF0FC">👥</div><div class="dt-text"><h4>Social Confidence</h4><p>Group engagement, participation score</p></div></div>
+        <div class="dash-tab" onclick="setTab(3,this)"><div class="dt-icon" style="background:#FBF2DC">🏆</div><div class="dt-text"><h4>Monthly Report</h4><p>Milestones, strengths, growth summary</p></div></div>
+      </div>
+      <div class="dash-main" id="dashMain"></div>
+    </div>
+    <div style="margin-top:16px;padding:14px 20px;background:var(--jade-pale);border-radius:10px;display:flex;gap:10px;align-items:center;max-width:860px">
+      <span style="font-size:17px">🔒</span>
+      <p style="font-size:13px;color:var(--ink);line-height:1.6"><strong>Conversations are never read by us, never sold.</strong> Emotion tracking analyses patterns only — not content.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="max">
+    <div class="section-header fade-up" style="text-align:center">
+      <div class="eyebrow" style="display:block;text-align:center">Beta Parents</div>
+      <h2 style="text-align:center">Families already <em>in love</em> with Sakhi.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-up d1"><div class="stars">★★★★★</div><p class="testi-text">"The dashboard showed my daughter's stress spikes every Monday. Turns out she dreaded one class. We fixed it. I'd never have known without Sakhi."</p><div class="testi-bottom"><div class="t-avatar">👨</div><div><div class="t-name">Rahul Krishnan</div><div class="t-meta">Dad of 9-year-old · Mumbai</div></div></div></div>
+      <div class="testi-card fade-up d2"><div class="stars">★★★★★</div><p class="testi-text">"Sakhi remembered my son's love for space stories from week one. He calls it his best friend. The first time he said that, I actually cried."</p><div class="testi-bottom"><div class="t-avatar">👩</div><div><div class="t-name">Priya Mehta</div><div class="t-meta">Mom of 7-year-old · Hyderabad</div></div></div></div>
+      <div class="testi-card fade-up d3"><div class="stars">★★★★★</div><p class="testi-text">"My son and three friends did their entire EVS project through the group feature. He came second in class. He has never been excited about school before."</p><div class="testi-bottom"><div class="t-avatar">👩</div><div><div class="t-name">Sneha Agarwal</div><div class="t-meta">Mom of 11-year-old · Bengaluru</div></div></div></div>
+    </div>
+    <div class="testi-numbers fade-up">
+      <div><div class="tn-val">4,200+</div><div class="tn-lbl">Families on waitlist</div></div>
+      <div><div class="tn-val">7</div><div class="tn-lbl">Cities in beta</div></div>
+      <div><div class="tn-val">4</div><div class="tn-lbl">Languages live</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section id="waitlist">
+  <div class="wl-left fade-up">
+    <div class="eyebrow" style="color:rgba(200,81,42,.7)">Early Access</div>
+    <h2>Be there before your<br/>child's childhood<br/><em>goes by.</em></h2>
+    <p>Join free today. Early access families get founding pricing, locked in for life.</p>
+    <div class="wl-trust">
+      <div class="wl-trust-item">Free to join, no credit card</div>
+      <div class="wl-trust-item">Founding pricing locked in forever</div>
+      <div class="wl-trust-item">Limited spots per city</div>
+      <div class="wl-trust-item">DPDPA-compliant, child-safe</div>
+    </div>
+  </div>
+  <div class="wl-form fade-up d2">
+    <div id="formContent">
+      <div class="form-grid">
+        <div class="form-field"><label>Parent's Name</label><input type="text" id="fname" placeholder="Priya Sharma"/></div>
+        <div class="form-field"><label>Child's Age</label><select id="fage"><option value="" disabled selected>Select</option><option>4–5 years</option><option>6–8 years</option><option>9–12 years</option></select></div>
+        <div class="form-field"><label>City</label><input type="text" id="fcity" placeholder="Bengaluru"/></div>
+        <div class="form-field"><label>Language</label><select id="flang"><option value="" disabled selected>Select</option><option>Hindi</option><option>Tamil</option><option>Telugu</option><option>Kannada</option><option>Marathi</option><option>Bengali</option><option>English</option></select></div>
+        <div class="form-field form-full"><label>Email Address</label><input type="email" id="femail" placeholder="priya@email.com"/></div>
+      </div>
+      <button class="form-submit" onclick="handleSubmit()">Reserve Our Spot →</button>
+      <p class="form-note">4,200 families ahead · Slots limited by city</p>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div style="font-size:48px">🌟</div>
+      <h3>You're on the list!</h3>
+      <p>We'll reach out as early access opens in your city. Tell a parent friend — the social layer works best when your child's friends are on it too.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Sakhi</div>
+  <div class="footer-links"><a href="#">Child Safety</a><a href="#">Privacy</a><a href="#">For Schools</a><a href="#">Contact</a></div>
+  <div class="footer-note">Made in India 🇮🇳 · DPDPA 2023 Compliant</div>
+</footer>
+
+<script>
+// Nav scroll
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>10));
+
+// Fade observer
+new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.1})
+.observe; // placeholder
+(()=>{
+  const obs=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.08});
+  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+})();
+
+// Bubble cycling — hide and reshow with stagger
+(()=>{
+  const bubbles=document.querySelectorAll('.msg-bubble');
+  bubbles.forEach((b,i)=>{
+    const dur=[5,5.5,6,5.2,5.8,6.2][i];
+    const delay=[0.3,1.2,2.1,0.7,1.5,0.4][i];
+    b.style.animationDuration=dur+'s';
+    b.style.animationDelay=delay+'s';
+  });
+})();
+
+// Agent network SVG lines
+(()=>{
+  function drawLines(){
+    const svg=document.getElementById('netSvg');
+    if(!svg)return;
+    const net=document.getElementById('agentNetwork');
+    const nb=net.getBoundingClientRect();
+    const sakhi=document.getElementById('sakhiCenter').getBoundingClientRect();
+    const cx=(sakhi.left+sakhi.right)/2-nb.left;
+    const cy=(sakhi.top+sakhi.bottom)/2-nb.top;
+    svg.innerHTML='';
+    const defs=document.createElementNS('http://www.w3.org/2000/svg','defs');
+    // gradient for lines
+    ['a1','a2','a3','a4'].forEach((id,i)=>{
+      const grad=document.createElementNS('http://www.w3.org/2000/svg','linearGradient');
+      grad.setAttribute('id','lg'+i);
+      grad.setAttribute('gradientUnits','userSpaceOnUse');
+      const stop1=document.createElementNS('http://www.w3.org/2000/svg','stop');
+      const colors=['rgba(200,81,42,.6)','rgba(42,138,94,.6)','rgba(74,114,232,.6)','rgba(160,100,220,.6)'];
+      stop1.setAttribute('offset','0%');stop1.setAttribute('stop-color',colors[i]);
+      const stop2=document.createElementNS('http://www.w3.org/2000/svg','stop');
+      stop2.setAttribute('offset','100%');stop2.setAttribute('stop-color','rgba(200,81,42,.4)');
+      grad.appendChild(stop1);grad.appendChild(stop2);
+      defs.appendChild(grad);
+    });
+    svg.appendChild(defs);
+    ['a1','a2','a3','a4'].forEach((id,i)=>{
+      const node=document.getElementById(id);
+      if(!node)return;
+      const nb2=node.getBoundingClientRect();
+      const nx=(nb2.left+nb2.right)/2-nb.left;
+      const ny=(nb2.top+nb2.bottom)/2-nb.top;
+      const grad=document.createElementNS('http://www.w3.org/2000/svg','linearGradient');
+      grad.setAttribute('id','gr'+i);grad.setAttribute('gradientUnits','userSpaceOnUse');
+      grad.setAttribute('x1',nx);grad.setAttribute('y1',ny);grad.setAttribute('x2',cx);grad.setAttribute('y2',cy);
+      const s1=document.createElementNS('http://www.w3.org/2000/svg','stop');
+      const cs=['rgba(200,81,42,.5)','rgba(42,138,94,.5)','rgba(74,114,232,.5)','rgba(160,100,220,.5)'];
+      s1.setAttribute('offset','0%');s1.setAttribute('stop-color',cs[i]);
+      const s2=document.createElementNS('http://www.w3.org/2000/svg','stop');
+      s2.setAttribute('offset','100%');s2.setAttribute('stop-color','rgba(200,81,42,.3)');
+      grad.appendChild(s1);grad.appendChild(s2);svg.appendChild(grad);
+      const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1',nx);line.setAttribute('y1',ny);
+      line.setAttribute('x2',cx);line.setAttribute('y2',cy);
+      line.setAttribute('stroke','url(#gr'+i+')');
+      line.setAttribute('stroke-width','1.5');
+      line.setAttribute('stroke-dasharray','6 4');
+      line.style.animation='dashAnim 1.5s linear infinite';
+      svg.appendChild(line);
+      // Travelling dot
+      const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      circle.setAttribute('r','4');
+      circle.setAttribute('fill',cs[i].replace('.5','.9'));
+      const anim=document.createElementNS('http://www.w3.org/2000/svg','animateMotion');
+      anim.setAttribute('dur',(2+i*0.3)+'s');
+      anim.setAttribute('repeatCount','indefinite');
+      anim.setAttribute('begin',(i*0.5)+'s');
+      const path=document.createElementNS('http://www.w3.org/2000/svg','mpath');
+      // inline path
+      const pathEl=document.createElementNS('http://www.w3.org/2000/svg','path');
+      const pid='tp'+i;pathEl.setAttribute('id',pid);
+      pathEl.setAttribute('d',`M ${nx} ${ny} L ${cx} ${cy}`);
+      pathEl.setAttribute('fill','none');
+      svg.appendChild(pathEl);
+      path.setAttributeNS('http://www.w3.org/1999/xlink','href','#'+pid);
+      anim.appendChild(path);circle.appendChild(anim);svg.appendChild(circle);
+    });
+  }
+  setTimeout(drawLines,400);
+  window.addEventListener('resize',()=>setTimeout(drawLines,200));
+  // Add CSS animation for dash
+  const style=document.createElement('style');
+  style.textContent='@keyframes dashAnim{to{stroke-dashoffset:-20}}';
+  document.head.appendChild(style);
+})();
+
+// Dashboard data
+const dashConfigs=[
+  {
+    header:{name:'Aarav Sharma',age:'Age 8 · CBSE Grade 3',badge:'Week 12 of 52',dots:[{c:'#2A8A5E'},{c:'#C68A1A'},{c:'#C8512A'}]},
+    render:()=>`
+    <div class="db-body">
+      <div class="db-row db-row-3">
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Maths</span><span class="db-stat-badge" style="background:rgba(42,138,94,.15);color:#2A8A5E">Strong</span></div>
+          <div class="db-stat-val" style="color:#2A8A5E">84%</div>
+          <div class="db-stat-sub">Mastery score</div>
+          <div class="db-stat-trend trend-up">↑ 6% from last week</div>
+        </div>
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Science</span><span class="db-stat-badge" style="background:rgba(198,138,26,.15);color:#C68A1A">Growing</span></div>
+          <div class="db-stat-val" style="color:#C68A1A">61%</div>
+          <div class="db-stat-sub">Mastery score</div>
+          <div class="db-stat-trend trend-up">↑ 3% from last week</div>
+        </div>
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Fractions</span><span class="db-stat-badge" style="background:rgba(200,81,42,.15);color:#C8512A">Weak</span></div>
+          <div class="db-stat-val" style="color:#C8512A">38%</div>
+          <div class="db-stat-sub">Needs attention</div>
+          <div class="db-stat-trend trend-dn">↓ 2% this week</div>
+        </div>
+      </div>
+      <div class="db-chart">
+        <div class="db-chart-header">
+          <span class="db-chart-title">Study sessions — last 7 days</span>
+          <div class="db-chart-legend"><span class="db-legend-item"><div class="db-legend-dot" style="background:#2A8A5E"></div>Active</span><span class="db-legend-item"><div class="db-legend-dot" style="background:#C68A1A"></div>Passive</span></div>
+        </div>
+        <div class="bar-chart">
+          ${[{a:70,p:20},{a:85,p:10},{a:50,p:30},{a:90,p:8},{a:65,p:25},{a:95,p:5},{a:72,p:18}].map((d,i)=>`
+          <div class="bar-wrap">
+            <div class="bar" style="height:${d.a+d.p}%;background:linear-gradient(to top,rgba(198,138,26,.6) ${d.p/(d.a+d.p)*100}%,#2A8A5E ${d.p/(d.a+d.p)*100}%)"></div>
+            <span class="bar-lbl">${['M','T','W','T','F','S','S'][i]}</span>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div class="db-chart">
+        <div class="db-chart-header"><span class="db-chart-title">Subject mastery breakdown</span></div>
+        <div class="prog-row">
+          ${[['Mathematics','#2A8A5E',84],['Environmental Studies','#6A8AE8',72],['English Reading','#C68A1A',67],['Hindi','#C8512A',91],['Fractions (focus topic)','#C8512A',38]].map(([n,c,p])=>`
+          <div class="prog-item">
+            <div class="prog-top"><span class="prog-name">${n}</span><span class="prog-pct" style="color:${c}">${p}%</span></div>
+            <div class="prog-track"><div class="prog-fill" style="width:${p}%;background:${c}"></div></div>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div class="db-alert" style="background:rgba(200,81,42,.1);border-color:rgba(200,81,42,.25)">
+        <span class="db-alert-icon">💡</span>
+        <div class="db-alert-body">
+          <div class="db-alert-title" style="color:#E87A5A">Weak Concept Detected</div>
+          <div class="db-alert-msg">Aarav is consistently struggling with fractions — 3 sessions flagged this week. Recommended: 15 min focused practice on Wed/Thu evenings.</div>
+        </div>
+      </div>
+    </div>`
+  },
+  {
+    header:{name:'Aarav Sharma',age:'Age 8 · Emotional Wellness',badge:'This Week',dots:[{c:'#2A8A5E'},{c:'#2A8A5E'},{c:'#C68A1A'}]},
+    render:()=>`
+    <div class="db-body">
+      <div class="db-row db-row-3">
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Happiness Index</span></div>
+          <div class="db-stat-val" style="color:#2A8A5E">74%</div>
+          <div class="db-stat-sub">7-day average</div>
+          <div class="db-stat-trend trend-up">↑ 8% vs last week</div>
+        </div>
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Anxiety Score</span></div>
+          <div class="db-stat-val" style="color:#C68A1A">14%</div>
+          <div class="db-stat-sub">Within normal range</div>
+          <div class="db-stat-trend trend-up">↓ 4% vs last week</div>
+        </div>
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Confidence</span></div>
+          <div class="db-stat-val" style="color:#6A8AE8">68%</div>
+          <div class="db-stat-sub">Voice tone analysis</div>
+          <div class="db-stat-trend trend-up">↑ 5% this month</div>
+        </div>
+      </div>
+      <div class="db-chart">
+        <div class="db-chart-header"><span class="db-chart-title">Mood pattern — last 7 days</span></div>
+        <div class="bar-chart">
+          ${[72,85,48,92,44,90,74].map((h,i)=>`
+          <div class="bar-wrap">
+            <div class="bar" style="height:${h}%;background:${h>70?'#2A8A5E':h>55?'#C68A1A':'#C8512A'}"></div>
+            <span class="bar-lbl">${['M','T','W','T','F','S','S'][i]}</span>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div class="db-chart">
+        <div class="db-chart-header"><span class="db-chart-title">Emotion breakdown this week</span></div>
+        <div class="emotion-grid">
+          ${[['😊','Happy','#2A8A5E',74],['😌','Calm','#6A8AE8',52],['😰','Anxious','#C68A1A',14],['😢','Sad','#C8512A',6],['🤩','Excited','#C68A1A',62],['😤','Frustrated','#C8512A',18]].map(([e,n,c,p])=>`
+          <div class="emotion-item">
+            <span class="emotion-emoji">${e}</span>
+            <div class="emotion-info">
+              <div class="emotion-name">${n} <span style="color:${c};font-size:10px;font-weight:700">${p}%</span></div>
+              <div class="emotion-bar"><div class="emotion-bar-fill" style="width:${p}%;background:${c}"></div></div>
+            </div>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div class="db-alert" style="background:rgba(198,138,26,.1);border-color:rgba(198,138,26,.25)">
+        <span class="db-alert-icon">📌</span>
+        <div class="db-alert-body">
+          <div class="db-alert-title" style="color:#E8C060">Pattern Detected</div>
+          <div class="db-alert-msg">Anxiety spikes consistently on Sunday evenings — likely school-week anticipation. Consider a calming Sunday bedtime routine with Sakhi.</div>
+        </div>
+      </div>
+    </div>`
+  },
+  {
+    header:{name:'Aarav Sharma',age:'Age 8 · Social Health',badge:'Group Activity',dots:[{c:'#6A8AE8'},{c:'#2A8A5E'},{c:'#2A8A5E'}]},
+    render:()=>`
+    <div class="db-body">
+      <div class="db-row db-row-3">
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Active Friends</span><span class="db-stat-badge" style="background:rgba(74,114,232,.15);color:#6A8AE8">Healthy</span></div>
+          <div class="db-stat-val" style="color:#6A8AE8">3</div>
+          <div class="db-stat-sub">Rohan, Priya, Meera</div>
+          <div class="db-stat-trend trend-nt">Same as last week</div>
+        </div>
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Participation</span></div>
+          <div class="db-stat-val" style="color:#2A8A5E">78%</div>
+          <div class="db-stat-sub">Group sessions</div>
+          <div class="db-stat-trend trend-up">↑ 12% this month</div>
+        </div>
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Leadership</span></div>
+          <div class="db-stat-val" style="color:#C68A1A">3×</div>
+          <div class="db-stat-sub">Led group this week</div>
+          <div class="db-stat-trend trend-up">New high ↑</div>
+        </div>
+      </div>
+      <div class="db-chart">
+        <div class="db-chart-header"><span class="db-chart-title">Group activities this week</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          ${[['EVS Project','Led group — contributed intro + data','#2A8A5E','Done ✓'],['Quiz Night','Participated — scored 8/10','#6A8AE8','Done ✓'],['Story World Ch.5','Co-authored with Priya','#C68A1A','In progress'],['Science revision','Facilitated group review','#2A8A5E','Done ✓']].map(([a,d,c,s])=>`
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:rgba(255,255,255,.04);border-radius:8px;border:1px solid rgba(255,255,255,.06)">
+            <div>
+              <div style="font-size:12px;font-weight:600;color:#fff;margin-bottom:2px">${a}</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4)">${d}</div>
+            </div>
+            <span style="font-size:10px;color:${c};background:${c}20;padding:3px 10px;border-radius:20px;white-space:nowrap">${s}</span>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div class="db-alert" style="background:rgba(42,138,94,.1);border-color:rgba(42,138,94,.25)">
+        <span class="db-alert-icon">✅</span>
+        <div class="db-alert-body">
+          <div class="db-alert-title" style="color:#6AD4A4">Healthy Group Dynamic</div>
+          <div class="db-alert-msg">Aarav is actively contributing and leading group sessions. Social confidence improving week-on-week. No isolation signals detected.</div>
+        </div>
+      </div>
+    </div>`
+  },
+  {
+    header:{name:'Aarav Sharma',age:'Age 8 · Monthly Summary',badge:'March 2026',dots:[{c:'#C68A1A'},{c:'#2A8A5E'},{c:'#6A8AE8'}]},
+    render:()=>`
+    <div class="db-body">
+      <div class="db-row db-row-3">
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Skills Unlocked</span></div>
+          <div class="db-stat-val" style="color:#C68A1A">12</div>
+          <div class="db-stat-sub">Across all subjects</div>
+          <div class="db-stat-trend trend-up">Best month yet ↑</div>
+        </div>
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Stories Heard</span></div>
+          <div class="db-stat-val" style="color:#6A8AE8">47</div>
+          <div class="db-stat-sub">14 co-created</div>
+          <div class="db-stat-trend trend-up">↑ 18 vs Feb</div>
+        </div>
+        <div class="db-stat">
+          <div class="db-stat-top"><span class="db-stat-label">Growth Score</span></div>
+          <div class="db-stat-val" style="color:#2A8A5E">9.1</div>
+          <div class="db-stat-sub">Out of 10</div>
+          <div class="db-stat-trend trend-up">Top 15% nationally</div>
+        </div>
+      </div>
+      <div class="db-chart">
+        <div class="db-chart-header"><span class="db-chart-title">Character strengths identified by AI</span></div>
+        <div class="prog-row">
+          ${[['Curiosity','#C68A1A',88],['Empathy','#2A8A5E',76],['Persistence','#6A8AE8',62],['Creativity','#C8512A',80],['Leadership','#C68A1A',54]].map(([n,c,p])=>`
+          <div class="prog-item">
+            <div class="prog-top"><span class="prog-name">${n}</span><span class="prog-pct" style="color:${c}">${p}%</span></div>
+            <div class="prog-track"><div class="prog-fill" style="width:${p}%;background:${c}"></div></div>
+          </div>`).join('')}
+        </div>
+      </div>
+      <div class="milestone-list">
+        ${[['🏆','Led first group project independently — EVS received school praise'],['📖','Co-authored 12-chapter story with friends across 3 weeks'],['🧠','Mastered multiplication tables — zero prompts needed'],['💚','Cried once, talked to Sakhi, resolved it — emotional growth detected']].map(([i,t])=>`
+        <div class="milestone-item"><span class="milestone-icon">${i}</span><span class="milestone-text">${t}</span></div>`).join('')}
+      </div>
+    </div>`
+  }
+];
+
+function setTab(i,el){
+  document.querySelectorAll('.dash-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  renderDash(i);
+}
+function renderDash(i){
+  const c=dashConfigs[i];
+  document.getElementById('dashMain').innerHTML=`
+    <div class="db-header">
+      <div class="db-header-left">
+        <div class="db-child-avatar">🧒</div>
+        <div>
+          <div class="db-child-name">${c.header.name}</div>
+          <div class="db-child-meta">${c.header.age}</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="db-status-row">${c.header.dots.map(d=>`<div class="db-status-dot" style="background:${d.c}"></div>`).join('')}</div>
+        <div class="db-date-range">${c.header.badge}</div>
+      </div>
+    </div>
+    ${c.render()}
+  `;
+}
+renderDash(0);
+
+// Form
+function handleSubmit(){
+  if(!document.getElementById('fname').value||!document.getElementById('femail').value){alert('Please enter your name and email.');return;}
+  document.getElementById('formContent').style.display='none';
+  document.getElementById('formSuccess').classList.add('show');
+}
+</script>
+</body>
+</html>

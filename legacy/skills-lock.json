@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "Frontend Responsive Design Standards": {
+      "source": "am-will/codex-skills",
+      "sourceType": "github",
+      "computedHash": "e01516e24ba086a603fdf753f9b4e428a3684fbf3010b9295352202fd3461fa8"
+    },
+    "agent-tools": {
+      "source": "inference-sh/skills",
+      "sourceType": "github",
+      "computedHash": "15d2ee25e4cd620e88227699d2c85a9ca873beaf4087db5efe0a44122e2e7c3b"
+    },
+    "landing-page-optimizer": {
+      "source": "aiagentskills/skills",
+      "sourceType": "github",
+      "computedHash": "ff228e27ef31cb139f956632a4bd70869d1a37e52be953aef4ce2d9853ea3f30"
+    }
+  }
+}

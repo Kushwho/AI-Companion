@@ -1,0 +1,22 @@
+# Sakhi by Playla
+
+> Sakhi is an AI companion for Indian children aged 4-12 that provides personalized bedtime stories, Socratic homework help, emotion awareness, and social learning in 7 Indian languages (Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, English).
+
+## Key Facts
+- Age range: 4-12 years
+- Languages: Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, English
+- Curriculum alignment: CBSE, ICSE, and state boards
+- Privacy: DPDPA 2023 compliant, end-to-end encrypted
+- Platform: iOS, Android, Web
+- Status: Beta with 200+ families across 7 Indian cities
+
+## Features
+- Personalised bedtime stories and voice conversations
+- Socratic homework guidance (never gives direct answers)
+- Real-time emotion detection with parent alerts
+- Multi-child social learning network
+- Parent dashboard with learning, emotional, and social health metrics
+
+## Links
+- [Home](https://www.playla.org/)
+- [Waitlist](https://www.playla.org/#waitlist)
