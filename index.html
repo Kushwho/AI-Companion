@@ -3229,7 +3229,97 @@
           font-size: 26px;
         }
       }
+
+      /* TOUR POPUP */
+      .tour-popup-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 10, 18, 0.85);
+        backdrop-filter: blur(8px);
+        z-index: 9998;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+      }
+      .tour-popup-overlay.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .tour-popup {
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+        max-width: 480px;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px var(--purple-glow);
+        transform: translateY(20px) scale(0.95);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .tour-popup-overlay.show .tour-popup {
+        transform: translateY(0) scale(1);
+      }
+      .tour-popup-icon {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+      .tour-popup h3 {
+        font-family: "Fraunces", serif;
+        font-size: 28px;
+        color: var(--text);
+        margin-bottom: 12px;
+      }
+      .tour-popup p {
+        color: var(--text2);
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 32px;
+      }
+      .tour-popup-actions {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+      }
+      
+      /* DRIVER.JS OVERRIDES */
+      .driver-popover {
+        background-color: var(--bg2) !important;
+        color: var(--text) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: var(--radius) !important;
+        font-family: "Outfit", sans-serif !important;
+        box-shadow: var(--shadow) !important;
+      }
+      .driver-popover-title {
+        font-family: "Fraunces", serif !important;
+        color: var(--terra2) !important;
+        font-size: 20px !important;
+      }
+      .driver-popover-description {
+        color: var(--text2) !important;
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+      }
+      .driver-popover-footer button {
+        background-color: var(--surface2) !important;
+        color: var(--text) !important;
+        border: 1px solid var(--border) !important;
+        text-shadow: none !important;
+        border-radius: 8px !important;
+        font-family: "Outfit", sans-serif !important;
+      }
+      .driver-popover-footer button:hover {
+        background-color: var(--purple-glow) !important;
+        border-color: var(--purple) !important;
+      }
+      .driver-popover-progress-text {
+        color: var(--text3) !important;
+      }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
   </head>
 
   <body>
@@ -5199,5 +5289,114 @@
 
     <!-- LiveKit Client SDK -->
     <script src="https://cdn.jsdelivr.net/npm/livekit-client@2/dist/livekit-client.umd.js"></script>
+
+    <!-- TOUR POPUP -->
+    <div class="tour-popup-overlay" id="tourPopupOverlay">
+      <div class="tour-popup">
+        <div class="tour-popup-icon">✨</div>
+        <h3>Welcome to Sakhi</h3>
+        <p>Would you like a quick tour to see how Sakhi helps your child learn and keeps you informed?</p>
+        <div class="tour-popup-actions">
+          <button class="btn btn-ghost" id="tourSkipBtn">Skip for now</button>
+          <button class="btn btn-primary" id="tourStartBtn">Start Tour</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Driver.js for Walkthrough -->
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const overlay = document.getElementById("tourPopupOverlay");
+        const skipBtn = document.getElementById("tourSkipBtn");
+        const startBtn = document.getElementById("tourStartBtn");
+
+        // Show the popup soon after load, only if they haven't seen it
+        const hasSeenTour = localStorage.getItem("sakhi_tour_seen");
+        if (!hasSeenTour) {
+          setTimeout(() => {
+            overlay.classList.add("show");
+          }, 3000);
+        }
+
+        skipBtn.addEventListener("click", () => {
+          overlay.classList.remove("show");
+          localStorage.setItem("sakhi_tour_seen", "true");
+        });
+
+        startBtn.addEventListener("click", () => {
+          overlay.classList.remove("show");
+          localStorage.setItem("sakhi_tour_seen", "true");
+          startTour();
+        });
+
+        function startTour() {
+          const emotionPanel = document.getElementById("sakhiEmotionPanel");
+          const alertPanel = document.getElementById("sakhiAlertPanel");
+          const topicsPanel = document.getElementById("sakhiTopicsPanel");
+
+          // Force panels to show for the walkthrough
+          if (emotionPanel) emotionPanel.classList.add("show");
+          if (alertPanel) alertPanel.classList.add("show");
+          if (topicsPanel) topicsPanel.classList.add("show");
+
+          const driver = window.driver.js.driver;
+          
+          const driverObj = driver({
+            showProgress: true,
+            animate: true,
+            onDestroyStarted: () => {
+              if (!sakhiConnected) {
+                  // Hide them again if the user isn't actually in a call
+                  if (emotionPanel) emotionPanel.classList.remove("show");
+                  if (alertPanel) alertPanel.classList.remove("show");
+                  if (topicsPanel) topicsPanel.classList.remove("show");
+              }
+              driverObj.destroy();
+            },
+            steps: [
+              {
+                element: '#sakhiVoiceBox',
+                popover: {
+                  title: 'Talk to Sakhi 🎙️',
+                  description: 'Tap the mic icon to start a live voice conversation with Sakhi for bedtime stories or patient homework help.',
+                  side: "left",
+                  align: 'start'
+                }
+              },
+              {
+                element: '.calm-mode-wrapper',
+                popover: {
+                  title: 'Calm Mode 🌙',
+                  description: 'Toggle this to reduce screen time and dopamine by turning the interface grayscale and minimal.',
+                  side: "bottom",
+                  align: 'start'
+                }
+              },
+              {
+                element: '#sakhiEmotionPanel',
+                popover: {
+                  title: 'Emotion & Alerts 💚',
+                  description: 'Real-time insights into your child\'s mood and early distress signals inferred from their conversation.',
+                  side: "left",
+                  align: 'start'
+                }
+              },
+              {
+                element: '#sakhiTopicsPanel',
+                popover: {
+                  title: 'Topics Explored 📚',
+                  description: 'See exactly what subjects or stories your child is engaging with recently.',
+                  side: "left",
+                  align: 'start'
+                }
+              }
+            ]
+          });
+          
+          driverObj.drive();
+        }
+      });
+    </script>
   </body>
 </html>
