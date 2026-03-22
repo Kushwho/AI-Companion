@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage (currently the only indexable page) -->
+  <url>
+    <loc>https://www.playla.org/</loc>
+    <lastmod>2026-03-23</lastmod>
+  </url>
+
+  <!--
+    Add the following URLs as pages are created:
+
+  <url>
+    <loc>https://www.playla.org/privacy</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.playla.org/child-safety</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.playla.org/terms</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.playla.org/about</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.playla.org/for-schools</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.playla.org/contact</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.playla.org/blog</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+  </url>
+  -->
+
+</urlset>

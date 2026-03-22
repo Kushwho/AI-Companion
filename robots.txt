@@ -1,0 +1,26 @@
+# robots.txt for www.playla.org (Sakhi)
+# Last updated: 2026-03-23
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# AI Crawlers - explicitly allowed for GEO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.playla.org/sitemap.xml
