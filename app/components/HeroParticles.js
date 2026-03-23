@@ -119,7 +119,7 @@ export default function HeroParticles() {
       <div className="orbit orbit-2"><div className="orbit-pip"></div><div className="orbit-pip p2"></div></div>
       <div className="orbit orbit-3"><div className="orbit-pip"></div><div className="orbit-pip p2"></div></div>
       <div className="mascot-body">
-        <img className="mascot-img" src="/sakhi-mascot.png" alt="Sakhi AI companion mascot character for children" width={280} height={280} />
+        <img className="mascot-img" src="/sakhi-mascot.png" alt="Playla AI companion mascot character for children" width={280} height={280} />
       </div>
       <div className="msg-bubble b1"><span className="msg-icon">📖</span> Tell me a story!</div>
       <div className="msg-bubble b2"><span className="msg-icon">🌟</span> I got 95 in maths!</div>

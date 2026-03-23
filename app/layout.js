@@ -17,9 +17,9 @@ const fraunces = Fraunces({
 })
 
 export const metadata = {
-  title: 'Sakhi — AI Learning Companion for Indian Children Ages 4-12',
+  title: 'Playla — AI Learning Companion for Children Ages 4-12',
   description:
-    'Sakhi is a personalised AI companion for Indian children aged 4-12. Homework help, stories & emotional support in 7 languages with a parent dashboard.',
+    'Playla is a personalised AI companion for children aged 4-12. Homework help, stories & emotional support in multiple languages with a parent dashboard.',
   metadataBase: new URL('https://www.playla.org'),
   alternates: {
     canonical: '/',
@@ -27,25 +27,25 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.playla.org/',
-    title: 'Sakhi — AI Companion for Indian Children',
+    title: 'Playla — AI Companion for Children',
     description:
-      'Personalised AI companion for Indian children aged 4-12. Stories, homework help, and emotional support in 7 languages with a parent dashboard.',
-    siteName: 'Sakhi',
-    locale: 'en_IN',
+      'Personalised AI companion for children aged 4-12. Stories, homework help, and emotional support in multiple languages with a parent dashboard.',
+    siteName: 'Playla',
+    locale: 'en_US',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Sakhi AI companion for Indian children',
+        alt: 'Playla AI companion for children',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sakhi — AI Companion for Indian Children',
+    title: 'Playla — AI Companion for Children',
     description:
-      'Personalised AI companion for Indian children aged 4-12. Stories, homework help, and emotional support in 7 languages.',
+      'Personalised AI companion for children aged 4-12. Stories, homework help, and emotional support in multiple languages.',
     images: ['/og-image.png'],
   },
   robots: {

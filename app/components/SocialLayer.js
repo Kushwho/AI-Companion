@@ -15,7 +15,7 @@ function drawLines() {
   if (!svg) return
   const net = document.getElementById('agentNetwork')
   const nb = net.getBoundingClientRect()
-  const sakhi = document.getElementById('sakhiCenter').getBoundingClientRect()
+  const sakhi = document.getElementById('playlaCenter').getBoundingClientRect()
   const cx = (sakhi.left + sakhi.right) / 2 - nb.left
   const cy = (sakhi.top + sakhi.bottom) / 2 - nb.top
   svg.innerHTML = ''
@@ -87,10 +87,10 @@ function drawLines() {
 }
 
 const agents = [
-  { id: 'a1', style: { top: '2%', left: '12%' }, gradient: 'linear-gradient(135deg, #ffd4a8, #ffb87a)', shadow: '0 4px 24px rgba(232, 101, 58, 0.35)', letter: 'A', letterColor: '#c45a20', statusBg: 'var(--terra)', label: "Aarav's Sakhi", sub: 'Age 8 · Hindi', iconPath: 'M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z' },
-  { id: 'a2', style: { top: '2%', right: '12%' }, gradient: 'linear-gradient(135deg, #b8e4d0, #7accaa)', shadow: '0 4px 24px rgba(52, 211, 153, 0.3)', letter: 'P', letterColor: '#2a7a5a', statusBg: 'var(--gold)', label: "Priya's Sakhi", sub: 'Age 9 · Tamil', iconPath: 'M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-3-10l2 2 4-4' },
-  { id: 'a3', style: { bottom: '8%', left: '12%' }, gradient: 'linear-gradient(135deg, #c4d8f8, #8ab4ec)', shadow: '0 4px 24px rgba(99, 102, 241, 0.3)', letter: 'R', letterColor: '#3a58c0', statusBg: 'var(--jade)', label: "Rohan's Sakhi", sub: 'Age 8 · Telugu', iconPath: 'M20 6 9 17l-5-5' },
-  { id: 'a4', style: { bottom: '8%', right: '12%' }, gradient: 'linear-gradient(135deg, #e8d0f0, #c8a0e0)', shadow: '0 4px 24px rgba(139, 92, 246, 0.3)', letter: 'M', letterColor: '#7a40b0', statusBg: 'var(--blue)', label: "Meera's Sakhi", sub: 'Age 10 · Kannada', iconPath: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z' },
+  { id: 'a1', style: { top: '2%', left: '12%' }, gradient: 'linear-gradient(135deg, #ffd4a8, #ffb87a)', shadow: '0 4px 24px rgba(232, 101, 58, 0.35)', letter: 'A', letterColor: '#c45a20', statusBg: 'var(--terra)', label: "Alex's Playla", sub: 'Age 8 · English', iconPath: 'M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z' },
+  { id: 'a2', style: { top: '2%', right: '12%' }, gradient: 'linear-gradient(135deg, #b8e4d0, #7accaa)', shadow: '0 4px 24px rgba(52, 211, 153, 0.3)', letter: 'P', letterColor: '#2a7a5a', statusBg: 'var(--gold)', label: "Priya's Playla", sub: 'Age 9 · Spanish', iconPath: 'M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-3-10l2 2 4-4' },
+  { id: 'a3', style: { bottom: '8%', left: '12%' }, gradient: 'linear-gradient(135deg, #c4d8f8, #8ab4ec)', shadow: '0 4px 24px rgba(99, 102, 241, 0.3)', letter: 'R', letterColor: '#3a58c0', statusBg: 'var(--jade)', label: "Ryan's Playla", sub: 'Age 8 · French', iconPath: 'M20 6 9 17l-5-5' },
+  { id: 'a4', style: { bottom: '8%', right: '12%' }, gradient: 'linear-gradient(135deg, #e8d0f0, #c8a0e0)', shadow: '0 4px 24px rgba(139, 92, 246, 0.3)', letter: 'M', letterColor: '#7a40b0', statusBg: 'var(--blue)', label: "Mia's Playla", sub: 'Age 10 · German', iconPath: 'M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z' },
 ]
 
 export default function SocialLayer() {
@@ -106,8 +106,8 @@ export default function SocialLayer() {
       <div className="max">
         <div className="section-header fade-up">
           <div className="section-tag" style={{ color: 'var(--purple2)', borderColor: 'rgba(139, 92, 246, 0.2)', background: 'rgba(139, 92, 246, 0.06)' }}>✦ The Social Layer</div>
-          <h2 style={{ color: 'var(--text)' }}>Four children. Four Sakhis.<br /><em>One shared world.</em></h2>
-          <p className="agents-sub">Each child&apos;s Sakhi has a unique personality. When real friends connect on Sakhi, their AI companions link up — collaborating on projects, sharing stories, and growing together.</p>
+          <h2 style={{ color: 'var(--text)' }}>Four children. Four Playlas.<br /><em>One shared world.</em></h2>
+          <p className="agents-sub">Each child&apos;s Playla has a unique personality. When real friends connect on Playla, their AI companions link up — collaborating on projects, sharing stories, and growing together.</p>
         </div>
         <div className="agent-network fade-up" id="agentNetwork">
           <svg id="netSvg" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 2, pointerEvents: 'none' }}></svg>
@@ -123,11 +123,11 @@ export default function SocialLayer() {
               <div className="agent-sublabel">{a.sub}</div>
             </div>
           ))}
-          <div className="sakhi-node" id="sakhiCenter">
+          <div className="sakhi-node" id="playlaCenter">
             <div className="sakhi-avatar">
-              <Image src="/sakhi-mascot.png" alt="Sakhi" className="sakhi-hub-img" width={42} height={42} />
+              <Image src="/sakhi-mascot.png" alt="Playla" className="sakhi-hub-img" width={42} height={42} />
             </div>
-            <div className="sakhi-node-label">Sakhi Hub</div>
+            <div className="sakhi-node-label">Playla Hub</div>
             <div className="sakhi-node-sub">Orchestrating collaboration</div>
           </div>
           <div className="conn-activity" style={{ top: '36%', left: '0%', '--delay': '0s' }}>
@@ -135,8 +135,8 @@ export default function SocialLayer() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--terra2)" strokeWidth="2" strokeLinecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
               Live: Study Session
             </div>
-            <div className="conn-activity-item"><div className="conn-dot" style={{ background: 'var(--terra)', color: 'var(--terra)' }}></div>Aarav sharing notes</div>
-            <div className="conn-activity-item"><div className="conn-dot" style={{ background: 'var(--jade)', color: 'var(--jade)' }}></div>Rohan reviewing</div>
+            <div className="conn-activity-item"><div className="conn-dot" style={{ background: 'var(--terra)', color: 'var(--terra)' }}></div>Alex sharing notes</div>
+            <div className="conn-activity-item"><div className="conn-dot" style={{ background: 'var(--jade)', color: 'var(--jade)' }}></div>Ryan reviewing</div>
           </div>
           <div className="conn-activity" style={{ top: '36%', right: '0%', '--delay': '4s' }}>
             <div className="conn-activity-title">
@@ -144,7 +144,7 @@ export default function SocialLayer() {
               Story World
             </div>
             <div className="conn-activity-item"><div className="conn-dot" style={{ background: 'var(--gold)', color: 'var(--gold)' }}></div>Priya: Ch.4 written</div>
-            <div className="conn-activity-item"><div className="conn-dot" style={{ background: 'var(--blue)', color: 'var(--blue)' }}></div>Meera: Ch.5 pending</div>
+            <div className="conn-activity-item"><div className="conn-dot" style={{ background: 'var(--blue)', color: 'var(--blue)' }}></div>Mia: Ch.5 pending</div>
           </div>
         </div>
         <div className="social-caps fade-up">

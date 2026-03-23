@@ -51,7 +51,7 @@ export default function WaitlistForm() {
         <div className="wl-trust">
           <div className="wl-trust-item">Free to join, no credit card</div>
           <div className="wl-trust-item">Founding pricing locked in forever</div>
-          <div className="wl-trust-item">DPDPA-compliant, child-safe</div>
+          <div className="wl-trust-item">COPPA-compliant, child-safe</div>
         </div>
       </div>
       <div className="wl-form fade-up d2">
@@ -60,7 +60,7 @@ export default function WaitlistForm() {
             <div className="form-grid">
               <div className="form-field">
                 <label>Parent&apos;s Name</label>
-                <input type="text" ref={fnameRef} placeholder="Priya Sharma" />
+                <input type="text" ref={fnameRef} placeholder="Sarah Mitchell" />
               </div>
               <div className="form-field">
                 <label>Child&apos;s Age</label>
@@ -73,7 +73,7 @@ export default function WaitlistForm() {
               </div>
               <div className="form-field form-full">
                 <label>Email Address</label>
-                <input type="email" ref={femailRef} placeholder="priya@email.com" />
+                <input type="email" ref={femailRef} placeholder="sarah@email.com" />
               </div>
             </div>
             <p className="form-time">Takes 15 seconds</p>

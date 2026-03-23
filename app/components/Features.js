@@ -1,12 +1,12 @@
 const features = [
-  { icon: '🎙️', bg: 'rgba(232, 101, 58, 0.12)', title: 'Stories & Conversation', desc: 'Personalised bedtime stories and voice conversations in Hindi, Tamil, Telugu, Kannada, Marathi, Bengali & English.', delay: 'd1' },
-  { icon: '📖', bg: 'rgba(52, 211, 153, 0.1)', title: 'Homework Companion', desc: 'Guides with Socratic questions — never just gives the answer. Aligned with CBSE, ICSE, and state boards.', delay: 'd2' },
+  { icon: '🎙️', bg: 'rgba(232, 101, 58, 0.12)', title: 'Stories & Conversation', desc: 'Personalised bedtime stories and voice conversations in English, Spanish, French, German, Portuguese, Mandarin & more.', delay: 'd1' },
+  { icon: '📖', bg: 'rgba(52, 211, 153, 0.1)', title: 'Homework Companion', desc: 'Guides with Socratic questions — never just gives the answer. Aligned with Common Core and international standards.', delay: 'd2' },
   { icon: '💚', bg: 'rgba(245, 158, 11, 0.1)', title: 'Emotion Awareness', desc: 'Detects mood patterns through conversation. Flags concerns to parents before they escalate.', delay: 'd3' },
-  { icon: '👥', bg: 'rgba(139, 92, 246, 0.1)', title: 'Friend Social Layer', desc: "Your child's Sakhi connects with friends' companions for group projects, study circles, and story worlds.", delay: 'd4' },
+  { icon: '👥', bg: 'rgba(139, 92, 246, 0.1)', title: 'Friend Social Layer', desc: "Your child's Playla connects with friends' companions for group projects, study circles, and story worlds.", delay: 'd4' },
   { icon: '📊', bg: 'rgba(232, 101, 58, 0.08)', title: 'Parent Dashboard', desc: 'Emotion trends, mastery heatmaps, social health. Know everything, hover over nothing.', delay: 'd1' },
   { icon: '🎮', bg: 'rgba(52, 211, 153, 0.08)', title: 'Gamified Learning', desc: 'Progress unlocks story chapters. Achievements tied to real learning, not arbitrary dopamine.', delay: 'd2' },
-  { icon: '🌍', bg: 'rgba(245, 158, 11, 0.08)', title: 'Indian Culture Built-In', desc: "Panchatantra, Jataka tales, festivals, regional folklore. Sakhi doesn't feel foreign — it feels like home.", delay: 'd3' },
-  { icon: '🔒', bg: 'rgba(99, 102, 241, 0.08)', title: 'Child-Safe by Design', desc: 'DPDPA-compliant, no ads, no data sold. Conversations never read by us. Privacy is foundational.', delay: 'd4' },
+  { icon: '🌍', bg: 'rgba(245, 158, 11, 0.08)', title: 'Rich Cultural Stories', desc: "Aesop's Fables, Grimm's Fairy Tales, world folklore and festivals. Playla feels like home wherever you are.", delay: 'd3' },
+  { icon: '🔒', bg: 'rgba(99, 102, 241, 0.08)', title: 'Child-Safe by Design', desc: 'COPPA-compliant, no ads, no data sold. Conversations never read by us. Privacy is foundational.', delay: 'd4' },
 ]
 
 export default function Features() {

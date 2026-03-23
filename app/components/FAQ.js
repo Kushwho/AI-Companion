@@ -3,11 +3,11 @@
 import { useCallback } from 'react'
 
 const faqs = [
-  { q: "Is my child's conversation data safe?", a: "Absolutely. Conversations are end-to-end encrypted and never read by us. Emotion tracking analyses patterns only — not content. We're DPDPA 2023 compliant." },
-  { q: 'What ages is Sakhi designed for?', a: 'Sakhi adapts to children aged 4–12, with age-appropriate language, topics, and complexity levels that grow with your child.' },
-  { q: 'Does Sakhi just give homework answers?', a: 'Never. Sakhi uses Socratic questioning to guide your child to the answer themselves, building real understanding. Aligned with CBSE, ICSE, and state boards.' },
-  { q: 'What languages does Sakhi speak?', a: 'Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, and English — with more coming soon.' },
-  { q: 'What devices does Sakhi work on?', a: 'Sakhi works on any smartphone or tablet via our app (iOS and Android), and via web browser on desktop.' },
+  { q: "Is my child's conversation data safe?", a: "Absolutely. Conversations are end-to-end encrypted and never read by us. Emotion tracking analyses patterns only — not content. We're COPPA compliant." },
+  { q: 'What ages is Playla designed for?', a: 'Playla adapts to children aged 4–12, with age-appropriate language, topics, and complexity levels that grow with your child.' },
+  { q: 'Does Playla just give homework answers?', a: 'Never. Playla uses Socratic questioning to guide your child to the answer themselves, building real understanding. Aligned with Common Core and international standards.' },
+  { q: 'What languages does Playla speak?', a: 'English, Spanish, French, German, Portuguese, and Mandarin — with more coming soon.' },
+  { q: 'What devices does Playla work on?', a: 'Playla works on any smartphone or tablet via our app (iOS and Android), and via web browser on desktop.' },
 ]
 
 export default function FAQ() {

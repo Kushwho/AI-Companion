@@ -8,11 +8,11 @@ export default function Hero() {
       <div className="hero-bg-grid"></div>
       <div className="hero-left">
         <div className="hero-eyebrow">
-          <span className="pulse"></span> Early Access · India
+          <span className="pulse"></span> Early Access
         </div>
         <h1>The AI companion<br />your child will<br /><em>grow up with.</em></h1>
         <p className="hero-sub">
-          Get back 5 hours a week while Sakhi handles bedtime stories, safe answers, and patient homework help — all while you get real-time insights into your child&apos;s learning and emotions.
+          Get back 5 hours a week while Playla handles bedtime stories, safe answers, and patient homework help — all while you get real-time insights into your child&apos;s learning and emotions.
         </p>
         <div className="hero-actions">
           <a className="btn btn-primary-lg" href="#waitlist">Reserve Your Spot — Free</a>

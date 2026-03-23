@@ -3,7 +3,7 @@
 import { useRef, useState, useCallback, useEffect } from 'react'
 import Image from 'next/image'
 
-const SAKHI_BACKEND_URL = 'https://najthngxwe6g3lkyqn707x4f.34-47-239-31.sslip.io'
+const PLAYLA_BACKEND_URL = 'https://najthngxwe6g3lkyqn707x4f.34-47-239-31.sslip.io'
 
 export default function VoiceChat() {
   const [connected, setConnected] = useState(false)
@@ -82,9 +82,9 @@ export default function VoiceChat() {
 
   const startCall = useCallback(async () => {
     setStatus('connecting')
-    setStatusText('Connecting to Sakhi…')
+    setStatusText('Connecting to Playla…')
     try {
-      const res = await fetch(`${SAKHI_BACKEND_URL}/api/demo-token`, { method: 'POST' })
+      const res = await fetch(`${PLAYLA_BACKEND_URL}/api/demo-token`, { method: 'POST' })
       if (!res.ok) throw new Error('Failed to get demo token')
       const { token, livekit_url } = await res.json()
 
@@ -94,7 +94,7 @@ export default function VoiceChat() {
       room.on(LivekitClient.RoomEvent.TrackSubscribed, (track) => {
         if (track.kind === LivekitClient.Track.Kind.Audio) {
           const el = track.attach()
-          el.id = 'sakhi-agent-audio'
+          el.id = 'playla-agent-audio'
           document.body.appendChild(el)
         }
       })
@@ -126,10 +126,10 @@ export default function VoiceChat() {
       setIsEndCall(true)
       setShowPanels(true)
       setStatus('connected')
-      setStatusText('Connected — speak to Sakhi')
+      setStatusText('Connected — speak to Playla')
       setupVisualizer()
     } catch (err) {
-      console.error('Sakhi call error:', err)
+      console.error('Playla call error:', err)
       setStatus('idle')
       setStatusText('Connection failed — try again')
       setTimeout(() => setStatusText('Tap the mic to start'), 3000)
@@ -141,7 +141,7 @@ export default function VoiceChat() {
       await roomRef.current.disconnect()
       roomRef.current = null
     }
-    document.querySelectorAll('#sakhi-agent-audio').forEach(el => el.remove())
+    document.querySelectorAll('#playla-agent-audio').forEach(el => el.remove())
     if (vizFrameRef.current) cancelAnimationFrame(vizFrameRef.current)
     if (audioCtxRef.current) { audioCtxRef.current.close(); audioCtxRef.current = null }
     setConnected(false)
@@ -172,11 +172,11 @@ export default function VoiceChat() {
           <div className="msg-bubble b3" style={{ top: 110, left: -150 }}><span className="msg-icon">😊</span> I&apos;m feeling happy today</div>
           <div className="msg-bubble b6" style={{ top: 130, right: -130 }}><span className="msg-icon">🌙</span> Bedtime story...</div>
           <div className={`sakhi-voice-mascot${mascotExpr ? ` expr-${mascotExpr}` : ''}`} id="sakhiMascot">
-            <Image src="/sakhi-mascot.png" alt="Sakhi" width={150} height={150} />
+            <Image src="/sakhi-mascot.png" alt="Playla" width={150} height={150} />
           </div>
         </div>
-        <div className="sakhi-voice-title">Talk to Sakhi</div>
-        <div className="sakhi-voice-sub">Experience Sakhi live — tap the mic and start talking</div>
+        <div className="sakhi-voice-title">Talk to Playla</div>
+        <div className="sakhi-voice-sub">Experience Playla live — tap the mic and start talking</div>
         <div className={`sakhi-visualizer${connected ? ' active' : ''}`} id="sakhiVisualizer">
           {Array.from({ length: 20 }).map((_, i) => <div key={i} className="viz-bar"></div>)}
         </div>
@@ -213,7 +213,7 @@ export default function VoiceChat() {
           <div className="sakhi-emotion-bar-track">
             <div className="sakhi-emotion-bar-fill" style={{ width: `${emotionScore}%` }}></div>
           </div>
-          <div className="sakhi-emotion-caption">Sakhi senses how you feel and adapts in real time</div>
+          <div className="sakhi-emotion-caption">Playla senses how you feel and adapts in real time</div>
         </div>
 
         <div className={`sakhi-emotion-panel${showPanels ? ' show' : ''}`} id="sakhiAlertPanel">

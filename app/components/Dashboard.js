@@ -10,16 +10,16 @@ const tabs = [
 ]
 
 const headers = [
-  { name: 'Aarav Sharma', age: 'Age 8 · CBSE Grade 3', badge: 'Week 12 of 52', dots: ['#34D399', '#F59E0B', '#E8653A'] },
-  { name: 'Aarav Sharma', age: 'Age 8 · Emotional Wellness', badge: 'This Week', dots: ['#34D399', '#34D399', '#F59E0B'] },
-  { name: 'Aarav Sharma', age: 'Age 8 · Social Health', badge: 'Group Activity', dots: ['#6366F1', '#34D399', '#34D399'] },
-  { name: 'Aarav Sharma', age: 'Age 8 · Monthly Summary', badge: 'March 2026', dots: ['#F59E0B', '#34D399', '#6366F1'] },
+  { name: 'Alex Thompson', age: 'Age 8 · Grade 3', badge: 'Week 12 of 52', dots: ['#34D399', '#F59E0B', '#E8653A'] },
+  { name: 'Alex Thompson', age: 'Age 8 · Emotional Wellness', badge: 'This Week', dots: ['#34D399', '#34D399', '#F59E0B'] },
+  { name: 'Alex Thompson', age: 'Age 8 · Social Health', badge: 'Group Activity', dots: ['#6366F1', '#34D399', '#34D399'] },
+  { name: 'Alex Thompson', age: 'Age 8 · Monthly Summary', badge: 'March 2026', dots: ['#F59E0B', '#34D399', '#6366F1'] },
 ]
 
 function LearningTab() {
   const barData = [{ a: 70, p: 20 }, { a: 85, p: 10 }, { a: 50, p: 30 }, { a: 90, p: 8 }, { a: 65, p: 25 }, { a: 95, p: 5 }, { a: 72, p: 18 }]
   const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
-  const subjects = [['Mathematics', '#34D399', 84], ['Environmental Studies', '#6366F1', 72], ['English Reading', '#F59E0B', 67], ['Hindi', '#E8653A', 91], ['Fractions (focus)', '#E8653A', 38]]
+  const subjects = [['Mathematics', '#34D399', 84], ['Science', '#6366F1', 72], ['English Reading', '#F59E0B', 67], ['Writing', '#E8653A', 91], ['Fractions (focus)', '#E8653A', 38]]
   return (
     <div className="db-body">
       <div className="db-row db-row-3">
@@ -35,7 +35,7 @@ function LearningTab() {
         <div className="db-chart-header"><span className="db-chart-title">Subject mastery breakdown</span></div>
         <div className="prog-row">{subjects.map(([n, c, p], i) => <div key={i} className="prog-item"><div className="prog-top"><span className="prog-name">{n}</span><span className="prog-pct" style={{ color: c }}>{p}%</span></div><div className="prog-track"><div className="prog-fill" style={{ width: `${p}%`, background: c }}></div></div></div>)}</div>
       </div>
-      <div className="db-alert" style={{ background: 'rgba(232,101,58,.06)', borderColor: 'rgba(232,101,58,.2)' }}><span className="db-alert-icon">💡</span><div className="db-alert-body"><div className="db-alert-title" style={{ color: '#FF7A50' }}>Weak Concept Detected</div><div className="db-alert-msg">Aarav is consistently struggling with fractions — 3 sessions flagged this week. Recommended: 15 min focused practice on Wed/Thu evenings.</div></div></div>
+      <div className="db-alert" style={{ background: 'rgba(232,101,58,.06)', borderColor: 'rgba(232,101,58,.2)' }}><span className="db-alert-icon">💡</span><div className="db-alert-body"><div className="db-alert-title" style={{ color: '#FF7A50' }}>Weak Concept Detected</div><div className="db-alert-msg">Alex is consistently struggling with fractions — 3 sessions flagged this week. Recommended: 15 min focused practice on Wed/Thu evenings.</div></div></div>
     </div>
   )
 }
@@ -59,14 +59,14 @@ function EmotionalTab() {
         <div className="db-chart-header"><span className="db-chart-title">Emotion breakdown this week</span></div>
         <div className="emotion-grid">{emotions.map(([e, n, c, p], i) => <div key={i} className="emotion-item"><span className="emotion-emoji">{e}</span><div className="emotion-info"><div className="emotion-name">{n} <span style={{ color: c, fontSize: 10, fontWeight: 700 }}>{p}%</span></div><div className="emotion-bar"><div className="emotion-bar-fill" style={{ width: `${p}%`, background: c }}></div></div></div></div>)}</div>
       </div>
-      <div className="db-alert" style={{ background: 'rgba(245,158,11,.06)', borderColor: 'rgba(245,158,11,.2)' }}><span className="db-alert-icon">📌</span><div className="db-alert-body"><div className="db-alert-title" style={{ color: '#F59E0B' }}>Pattern Detected</div><div className="db-alert-msg">Anxiety spikes consistently on Sunday evenings — likely school-week anticipation. Consider a calming Sunday bedtime routine with Sakhi.</div></div></div>
+      <div className="db-alert" style={{ background: 'rgba(245,158,11,.06)', borderColor: 'rgba(245,158,11,.2)' }}><span className="db-alert-icon">📌</span><div className="db-alert-body"><div className="db-alert-title" style={{ color: '#F59E0B' }}>Pattern Detected</div><div className="db-alert-msg">Anxiety spikes consistently on Sunday evenings — likely school-week anticipation. Consider a calming Sunday bedtime routine with Playla.</div></div></div>
     </div>
   )
 }
 
 function SocialTab() {
   const activities = [
-    ['EVS Project', 'Led group — contributed intro + data', '#34D399', 'Done ✓'],
+    ['Science Project', 'Led group — contributed intro + data', '#34D399', 'Done ✓'],
     ['Quiz Night', 'Participated — scored 8/10', '#6366F1', 'Done ✓'],
     ['Story World Ch.5', 'Co-authored with Priya', '#F59E0B', 'In progress'],
     ['Science revision', 'Facilitated group review', '#34D399', 'Done ✓'],
@@ -74,7 +74,7 @@ function SocialTab() {
   return (
     <div className="db-body">
       <div className="db-row db-row-3">
-        <div className="db-stat"><div className="db-stat-top"><span className="db-stat-label">Active Friends</span><span className="db-stat-badge" style={{ background: 'rgba(99,102,241,.12)', color: '#6366F1' }}>Healthy</span></div><div className="db-stat-val" style={{ color: '#6366F1' }}>3</div><div className="db-stat-sub">Rohan, Priya, Meera</div><div className="db-stat-trend trend-nt">Same as last week</div></div>
+        <div className="db-stat"><div className="db-stat-top"><span className="db-stat-label">Active Friends</span><span className="db-stat-badge" style={{ background: 'rgba(99,102,241,.12)', color: '#6366F1' }}>Healthy</span></div><div className="db-stat-val" style={{ color: '#6366F1' }}>3</div><div className="db-stat-sub">Ryan, Priya, Mia</div><div className="db-stat-trend trend-nt">Same as last week</div></div>
         <div className="db-stat"><div className="db-stat-top"><span className="db-stat-label">Participation</span></div><div className="db-stat-val" style={{ color: '#34D399' }}>78%</div><div className="db-stat-sub">Group sessions</div><div className="db-stat-trend trend-up">↑ 12% this month</div></div>
         <div className="db-stat"><div className="db-stat-top"><span className="db-stat-label">Leadership</span></div><div className="db-stat-val" style={{ color: '#F59E0B' }}>3×</div><div className="db-stat-sub">Led group this week</div><div className="db-stat-trend trend-up">New high ↑</div></div>
       </div>
@@ -82,14 +82,14 @@ function SocialTab() {
         <div className="db-chart-header"><span className="db-chart-title">Group activities this week</span></div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>{activities.map(([a, d, c, s], i) => <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 14px', background: 'var(--surface)', borderRadius: 10, border: '1px solid var(--border)' }}><div><div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', marginBottom: 3 }}>{a}</div><div style={{ fontSize: 12, color: 'var(--text3)' }}>{d}</div></div><span style={{ fontSize: 11, color: c, background: c + '15', padding: '4px 12px', borderRadius: 20, whiteSpace: 'nowrap' }}>{s}</span></div>)}</div>
       </div>
-      <div className="db-alert" style={{ background: 'rgba(52,211,153,.06)', borderColor: 'rgba(52,211,153,.2)' }}><span className="db-alert-icon">✅</span><div className="db-alert-body"><div className="db-alert-title" style={{ color: '#34D399' }}>Healthy Group Dynamic</div><div className="db-alert-msg">Aarav is actively contributing and leading group sessions. Social confidence improving week-on-week. No isolation signals detected.</div></div></div>
+      <div className="db-alert" style={{ background: 'rgba(52,211,153,.06)', borderColor: 'rgba(52,211,153,.2)' }}><span className="db-alert-icon">✅</span><div className="db-alert-body"><div className="db-alert-title" style={{ color: '#34D399' }}>Healthy Group Dynamic</div><div className="db-alert-msg">Alex is actively contributing and leading group sessions. Social confidence improving week-on-week. No isolation signals detected.</div></div></div>
     </div>
   )
 }
 
 function MonthlyTab() {
   const strengths = [['Curiosity', '#F59E0B', 88], ['Empathy', '#34D399', 76], ['Persistence', '#6366F1', 62], ['Creativity', '#E8653A', 80], ['Leadership', '#F59E0B', 54]]
-  const milestones = [['🏆', 'Led first group project independently — EVS received school praise'], ['📖', 'Co-authored 12-chapter story with friends across 3 weeks'], ['🧠', 'Mastered multiplication tables — zero prompts needed'], ['💚', 'Cried once, talked to Sakhi, resolved it — emotional growth detected']]
+  const milestones = [['🏆', 'Led first group project independently — EVS received school praise'], ['📖', 'Co-authored 12-chapter story with friends across 3 weeks'], ['🧠', 'Mastered multiplication tables — zero prompts needed'], ['💚', 'Cried once, talked to Playla, resolved it — emotional growth detected']]
   return (
     <div className="db-body">
       <div className="db-row db-row-3">

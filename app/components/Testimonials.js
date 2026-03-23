@@ -1,15 +1,15 @@
 const testimonials = [
   {
-    text: "The dashboard showed my daughter's stress spikes every Monday. Turns out she dreaded one class. We fixed it. I'd never have known without Sakhi.",
-    avatar: '👨', name: 'Rahul Krishnan', meta: 'Dad of 9-year-old · Mumbai', delay: 'd1',
+    text: "The dashboard showed my daughter's stress spikes every Monday. Turns out she dreaded one class. We fixed it. I'd never have known without Playla.",
+    avatar: '👨', name: 'David Nguyen', meta: 'Dad of 9-year-old · San Francisco', delay: 'd1',
   },
   {
-    text: "Sakhi remembered my son's love for space stories from week one. He calls it his best friend. The first time he said that, I actually cried.",
-    avatar: '👩', name: 'Priya Mehta', meta: 'Mom of 7-year-old · Hyderabad', delay: 'd2',
+    text: "Playla remembered my son's love for space stories from week one. He calls it his best friend. The first time he said that, I actually cried.",
+    avatar: '👩', name: 'Sarah Mitchell', meta: 'Mom of 7-year-old · Austin', delay: 'd2',
   },
   {
-    text: 'My son and three friends did their entire EVS project through the group feature. He came second in class. He has never been excited about school before.',
-    avatar: '👩', name: 'Sneha Agarwal', meta: 'Mom of 11-year-old · Bengaluru', delay: 'd3',
+    text: 'My son and three friends did their entire science project through the group feature. He came second in class. He has never been excited about school before.',
+    avatar: '👩', name: 'Emily Chen', meta: 'Mom of 11-year-old · New York', delay: 'd3',
   },
 ]
 
@@ -21,7 +21,7 @@ export default function Testimonials() {
           <div className="section-tag" style={{ color: 'var(--gold)', borderColor: 'rgba(245, 158, 11, 0.2)', background: 'rgba(245, 158, 11, 0.06)', margin: '0 auto', display: 'inline-flex' }}>
             ★ Beta Parents
           </div>
-          <h2 style={{ textAlign: 'center', marginTop: 14 }}>Families already <em>in love</em> with Sakhi.</h2>
+          <h2 style={{ textAlign: 'center', marginTop: 14 }}>Families already <em>in love</em> with Playla.</h2>
         </div>
         <div className="testi-grid">
           {testimonials.map((t, i) => (

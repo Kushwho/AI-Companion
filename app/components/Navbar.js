@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Link from 'next/link'
 
 export default function Navbar() {
   useEffect(() => {
@@ -13,15 +14,15 @@ export default function Navbar() {
 
   return (
     <nav id="nav">
-      <a className="nav-logo" href="#">
-        <span className="logo-dot"></span> Sakhi
+      <a className="nav-logo" href="/">
+        <span className="logo-dot"></span> Playla
       </a>
       <ul className="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#agents">Social Layer</a></li>
-        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><Link href="/stories">Stories</Link></li>
+        <li><a href="/#dashboard">Dashboard</a></li>
       </ul>
-      <a className="btn btn-primary" href="#waitlist">Reserve Your Spot</a>
+      <a className="btn btn-primary" href="/#waitlist">Reserve Your Spot</a>
     </nav>
   )
 }

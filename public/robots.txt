@@ -1,4 +1,4 @@
-# robots.txt for www.playla.org (Sakhi)
+# robots.txt for www.playla.org (Playla)
 # Last updated: 2026-03-23
 
 User-agent: *
