@@ -29,23 +29,46 @@ export default function SceneReader({ story, onNewStory }) {
     if (idx >= 0 && idx < story.scenes.length) {
       setSceneIndex(idx)
       setEnded(false)
-      setListening(false)
     }
   }, [story.scenes.length])
 
   const handleAudioEnded = useCallback(() => {
     if (isLastScene) {
-      autoAdvanceTimer.current = setTimeout(() => setEnded(true), 1500)
+      autoAdvanceTimer.current = setTimeout(() => setEnded(true), 500)
     } else {
       autoAdvanceTimer.current = setTimeout(() => {
         setSceneIndex((i) => i + 1)
-        setListening(false)
-      }, 1500)
+      }, 500)
     }
   }, [isLastScene])
 
+  // Auto-advance without audio — faster timing
+  useEffect(() => {
+    if (listening && scene?.audio_url) return
+    if (ended) return
+
+    const wordCount = (scene?.story_text || '').split(/\s+/).length
+    const readingTimeSec = Math.min(Math.max(Math.ceil(wordCount / 3.3), 3), 12)
+
+    autoAdvanceTimer.current = setTimeout(() => {
+      if (isLastScene) {
+        setEnded(true)
+      } else {
+        setSceneIndex((i) => i + 1)
+      }
+    }, readingTimeSec * 1000)
+
+    return () => {
+      if (autoAdvanceTimer.current) clearTimeout(autoAdvanceTimer.current)
+    }
+  }, [sceneIndex, isLastScene, ended, listening, scene?.audio_url, scene?.story_text])
+
   const handleListen = () => {
     setListening(true)
+  }
+
+  const handleStopListening = () => {
+    setListening(false)
   }
 
   if (ended) {
@@ -68,7 +91,19 @@ export default function SceneReader({ story, onNewStory }) {
   return (
     <div className="scene-reader">
       <div className="scene-reader-header">
-        <h2 className="story-title">{story.title}</h2>
+        <div className="scene-title-row">
+          <h2 className="story-title">{story.title}</h2>
+          {scene.audio_url && !listening && (
+            <button className="btn-listen-inline" onClick={handleListen}>
+              🔊 Listen
+            </button>
+          )}
+          {listening && (
+            <button className="btn-listen-inline active" onClick={handleStopListening}>
+              🔇 Stop
+            </button>
+          )}
+        </div>
         <span className="scene-badge">
           Scene {scene.scene_number} of {story.total_scenes}
         </span>
@@ -84,18 +119,12 @@ export default function SceneReader({ story, onNewStory }) {
 
       <div className="scene-text">{scene.story_text}</div>
 
-      {scene.audio_url && listening && (
+      {listening && scene.audio_url && (
         <AudioPlayer
           src={scene.audio_url}
           onEnded={handleAudioEnded}
           autoPlay={true}
         />
-      )}
-
-      {scene.audio_url && !listening && (
-        <button className="btn-listen" onClick={handleListen}>
-          🔊 Listen to this scene
-        </button>
       )}
 
       <div className="scene-nav">

@@ -385,31 +385,41 @@
   white-space: pre-line;
 }
 
-/* LISTEN BUTTON */
-.btn-listen {
+/* LISTEN BUTTON (inline next to title) */
+.scene-title-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 14px 24px;
-  border-radius: 12px;
-  font-size: 15px;
+  gap: 12px;
+}
+
+.btn-listen-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 13px;
   font-weight: 500;
   font-family: var(--font-outfit), "Outfit", sans-serif;
-  color: var(--text);
+  color: var(--text2);
   background: var(--surface2);
   border: 1px solid var(--border2);
   cursor: pointer;
   transition: all 0.25s;
-  margin-bottom: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.btn-listen:hover {
+.btn-listen-inline:hover {
   border-color: var(--terra);
   color: var(--terra2);
   background: rgba(232, 101, 58, 0.08);
-  box-shadow: 0 4px 16px var(--terra-glow);
+}
+
+.btn-listen-inline.active {
+  border-color: var(--terra);
+  color: var(--terra2);
+  background: rgba(232, 101, 58, 0.1);
 }
 
 /* AUDIO PLAYER */

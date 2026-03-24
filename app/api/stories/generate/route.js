@@ -10,7 +10,7 @@ export async function POST(request) {
     return Response.json({ error: 'Story idea must be under 500 characters' }, { status: 400 })
   }
 
-  const BACKEND_URL = process.env.STORY_BACKEND_URL || 'https://api.playla.in'
+  const BACKEND_URL = process.env.STORY_BACKEND_URL || 'https://34-180-58-37.sslip.io'
 
   try {
     const payload = { idea: idea.trim() }
