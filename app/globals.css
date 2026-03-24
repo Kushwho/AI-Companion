@@ -146,6 +146,7 @@ nav.scrolled {
   padding: 11px 26px;
   border-radius: 12px;
   font-size: 14px;
+  min-height: 48px;
   box-shadow: 0 4px 20px var(--terra-glow);
 }
 
