@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "2-3",
+    "range": "2-3 years",
+    "label": "Tiny Listeners",
+    "emoji": "👶",
+    "childAge": 3,
+    "numScenes": 2,
+    "metaTitle": "Stories for 2-3 Year Olds — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator for 2-3 year olds. Simple, colorful bedtime stories with repetition and gentle rhythms. Generate and listen instantly.",
+    "characteristics": "Very simple vocabulary, short sentences, lots of repetition, bright imagery, familiar objects, soothing rhythms. Stories should be 1-2 minutes long.",
+    "parentingTips": [
+      "Point to things in the story and name them — 'Look, a dog! What does a dog say?'",
+      "Use different voices for different characters to keep little ones engaged",
+      "Don't worry about finishing the story — follow your child's attention",
+      "Repetition is golden at this age. Reading the same story 10 times is perfectly normal and beneficial."
+    ],
+    "recommendedGenres": ["bedtime", "kids", "fairy-tale", "funny"],
+    "recommendedTopics": ["animals", "moon", "family", "food"],
+    "samplePrompts": [
+      "A story about a sleepy bunny going to bed",
+      "A puppy who makes friends at the park",
+      "A star who falls asleep in a child's hand"
+    ]
+  },
+  {
+    "slug": "3-4",
+    "range": "3-4 years",
+    "label": "Story Starters",
+    "emoji": "🧒",
+    "childAge": 4,
+    "numScenes": 2,
+    "metaTitle": "Stories for 3-4 Year Olds — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator for 3-4 year olds. Engaging tales with simple plots, lovable characters, and gentle lessons. Generate and listen instantly.",
+    "characteristics": "Simple plots with clear beginnings and endings, familiar settings (home, school, park), lovable animal characters, gentle humour, basic emotions.",
+    "parentingTips": [
+      "Ask 'What do you think happens next?' to build prediction skills",
+      "Let your child 'read' the pictures back to you",
+      "Connect story events to your child's life: 'Remember when we saw a butterfly too?'",
+      "This is the perfect age to start a bedtime story routine"
+    ],
+    "recommendedGenres": ["bedtime", "kids", "fairy-tale", "funny"],
+    "recommendedTopics": ["animals", "fairies", "moon", "food", "family"],
+    "samplePrompts": [
+      "A little bear who tries to count all the stars",
+      "A duck who wants to learn to swim",
+      "A magic crayon that draws real things"
+    ]
+  },
+  {
+    "slug": "4-5",
+    "range": "4-5 years",
+    "label": "Imagination Explorers",
+    "emoji": "🌟",
+    "childAge": 5,
+    "numScenes": 3,
+    "metaTitle": "Stories for 4-5 Year Olds — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator for 4-5 year olds. Imaginative tales with moral lessons, silly humor, and relatable characters. Generate and listen instantly.",
+    "characteristics": "Imaginative premises, moral lessons woven naturally into plots, silly humour, relatable characters (often animals), basic problem-solving in the story.",
+    "parentingTips": [
+      "Ask about the character's feelings: 'How do you think the fox felt?'",
+      "Encourage your child to retell the story in their own words",
+      "Discuss the moral naturally: 'What did the bear learn?'",
+      "Let kids choose the next story topic — it builds ownership and excitement"
+    ],
+    "recommendedGenres": ["kids", "funny", "fairy-tale", "bedtime", "adventure"],
+    "recommendedTopics": ["animals", "dinosaurs", "unicorns", "school", "cooking"],
+    "samplePrompts": [
+      "A cat who becomes the teacher for a day",
+      "A dinosaur who visits a modern school",
+      "A child who finds a tiny door in the garden"
+    ]
+  },
+  {
+    "slug": "5-6",
+    "range": "5-6 years",
+    "label": "Young Adventurers",
+    "emoji": "🎈",
+    "childAge": 6,
+    "numScenes": 3,
+    "metaTitle": "Stories for 5-6 Year Olds — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator for 5-6 year olds. Adventure stories with richer vocabulary, fun twists, and characters who solve problems. Generate and listen instantly.",
+    "characteristics": "Richer vocabulary with context clues, multi-step plots, characters who solve problems, gentle suspense, introduction of broader themes like teamwork and empathy.",
+    "parentingTips": [
+      "Introduce 'chapter' stories that span multiple nights to build anticipation",
+      "Ask 'What would you do if you were this character?'",
+      "Use new vocabulary from the story in daily conversation",
+      "Encourage your child to draw their favourite scene from the story"
+    ],
+    "recommendedGenres": ["adventure", "kids", "funny", "fairy-tale", "mystery"],
+    "recommendedTopics": ["dinosaurs", "space", "pirates", "superheroes", "school"],
+    "samplePrompts": [
+      "A kid who finds a magic map in their backpack",
+      "A baby dragon's first day at dragon school",
+      "Pirates who discover their treasure is a library"
+    ]
+  },
+  {
+    "slug": "6-8",
+    "range": "6-8 years",
+    "label": "Independent Readers",
+    "emoji": "📖",
+    "childAge": 7,
+    "numScenes": 3,
+    "metaTitle": "Stories for 6-8 Year Olds — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator for 6-8 year olds. Chapter-length adventures with complex plots, mystery, and humor. Generate and listen instantly.",
+    "characteristics": "Complex plots with subplots, diverse character motivations, introduction of mystery and suspense, humour with wordplay, stories that challenge without overwhelming.",
+    "parentingTips": [
+      "Let them read independently but discuss the story afterwards",
+      "Introduce different genres to find what they love most",
+      "Talk about character motivations: 'Why did she make that choice?'",
+      "This is a great age for stories that model problem-solving and resilience"
+    ],
+    "recommendedGenres": ["adventure", "mystery", "fantasy", "funny", "sci-fi"],
+    "recommendedTopics": ["dragons", "treasure-hunt", "robots", "superheroes", "time-travel"],
+    "samplePrompts": [
+      "A detective duo who solves mysteries at school",
+      "A robot who joins a human family",
+      "A fantasy world hidden inside a video game"
+    ]
+  },
+  {
+    "slug": "8-10",
+    "range": "8-10 years",
+    "label": "Deep Divers",
+    "emoji": "🔍",
+    "childAge": 9,
+    "numScenes": 3,
+    "metaTitle": "Stories for 8-10 Year Olds — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator for 8-10 year olds. Sophisticated adventures with emotional depth, moral complexity, and exciting twists. Generate and listen instantly.",
+    "characteristics": "Sophisticated narratives with emotional depth, moral ambiguity, multi-layered characters, real-world themes explored through fiction, longer attention span supported.",
+    "parentingTips": [
+      "Discuss themes and moral dilemmas: 'Was the character right to do that?'",
+      "Encourage them to write their own stories inspired by what they read",
+      "Introduce them to series that build world-knowledge over multiple stories",
+      "This age loves stories where kids are the heroes solving adult-sized problems"
+    ],
+    "recommendedGenres": ["mystery", "fantasy", "sci-fi", "horror", "adventure"],
+    "recommendedTopics": ["time-travel", "space", "wizards", "treasure-hunt", "robots"],
+    "samplePrompts": [
+      "A kid who discovers their town has a secret underground history",
+      "A time-traveller stuck in a loop trying to fix one mistake",
+      "An AI that becomes self-aware inside a kid's computer"
+    ]
+  },
+  {
+    "slug": "10-12",
+    "range": "10-12 years",
+    "label": "Story Masters",
+    "emoji": "🎭",
+    "childAge": 11,
+    "numScenes": 3,
+    "metaTitle": "Stories for 10-12 Year Olds — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator for 10-12 year olds. Complex narratives with nuanced themes, plot twists, and mature emotional depth. Generate and listen instantly.",
+    "characteristics": "Complex narratives with nuanced themes, unreliable narrators, plot twists, exploration of identity and belonging, stories that respect the reader's intelligence, can handle darker tones appropriately.",
+    "parentingTips": [
+      "Respect their reading preferences — this is the age where genre loyalty forms",
+      "Discuss books like peers, not like teacher-student",
+      "Introduce graphic novels and different narrative formats",
+      "Stories at this age often process real anxieties (peer pressure, identity) — let them"
+    ],
+    "recommendedGenres": ["mystery", "horror", "sci-fi", "fantasy", "romance"],
+    "recommendedTopics": ["time-travel", "wizards", "superheroes", "school", "space"],
+    "samplePrompts": [
+      "A teen who discovers they're a character in someone else's story",
+      "A horror mystery set in a boarding school",
+      "A group of friends who find a portal in the school library"
+    ]
+  }
+]

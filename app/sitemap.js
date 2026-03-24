@@ -1,7 +1,7 @@
-import genres from '@/data/genres.json'
-import themes from '@/data/themes.json'
-import topics from '@/data/topics.json'
-import ages from '@/data/ages.json'
+import genres from '../data/genres.json'
+import themes from '../data/themes.json'
+import topics from '../data/topics.json'
+import ages from '../data/ages.json'
 
 const BASE_URL = 'https://www.playla.org'
 

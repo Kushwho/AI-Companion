@@ -1,0 +1,522 @@
+[
+  {
+    "slug": "dinosaurs",
+    "name": "Dinosaurs",
+    "emoji": "🦕",
+    "category": "animals",
+    "defaultGenre": "adventure",
+    "metaTitle": "Dinosaur Story Generator — Free AI Dinosaur Stories for Kids | Playla",
+    "metaDescription": "Free AI dinosaur story generator. Create personalized bedtime stories about dinosaurs for kids. Generate and listen instantly.",
+    "introHook": "Children are fascinated by dinosaurs — these magnificent creatures spark imagination like nothing else. From towering T-Rexes to gentle long-necks, dinosaur stories take kids on adventures millions of years in the making.",
+    "promptPlaceholder": "Write a story about dinosaurs... e.g., 'A friendly T-Rex who runs a bakery in prehistoric times'",
+    "promptChips": [
+      "A baby dinosaur gets lost and makes unlikely friends",
+      "A time-traveling kid meets a gentle brontosaurus",
+      "Dinosaurs compete in the first-ever Dino Olympics"
+    ],
+    "funFacts": [
+      "The word 'dinosaur' means 'terrible lizard' in Greek, coined in 1842",
+      "Some dinosaurs were as small as chickens — the Microraptor was only 2 feet long",
+      "Dinosaurs lived on Earth for about 165 million years — humans have been around for just 300,000",
+      "The largest dinosaur, Argentinosaurus, weighed as much as 12 elephants"
+    ],
+    "ageRange": "3-10",
+    "relatedTopics": ["space", "jungle", "ocean", "volcanoes", "time-travel"],
+    "relatedThemes": ["bravery", "friendship", "curiosity"],
+    "searchVolume": 590
+  },
+  {
+    "slug": "space",
+    "name": "Space",
+    "emoji": "🚀",
+    "category": "adventure",
+    "defaultGenre": "sci-fi",
+    "metaTitle": "Space Story Generator — Free AI Space Stories for Kids | Playla",
+    "metaDescription": "Free AI space story generator. Create cosmic adventures about astronauts, planets, and aliens for kids. Generate and listen instantly.",
+    "introHook": "The universe is the ultimate adventure playground. Space stories let children explore galaxies, meet aliens, and discover that the cosmos is full of wonder waiting to be found.",
+    "promptPlaceholder": "Write a story about space... e.g., 'An astronaut kid who discovers a planet made entirely of music'",
+    "promptChips": [
+      "A family who lives on a space station orbiting Jupiter",
+      "A girl who befriends a star that's about to go supernova",
+      "Astronauts discover a library floating in space"
+    ],
+    "funFacts": [
+      "A day on Venus is longer than a year on Venus — it takes 243 Earth days to rotate once",
+      "There are more stars in the universe than grains of sand on all of Earth's beaches",
+      "Space is completely silent because there's no air for sound to travel through",
+      "Astronauts grow up to 2 inches taller in space because gravity isn't compressing their spine"
+    ],
+    "ageRange": "4-12",
+    "relatedTopics": ["robots", "aliens", "moon", "planets", "astronauts"],
+    "relatedThemes": ["bravery", "teamwork", "curiosity"],
+    "searchVolume": 400
+  },
+  {
+    "slug": "dragons",
+    "name": "Dragons",
+    "emoji": "🐉",
+    "category": "fantasy",
+    "defaultGenre": "fantasy",
+    "metaTitle": "Dragon Story Generator — Free AI Dragon Stories for Kids | Playla",
+    "metaDescription": "Free AI dragon story generator. Create magical tales of fire-breathing dragons and brave heroes. Generate and listen instantly.",
+    "introHook": "Dragons have captured human imagination for thousands of years. Whether fierce and fire-breathing or gentle and wise, dragon stories are about facing the extraordinary with courage.",
+    "promptPlaceholder": "Write a story about dragons... e.g., 'A dragon who's afraid of fire but dreams of becoming a chef'",
+    "promptChips": [
+      "A baby dragon who can't breathe fire and feels left out",
+      "A girl who discovers a dragon egg in her backyard",
+      "A dragon and a knight who become unexpected best friends"
+    ],
+    "funFacts": [
+      "Dragons appear in the mythology of nearly every culture on Earth",
+      "In Chinese culture, dragons are symbols of luck, power, and wisdom",
+      "The Komodo dragon, Earth's largest living lizard, can grow up to 10 feet long",
+      "The word 'dragon' comes from the Greek 'drakon' meaning 'large serpent'"
+    ],
+    "ageRange": "4-12",
+    "relatedTopics": ["wizards", "knights", "castles", "treasure-hunt"],
+    "relatedThemes": ["bravery", "friendship", "self-confidence"],
+    "searchVolume": 300
+  },
+  {
+    "slug": "pirates",
+    "name": "Pirates",
+    "emoji": "🏴‍☠️",
+    "category": "adventure",
+    "defaultGenre": "adventure",
+    "metaTitle": "Pirate Story Generator — Free AI Pirate Stories for Kids | Playla",
+    "metaDescription": "Free AI pirate story generator. Create swashbuckling tales of treasure hunts and sea adventures. Generate and listen instantly.",
+    "introHook": "Ahoy! Pirate stories are the ultimate adventure — buried treasure, mysterious maps, stormy seas, and the freedom of the open ocean. Every child dreams of sailing to uncharted islands.",
+    "promptPlaceholder": "Write a pirate story... e.g., 'A kid who finds a treasure map inside a library book'",
+    "promptChips": [
+      "A pirate captain whose treasure is a collection of rare books",
+      "A young stowaway on a friendly pirate ship",
+      "A parrot who knows the location of every treasure on earth"
+    ],
+    "funFacts": [
+      "Real pirates had rules called 'Articles of Agreement' — basically a pirate constitution",
+      "Pirates wore eye patches so one eye was always adjusted to the dark below deck",
+      "The most successful pirate in history was a Chinese woman named Ching Shih who commanded over 1,800 ships",
+      "Pirates really did bury treasure — Captain Kidd buried his on Long Island"
+    ],
+    "ageRange": "4-10",
+    "relatedTopics": ["ocean", "treasure-hunt", "islands", "ships"],
+    "relatedThemes": ["bravery", "teamwork", "friendship"],
+    "searchVolume": 200
+  },
+  {
+    "slug": "unicorns",
+    "name": "Unicorns",
+    "emoji": "🦄",
+    "category": "fantasy",
+    "defaultGenre": "fairy-tale",
+    "metaTitle": "Unicorn Story Generator — Free AI Unicorn Stories for Kids | Playla",
+    "metaDescription": "Free AI unicorn story generator. Create magical tales of unicorns, rainbows, and enchanted lands. Generate and listen instantly.",
+    "introHook": "Unicorns represent everything magical about childhood — wonder, beauty, and the belief that extraordinary things exist just beyond the ordinary.",
+    "promptPlaceholder": "Write a story about unicorns... e.g., 'A unicorn who paints rainbows across the sky every morning'",
+    "promptChips": [
+      "A unicorn who loses its horn and must find it before sunset",
+      "A child who discovers unicorns are real but invisible to adults",
+      "A unicorn school where young unicorns learn their first spells"
+    ],
+    "funFacts": [
+      "Unicorns appear in the myths of cultures across the world, from ancient Greece to medieval Europe",
+      "Scotland's national animal is the unicorn — it's been a Scottish symbol since the 12th century",
+      "A narwhal's tusk was once sold as a 'unicorn horn' and was worth more than gold",
+      "In medieval art, unicorns could only be tamed by someone pure of heart"
+    ],
+    "ageRange": "3-8",
+    "relatedTopics": ["fairies", "rainbows", "magic", "princesses"],
+    "relatedThemes": ["kindness", "self-confidence", "friendship"],
+    "searchVolume": 250
+  },
+  {
+    "slug": "underwater",
+    "name": "Underwater",
+    "emoji": "🌊",
+    "category": "adventure",
+    "defaultGenre": "adventure",
+    "metaTitle": "Underwater Story Generator — Free AI Ocean Stories for Kids | Playla",
+    "metaDescription": "Free AI underwater story generator. Create deep-sea adventures with mermaids, whales, and hidden treasures. Generate and listen instantly.",
+    "introHook": "Beneath the waves lies a world more mysterious than outer space. Underwater stories take children into coral kingdoms, sunken cities, and friendships with the most fascinating creatures on Earth.",
+    "promptPlaceholder": "Write an underwater story... e.g., 'A girl who can breathe underwater and discovers a hidden city'",
+    "promptChips": [
+      "A fish who dreams of seeing the world above the water",
+      "A submarine crew discovers a friendly octopus civilization",
+      "A mermaid school where students learn to ride seahorses"
+    ],
+    "funFacts": [
+      "More than 80% of the ocean is unexplored — there could be millions of undiscovered species",
+      "The deepest point in the ocean, the Mariana Trench, is deeper than Mount Everest is tall",
+      "Dolphins sleep with one eye open and one half of their brain awake",
+      "Coral reefs support 25% of all marine life despite covering less than 1% of the ocean floor"
+    ],
+    "ageRange": "4-10",
+    "relatedTopics": ["mermaids", "dolphins", "whales", "coral-reefs", "pirates"],
+    "relatedThemes": ["bravery", "friendship", "teamwork"],
+    "searchVolume": 150
+  },
+  {
+    "slug": "robots",
+    "name": "Robots",
+    "emoji": "🤖",
+    "category": "sci-fi",
+    "defaultGenre": "sci-fi",
+    "metaTitle": "Robot Story Generator — Free AI Robot Stories for Kids | Playla",
+    "metaDescription": "Free AI robot story generator. Create stories about robots, AI, and futuristic technology for kids. Generate and listen instantly.",
+    "introHook": "Robots fascinate children because they exist at the boundary of what's real and what's imagined. Robot stories explore what it means to be alive, to feel, and to connect.",
+    "promptPlaceholder": "Write a story about robots... e.g., 'A robot who wants to learn how to dream'",
+    "promptChips": [
+      "A robot who becomes a kindergarten teacher",
+      "A boy builds a robot best friend from spare parts",
+      "A robot dog who's more loyal than any real dog"
+    ],
+    "funFacts": [
+      "The word 'robot' comes from the Czech word 'robota' meaning 'forced work'",
+      "The first robot was created in 1954 — a mechanical arm used in a car factory",
+      "Japan has robot hotels where robots check you in and carry your luggage",
+      "NASA's Mars rovers are robots that have been exploring Mars since 2004"
+    ],
+    "ageRange": "5-12",
+    "relatedTopics": ["space", "school", "inventions", "future"],
+    "relatedThemes": ["friendship", "empathy", "teamwork"],
+    "searchVolume": 180
+  },
+  {
+    "slug": "school",
+    "name": "School",
+    "emoji": "🏫",
+    "category": "everyday",
+    "defaultGenre": "funny",
+    "metaTitle": "School Story Generator — Free AI School Stories for Kids | Playla",
+    "metaDescription": "Free AI school story generator. Create funny, relatable school adventures for kids. Generate and listen instantly.",
+    "introHook": "School is where friendships are forged, lessons are learned (not always from textbooks), and every day brings a new adventure. School stories capture the drama, comedy, and heart of growing up.",
+    "promptPlaceholder": "Write a story about school... e.g., 'A school play where everything goes hilariously wrong'",
+    "promptChips": [
+      "The class pet escapes and the whole school goes on a hunt",
+      "A new teacher who turns every lesson into a game",
+      "A school science fair experiment that accidentally works too well"
+    ],
+    "funFacts": [
+      "The longest school day in the world is in Chile — students attend for up to 10 hours",
+      "Finland has no homework for children under 16 and consistently ranks top in education",
+      "The oldest school in the world is the University of al-Qarawiyyin in Morocco, founded in 859 AD",
+      "In Japan, students clean their own classrooms — there are no janitors in most schools"
+    ],
+    "ageRange": "5-12",
+    "relatedTopics": ["friends", "sports", "science", "art"],
+    "relatedThemes": ["friendship", "bravery", "perseverance", "teamwork"],
+    "searchVolume": 350
+  },
+  {
+    "slug": "animals",
+    "name": "Animals",
+    "emoji": "🐾",
+    "category": "animals",
+    "defaultGenre": "kids",
+    "metaTitle": "Animal Story Generator — Free AI Animal Stories for Kids | Playla",
+    "metaDescription": "Free AI animal story generator. Create heartwarming tales about puppies, kittens, elephants, and more. Generate and listen instantly.",
+    "introHook": "Animals are children's first storytelling friends. From wise owls to silly puppies, animal stories teach empathy, responsibility, and the joy of our connection to the natural world.",
+    "promptPlaceholder": "Write a story about animals... e.g., 'A puppy who wants to fly like the birds in the sky'",
+    "promptChips": [
+      "A little elephant lost in the jungle who makes surprising friends",
+      "A fox cub and a rabbit who start a bakery together",
+      "A talking parrot who becomes the school announcer"
+    ],
+    "funFacts": [
+      "Elephants can recognize themselves in a mirror — only a few animals can do this",
+      "A group of flamingos is called a 'flamboyance'",
+      "Octopuses have three hearts and blue blood",
+      "Dogs can understand up to 250 words and gestures"
+    ],
+    "ageRange": "2-10",
+    "relatedTopics": ["jungle", "ocean", "farm", "pets"],
+    "relatedThemes": ["friendship", "kindness", "empathy", "sharing"],
+    "searchVolume": 400
+  },
+  {
+    "slug": "moon",
+    "name": "Moon",
+    "emoji": "🌙",
+    "category": "nature",
+    "defaultGenre": "bedtime",
+    "metaTitle": "Moon Story Generator — Free AI Moon Stories for Kids | Playla",
+    "metaDescription": "Free AI moon story generator. Create dreamy bedtime stories about the moon, stars, and night sky. Generate and listen instantly.",
+    "introHook": "The moon has inspired stories since the beginning of time. Glowing softly in the night sky, it's the perfect companion for bedtime tales filled with wonder and calm.",
+    "promptPlaceholder": "Write a story about the moon... e.g., 'The moon comes down to play with a lonely child'",
+    "promptChips": [
+      "A child who sends letters to the moon by tying them to balloons",
+      "The moon and the sun who are best friends but can never meet",
+      "A bunny who lives on the moon and makes dreams"
+    ],
+    "funFacts": [
+      "The same side of the moon always faces Earth — the 'dark side' gets just as much sunlight",
+      "Moonlight is actually reflected sunlight — the moon doesn't produce its own light",
+      "Footprints on the moon will last for millions of years because there's no wind or rain",
+      "The moon is slowly drifting away from Earth — about 1.5 inches per year"
+    ],
+    "ageRange": "2-8",
+    "relatedTopics": ["stars", "night", "dreams", "space"],
+    "relatedThemes": ["gratitude", "patience", "friendship"],
+    "searchVolume": 200
+  },
+  {
+    "slug": "superheroes",
+    "name": "Superheroes",
+    "emoji": "🦸",
+    "category": "fantasy",
+    "defaultGenre": "adventure",
+    "metaTitle": "Superhero Story Generator — Free AI Superhero Stories for Kids | Playla",
+    "metaDescription": "Free AI superhero story generator. Create stories about kids with amazing powers and heroic missions. Generate and listen instantly.",
+    "introHook": "Every child dreams of having superpowers. Superhero stories show that true heroism comes from choosing to help others — with or without a cape.",
+    "promptPlaceholder": "Write a superhero story... e.g., 'A kid whose superpower is making people laugh'",
+    "promptChips": [
+      "A superhero whose only power is being really, really kind",
+      "Siblings who discover they each have a different superpower",
+      "A retired superhero who becomes a school teacher"
+    ],
+    "funFacts": [
+      "The first comic book superhero was Superman, created in 1938",
+      "Spider-Man was inspired by a fly crawling on the wall of a writer's office",
+      "The word 'superhero' is actually trademarked jointly by DC and Marvel Comics",
+      "In ancient myths, heroes like Hercules and Achilles were the original superheroes"
+    ],
+    "ageRange": "4-12",
+    "relatedTopics": ["school", "city", "space", "inventions"],
+    "relatedThemes": ["bravery", "responsibility", "teamwork", "self-confidence"],
+    "searchVolume": 300
+  },
+  {
+    "slug": "christmas",
+    "name": "Christmas",
+    "emoji": "🎄",
+    "category": "holidays",
+    "defaultGenre": "bedtime",
+    "metaTitle": "Christmas Story Generator — Free AI Christmas Stories for Kids | Playla",
+    "metaDescription": "Free AI Christmas story generator. Create magical holiday tales about Santa, reindeer, and the spirit of giving. Generate and listen instantly.",
+    "introHook": "Christmas stories carry the magic of the season — twinkling lights, cozy firesides, and the warmth of giving. They remind us that the best gifts can't be wrapped.",
+    "promptPlaceholder": "Write a Christmas story... e.g., 'A reindeer who gets lost on Christmas Eve and is helped home by children'",
+    "promptChips": [
+      "Santa's youngest elf who saves Christmas with a creative idea",
+      "A snowman who comes alive on Christmas night",
+      "A family who discovers the true meaning of Christmas"
+    ],
+    "funFacts": [
+      "Santa Claus is based on St. Nicholas, a 4th-century Greek bishop known for his generosity",
+      "In Japan, it's a tradition to eat KFC on Christmas Day",
+      "The song 'Jingle Bells' was originally written for Thanksgiving, not Christmas",
+      "Rudolph the Red-Nosed Reindeer was created in 1939 as a colouring book for a department store"
+    ],
+    "ageRange": "3-12",
+    "relatedTopics": ["snow", "winter", "family", "gifts"],
+    "relatedThemes": ["kindness", "gratitude", "sharing", "family"],
+    "searchVolume": 450
+  },
+  {
+    "slug": "halloween",
+    "name": "Halloween",
+    "emoji": "🎃",
+    "category": "holidays",
+    "defaultGenre": "horror",
+    "metaTitle": "Halloween Story Generator — Free AI Halloween Stories for Kids | Playla",
+    "metaDescription": "Free AI Halloween story generator. Create spooky-fun tales of ghosts, witches, and trick-or-treating. Generate and listen instantly.",
+    "introHook": "Halloween is the one night where the spooky becomes fun. Halloween stories blend thrills with giggles, making the dark a little less scary and a lot more exciting.",
+    "promptPlaceholder": "Write a Halloween story... e.g., 'A friendly ghost who is terrible at haunting'",
+    "promptChips": [
+      "A witch's cat who accidentally turns the whole town purple",
+      "The new kid at school who turns out to be a vampire — a vegetarian one",
+      "A haunted house that's actually just a really messy house"
+    ],
+    "funFacts": [
+      "Halloween originated from the ancient Celtic festival of Samhain over 2,000 years ago",
+      "The first jack-o'-lanterns were made from turnips, not pumpkins",
+      "Americans spend over $10 billion on Halloween each year",
+      "Dressing up in costumes on Halloween started as a way to hide from ghosts"
+    ],
+    "ageRange": "4-12",
+    "relatedTopics": ["ghosts", "witches", "monsters", "candy"],
+    "relatedThemes": ["bravery", "friendship", "dealing-with-fear"],
+    "searchVolume": 500
+  },
+  {
+    "slug": "cooking",
+    "name": "Cooking",
+    "emoji": "👨‍🍳",
+    "category": "everyday",
+    "defaultGenre": "funny",
+    "metaTitle": "Cooking Story Generator — Free AI Cooking Stories for Kids | Playla",
+    "metaDescription": "Free AI cooking story generator. Create delicious tales of kitchen adventures and magical recipes. Generate and listen instantly.",
+    "introHook": "The kitchen is a place of magic — where flour and sugar become cake, and recipes become memories. Cooking stories combine creativity, science, and the universal joy of making something delicious.",
+    "promptPlaceholder": "Write a cooking story... e.g., 'A child who discovers their grandmother's secret recipe has magical properties'",
+    "promptChips": [
+      "A food truck run by a family of mice",
+      "A cooking competition between a kid and a professional chef",
+      "A magical recipe book where every dish grants a wish"
+    ],
+    "funFacts": [
+      "Chocolate chip cookies were invented by accident in 1938",
+      "Honey never spoils — archaeologists found 3,000-year-old honey in Egyptian tombs that was still edible",
+      "Bananas are technically berries, but strawberries are not",
+      "The world's most expensive pizza costs $12,000 and is topped with gold leaf and caviar"
+    ],
+    "ageRange": "4-10",
+    "relatedTopics": ["food", "family", "school", "festivals"],
+    "relatedThemes": ["patience", "teamwork", "sharing", "creativity"],
+    "searchVolume": 120
+  },
+  {
+    "slug": "jungle",
+    "name": "Jungle",
+    "emoji": "🌴",
+    "category": "adventure",
+    "defaultGenre": "adventure",
+    "metaTitle": "Jungle Story Generator — Free AI Jungle Stories for Kids | Playla",
+    "metaDescription": "Free AI jungle story generator. Create wild adventures in tropical rainforests with exotic animals. Generate and listen instantly.",
+    "introHook": "The jungle is alive with sounds, colours, and creatures found nowhere else on Earth. Jungle stories are adventures in the truest sense — where every step brings a new discovery.",
+    "promptPlaceholder": "Write a jungle story... e.g., 'A lost explorer who is guided home by a wise parrot'",
+    "promptChips": [
+      "A monkey who wants to start a school for jungle animals",
+      "A child raised by elephants who discovers human civilization",
+      "A tiger cub's first journey through the rainforest"
+    ],
+    "funFacts": [
+      "Rainforests produce 20% of the world's oxygen — they're called 'the lungs of the Earth'",
+      "A single rainforest tree can be home to 2,000 different species of insects",
+      "Jaguars are one of the few big cats that love swimming",
+      "Some bamboo species can grow up to 35 inches in a single day"
+    ],
+    "ageRange": "3-10",
+    "relatedTopics": ["animals", "birds", "rivers", "dinosaurs"],
+    "relatedThemes": ["bravery", "friendship", "teamwork"],
+    "searchVolume": 180
+  },
+  {
+    "slug": "time-travel",
+    "name": "Time Travel",
+    "emoji": "⏰",
+    "category": "sci-fi",
+    "defaultGenre": "sci-fi",
+    "metaTitle": "Time Travel Story Generator — Free AI Time Travel Stories for Kids | Playla",
+    "metaDescription": "Free AI time travel story generator. Create mind-bending adventures through past, present, and future. Generate and listen instantly.",
+    "introHook": "What if you could visit any moment in history — or see the future? Time travel stories are the ultimate 'what if,' blending science, history, and boundless imagination.",
+    "promptPlaceholder": "Write a time travel story... e.g., 'A watch that sends you back in time by exactly 24 hours'",
+    "promptChips": [
+      "A kid who accidentally goes back to when dinosaurs were alive",
+      "A girl who visits her grandmother as a child",
+      "A phone that only gets messages from the future"
+    ],
+    "funFacts": [
+      "Einstein's theory of relativity actually allows for time 'dilation' — time moves slower at high speeds",
+      "Astronauts on the ISS experience time slightly slower due to speed and gravity — technically time travellers",
+      "The concept of time travel first appeared in literature in 1895 with H.G. Wells' 'The Time Machine'",
+      "A clock at the top of a mountain runs slightly faster than one at sea level due to gravity"
+    ],
+    "ageRange": "6-12",
+    "relatedTopics": ["dinosaurs", "space", "robots", "history"],
+    "relatedThemes": ["responsibility", "perseverance", "empathy"],
+    "searchVolume": 200
+  },
+  {
+    "slug": "wizards",
+    "name": "Wizards",
+    "emoji": "🧙",
+    "category": "fantasy",
+    "defaultGenre": "fantasy",
+    "metaTitle": "Wizard Story Generator — Free AI Wizard Stories for Kids | Playla",
+    "metaDescription": "Free AI wizard story generator. Create magical tales of spells, potions, and wizard school. Generate and listen instantly.",
+    "introHook": "Wizards represent the dream of mastering the impossible. From bumbling apprentices to wise mentors, wizard stories show that true magic comes from knowledge, practice, and heart.",
+    "promptPlaceholder": "Write a wizard story... e.g., 'A young wizard who accidentally turns everything they touch into chocolate'",
+    "promptChips": [
+      "A wizard school where the homework literally fights back",
+      "An old wizard who retires and opens a pet shop",
+      "A clumsy wizard's apprentice who saves the day by accident"
+    ],
+    "funFacts": [
+      "The word 'wizard' comes from the Middle English 'wysard' meaning 'wise one'",
+      "In medieval times, people believed wizards kept their power in their staffs or wands",
+      "Merlin, the most famous wizard, first appeared in literature around 1136 AD",
+      "Alchemy — the 'real magic' of the Middle Ages — actually led to the development of modern chemistry"
+    ],
+    "ageRange": "5-12",
+    "relatedTopics": ["dragons", "potions", "castles", "enchanted-forest"],
+    "relatedThemes": ["perseverance", "self-confidence", "responsibility"],
+    "searchVolume": 200
+  },
+  {
+    "slug": "mermaids",
+    "name": "Mermaids",
+    "emoji": "🧜‍♀️",
+    "category": "fantasy",
+    "defaultGenre": "fairy-tale",
+    "metaTitle": "Mermaid Story Generator — Free AI Mermaid Stories for Kids | Playla",
+    "metaDescription": "Free AI mermaid story generator. Create enchanting tales of underwater kingdoms and ocean magic. Generate and listen instantly.",
+    "introHook": "Mermaids bridge two worlds — land and sea. Their stories explore belonging, identity, and the courage to be yourself, even when you feel caught between worlds.",
+    "promptPlaceholder": "Write a mermaid story... e.g., 'A mermaid who discovers she can walk on land during full moons'",
+    "promptChips": [
+      "A mermaid princess who prefers the library to the palace",
+      "A boy who finds a mermaid in the local swimming pool",
+      "A mermaid school where students learn to create tidal waves"
+    ],
+    "funFacts": [
+      "Mermaid legends exist in nearly every coastal culture around the world",
+      "Manatees are believed to be the origin of many mermaid sightings by sailors",
+      "In Japanese mythology, mermaids (ningyo) are fish with human faces",
+      "The oldest mermaid legend is from Assyria (modern Iraq), dating back to 1000 BC"
+    ],
+    "ageRange": "3-10",
+    "relatedTopics": ["underwater", "ocean", "dolphins", "coral-reefs"],
+    "relatedThemes": ["self-confidence", "bravery", "friendship"],
+    "searchVolume": 200
+  },
+  {
+    "slug": "treasure-hunt",
+    "name": "Treasure Hunt",
+    "emoji": "🗺️",
+    "category": "adventure",
+    "defaultGenre": "adventure",
+    "metaTitle": "Treasure Hunt Story Generator — Free AI Treasure Hunt Stories | Playla",
+    "metaDescription": "Free AI treasure hunt story generator. Create thrilling tales of maps, clues, and hidden treasure. Generate and listen instantly.",
+    "introHook": "The thrill of following clues, decoding riddles, and discovering hidden treasure is irresistible. Treasure hunt stories turn reading itself into an adventure.",
+    "promptPlaceholder": "Write a treasure hunt story... e.g., 'A map found inside an old book leads to a surprise in the school garden'",
+    "promptChips": [
+      "A birthday treasure hunt that leads through the whole neighbourhood",
+      "A pirate's treasure map that shows up on a kid's tablet",
+      "Grandmother's recipe box contains clues to a family treasure"
+    ],
+    "funFacts": [
+      "The largest buried treasure ever found was worth over $17 billion — a Spanish galleon off Colombia",
+      "Geocaching is a modern-day treasure hunt — there are over 3 million geocaches hidden worldwide",
+      "The Oak Island Money Pit in Canada has been searched for treasure for over 200 years without success",
+      "In 2010, a man hid a chest of gold in the Rocky Mountains and published a poem with clues — it was found 10 years later"
+    ],
+    "ageRange": "5-12",
+    "relatedTopics": ["pirates", "maps", "riddles", "castles"],
+    "relatedThemes": ["teamwork", "perseverance", "bravery"],
+    "searchVolume": 150
+  },
+  {
+    "slug": "fairies",
+    "name": "Fairies",
+    "emoji": "🧚",
+    "category": "fantasy",
+    "defaultGenre": "fairy-tale",
+    "metaTitle": "Fairy Story Generator — Free AI Fairy Stories for Kids | Playla",
+    "metaDescription": "Free AI fairy story generator. Create enchanting tales of tiny magical beings and their woodland homes. Generate and listen instantly.",
+    "introHook": "Fairies are the gentle magic of nature — tiny beings who live in flowers, dance on moonbeams, and sprinkle wonder wherever they go. Fairy stories remind us that magic is everywhere if you look closely enough.",
+    "promptPlaceholder": "Write a fairy story... e.g., 'A fairy who loses her wings and discovers she can still do magic'",
+    "promptChips": [
+      "A tooth fairy who accidentally takes the wrong tooth",
+      "A fairy village hidden inside an old oak tree",
+      "A clumsy fairy who keeps granting wishes backwards"
+    ],
+    "funFacts": [
+      "The Tooth Fairy tradition started in early 20th-century America",
+      "In Irish folklore, fairies live in 'fairy forts' — ancient ring forts still protected by law today",
+      "The original fairy tales by the Brothers Grimm were much darker than modern versions",
+      "In Nordic mythology, fairies (elves) were considered powerful nature spirits"
+    ],
+    "ageRange": "3-8",
+    "relatedTopics": ["unicorns", "enchanted-forest", "flowers", "magic"],
+    "relatedThemes": ["kindness", "self-confidence", "patience"],
+    "searchVolume": 150
+  }
+]

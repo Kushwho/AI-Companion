@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import genres from '@/data/genres.json'
+import genres from '../../../data/genres.json'
 import StoryGeneratorWidget from '../components/StoryGeneratorWidget'
 import StoryBreadcrumbs from '../components/StoryBreadcrumbs'
 import StoryJsonLd from '../components/StoryJsonLd'

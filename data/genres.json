@@ -1,0 +1,494 @@
+[
+  {
+    "slug": "fantasy-story-generator",
+    "genreId": "fantasy",
+    "name": "Fantasy",
+    "emoji": "🏰",
+    "color": "var(--purple)",
+    "h1": "Free Fantasy Story Generator — Create & Listen",
+    "metaTitle": "Fantasy Story Generator — Free AI Fantasy Stories | Playla",
+    "metaDescription": "Free AI fantasy story generator. Create unique fantasy adventures with magic, dragons, and epic quests. Generate and listen to your story instantly.",
+    "promptPlaceholder": "Describe your fantasy adventure... e.g., 'An elf discovers a sword that can talk and must save a kingdom'",
+    "promptChips": [
+      "A young wizard's first spell goes hilariously wrong",
+      "A dragon who's afraid of fire befriends a knight",
+      "A magical forest where the trees can walk and talk"
+    ],
+    "description": "Fantasy stories transport readers to worlds where magic is real, impossible creatures roam, and ordinary people discover extraordinary powers. From epic quests to quiet magical moments, fantasy lets imagination run wild.",
+    "writingTips": [
+      "Start with a unique magical system — what are its rules and limits?",
+      "Give your hero a flaw that magic can't fix",
+      "Build your world through small details, not info dumps",
+      "The best fantasy stories reflect real emotions in unreal settings"
+    ],
+    "faqs": [
+      {
+        "q": "What kinds of fantasy stories can I generate?",
+        "a": "Anything from epic high fantasy with dragons and wizards to cozy fantasy about magical bakeries. Just describe your idea in the prompt box and Playla will create a unique story."
+      },
+      {
+        "q": "Can I generate fantasy stories for kids?",
+        "a": "Yes! Playla creates age-appropriate content. You can specify the age range or simply describe a kid-friendly scenario in your prompt."
+      }
+    ],
+    "relatedGenres": ["adventure-story-generator", "fairy-tale-generator", "mystery-story-generator"],
+    "relatedTopics": ["dragons", "wizards", "mermaids", "enchanted-forest", "magical-kingdom"],
+    "searchVolume": 720,
+    "sampleStory": {
+      "title": "The Mapmaker's Secret",
+      "text": "In the quiet town of Willowmere, twelve-year-old Anya discovered something extraordinary about her grandmother's old maps — they moved. Rivers shimmered, mountains cast tiny shadows, and if you looked closely, you could see little figures walking the trails.\n\nOne rainy afternoon, while tracing a path through the Silverwood Forest on the oldest map, Anya's finger slipped — and she fell right through the parchment.\n\nShe landed in a meadow of luminous flowers, each petal glowing a different colour. A fox made entirely of starlight trotted up to her. 'You're the new Mapmaker,' it said matter-of-factly. 'The old one — your grandmother — she said you'd come.'\n\nAnya learned that every map her grandmother had drawn was a door to a different world. But the maps were fading. Without a Mapmaker to redraw them, the worlds would disappear forever.\n\nWith a quill that wrote in light and a compass that pointed toward stories yet untold, Anya set out to save every world her grandmother had ever imagined — starting with Silverwood, where the trees whispered secrets and the rivers remembered everything.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "horror-story-generator",
+    "genreId": "horror",
+    "name": "Horror",
+    "emoji": "👻",
+    "color": "var(--terra)",
+    "h1": "Free Horror Story Generator — Create & Listen",
+    "metaTitle": "Horror Story Generator — Free AI Horror Stories | Playla",
+    "metaDescription": "Free AI horror story generator. Create spine-tingling tales of mystery and suspense. Generate and listen to your horror story instantly.",
+    "promptPlaceholder": "Describe your spooky scenario... e.g., 'A house where the mirrors show a different version of you'",
+    "promptChips": [
+      "A doll that only moves when no one is watching",
+      "A lighthouse keeper hears knocking from inside the walls",
+      "The last person on earth hears a doorbell ring"
+    ],
+    "description": "Horror stories tap into our deepest fears, creating tension and suspense that keeps readers turning pages. From ghostly encounters to psychological thrillers, horror challenges us to face the unknown.",
+    "writingTips": [
+      "What you don't show is scarier than what you do — let imagination fill the gaps",
+      "Ground the horror in a normal, relatable setting before introducing the strange",
+      "Build tension gradually with small, unsettling details",
+      "The best horror stories have an emotional core beneath the scares"
+    ],
+    "faqs": [
+      {
+        "q": "Are the horror stories scary for kids?",
+        "a": "Playla calibrates the intensity based on your prompt. For kid-friendly spooky stories, mention it in your idea. For more intense horror, describe scarier scenarios."
+      },
+      {
+        "q": "What sub-genres of horror can I generate?",
+        "a": "Psychological horror, ghost stories, monster tales, suspense thrillers, dark fairy tales, and more. Just describe the mood you want in your prompt."
+      }
+    ],
+    "relatedGenres": ["mystery-story-generator", "fantasy-story-generator", "sci-fi-story-generator"],
+    "relatedTopics": ["haunted-house", "ghosts", "monsters"],
+    "searchVolume": 590,
+    "sampleStory": {
+      "title": "The Mirror Game",
+      "text": "Ruby found the antique mirror at a garage sale. It was oval, framed in tarnished silver, and cost three dollars. That night, she hung it in her bedroom.\n\nAt first, she thought it was her imagination — the reflection was always half a second behind. She'd turn her head, and Mirror-Ruby would follow... just a beat too late.\n\nBy Tuesday, Mirror-Ruby started smiling when Ruby wasn't. By Thursday, Mirror-Ruby was wearing different clothes. By Saturday, Mirror-Ruby held up a sign: 'LET ME OUT.'\n\nRuby covered the mirror with a sheet. But in the morning, the sheet was on the floor, folded neatly. And Mirror-Ruby was gone. The mirror showed only an empty bedroom.\n\nThat's when Ruby noticed her own hands looked strange — slightly transparent, shimmering at the edges. She pressed her palm against the glass. It went right through.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "romance-story-generator",
+    "genreId": "romance",
+    "name": "Romance",
+    "emoji": "💕",
+    "color": "#ec4899",
+    "h1": "Free Romance Story Generator — Create & Listen",
+    "metaTitle": "Romance Story Generator — Free AI Romance Stories | Playla",
+    "metaDescription": "Free AI romance story generator. Create heartwarming love stories and romantic adventures. Generate and listen to your romance story instantly.",
+    "promptPlaceholder": "Describe your love story... e.g., 'Two rival bakers who keep leaving anonymous love notes'",
+    "promptChips": [
+      "Pen pals who don't know they're next-door neighbours",
+      "A florist and an allergist who keep bumping into each other",
+      "Two astronauts assigned to the same space station"
+    ],
+    "description": "Romance stories explore the most universal human experience — connection. From meet-cutes to epic love stories, romance celebrates the joy, vulnerability, and courage of opening your heart.",
+    "writingTips": [
+      "Give each character a full life beyond the romance — hobbies, goals, friends",
+      "Tension comes from obstacles, not just attraction",
+      "The best romantic moments are specific and surprising, not generic",
+      "Let the characters change each other for the better"
+    ],
+    "faqs": [
+      {
+        "q": "Can I generate clean romance stories?",
+        "a": "Absolutely. Playla generates wholesome, heartfelt romance by default. Specify the tone in your prompt — sweet, dramatic, funny, or adventurous."
+      },
+      {
+        "q": "What romance sub-genres work best?",
+        "a": "Everything from contemporary to historical, fantasy romance to romantic comedy. Describe the setting and mood you want."
+      }
+    ],
+    "relatedGenres": ["funny-story-generator", "fantasy-story-generator", "short-story-generator"],
+    "relatedTopics": ["friendship", "school", "travel"],
+    "searchVolume": 480,
+    "sampleStory": {
+      "title": "The Bookmark",
+      "text": "Every week, someone left a bookmark in the same library book Maya was reading. Not a plain bookmark — a hand-painted one with tiny illustrations that matched the chapter.\n\nFor the dragon chapter, a watercolour dragon the size of a postage stamp. For the chapter about the sea, a miniature octopus in turquoise ink. Each one more beautiful than the last.\n\nMaya started leaving notes tucked inside the book. 'These are incredible. Who are you?'\n\nThe next week, instead of a bookmark, she found a note: 'I'm the one who checks out the book after you. Your margin notes make the story better.'\n\nThey wrote to each other through the book for three months. Maya would add margin notes, and the mystery artist would illustrate them. The librarian watched the whole thing unfold, smiling, never saying a word.\n\nThe day the book was due for the last time, Maya found a final bookmark — a painting of two people reading the same book, sitting back to back. On the flip side: 'Coffee? Wednesday? The café across the street. I'll be the one with paint on my hands.'",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "bedtime-story-generator",
+    "genreId": "bedtime",
+    "name": "Bedtime",
+    "emoji": "🌙",
+    "color": "var(--blue)",
+    "h1": "Free Bedtime Story Generator — Create & Listen",
+    "metaTitle": "Bedtime Story Generator — Free AI Bedtime Stories | Playla",
+    "metaDescription": "Free AI bedtime story generator for kids. Create soothing, personalized bedtime stories. Generate and listen with calming narration.",
+    "promptPlaceholder": "Describe a cozy bedtime story... e.g., 'A little bear who can't fall asleep and counts the stars'",
+    "promptChips": [
+      "A moon who comes down to tuck the animals in",
+      "A cloud that collects children's dreams",
+      "A sleepy owl who reads stories to the forest"
+    ],
+    "description": "Bedtime stories are the gentle bridge between the busy day and peaceful sleep. With soothing language, warm characters, and calming rhythms, these stories create the perfect end-of-day ritual.",
+    "writingTips": [
+      "Use soft, rhythmic language that naturally slows the reader down",
+      "End with the character falling asleep or settling into comfort",
+      "Include sensory details — warm blankets, starlight, gentle breezes",
+      "Keep the plot simple and reassuring with no unresolved tension"
+    ],
+    "faqs": [
+      {
+        "q": "What age range are the bedtime stories for?",
+        "a": "Playla creates bedtime stories for ages 2-12. The language complexity automatically adjusts based on the story context, or you can specify an age in your prompt."
+      },
+      {
+        "q": "Can I listen to the bedtime story as audio?",
+        "a": "Yes! Every generated story comes with audio narration. Perfect for listening in bed with the lights dimmed."
+      }
+    ],
+    "relatedGenres": ["fairy-tale-generator", "funny-story-generator", "kids-story-generator"],
+    "relatedTopics": ["moon", "stars", "bears", "rabbits", "sleep"],
+    "searchVolume": 90,
+    "sampleStory": {
+      "title": "The Sleepy Cloud",
+      "text": "High above the rooftops, a little cloud named Nimboo yawned so wide that a rainbow tumbled out.\n\n'Oh dear,' said Nimboo, catching the colours before they fell on the sleeping town below. 'It's much too late for rainbows.'\n\nNimboo floated past the moon, who was already wearing her nightcap. 'Having trouble sleeping again?' she asked kindly.\n\n'I can't help it,' said Nimboo. 'I keep thinking about all the wonderful things I saw today — the children playing in the park, the puppy chasing butterflies, the old man feeding pigeons.'\n\nThe moon smiled. 'Why don't you turn those memories into dreams? Sprinkle them gently over the town.'\n\nSo Nimboo drifted slowly over each rooftop, letting soft wisps of cloud float down through chimneys and open windows. Each wisp carried a happy memory — now a dream for someone sleeping below.\n\nThe child who'd played in the park dreamed of flying. The puppy dreamed of butterflies made of cheese. The old man dreamed he was young again, feeding pigeons that sang opera.\n\nAnd Nimboo? Finally light enough to rest, Nimboo settled on the moon's shoulder and fell fast asleep.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "fairy-tale-generator",
+    "genreId": "fairy-tale",
+    "name": "Fairy Tale",
+    "emoji": "🧚",
+    "color": "var(--jade)",
+    "h1": "Free Fairy Tale Generator — Create & Listen",
+    "metaTitle": "Fairy Tale Generator — Free AI Fairy Tales | Playla",
+    "metaDescription": "Free AI fairy tale generator. Create enchanting fairy tales with magical creatures and happy endings. Generate and listen instantly.",
+    "promptPlaceholder": "Describe your fairy tale... e.g., 'A princess who trades her crown for a pair of running shoes'",
+    "promptChips": [
+      "A frog prince who doesn't want to be kissed back",
+      "A fairy godmother who keeps getting the spells wrong",
+      "A giant who's afraid of heights"
+    ],
+    "description": "Fairy tales are timeless stories that blend magic with life lessons. With enchanted forests, clever heroes, and surprising twists, they teach us that courage and kindness can overcome any obstacle.",
+    "writingTips": [
+      "Start with 'Once upon a time' — or subvert the classic opening for a modern twist",
+      "Include the rule of three: three wishes, three challenges, three siblings",
+      "Give the villain a reason — the best fairy tales have complex antagonists",
+      "End with a lesson that feels earned, not forced"
+    ],
+    "faqs": [
+      {
+        "q": "Can I create modern fairy tales?",
+        "a": "Absolutely! Playla excels at modern fairy tales that blend classic tropes with contemporary settings. Try 'A fairy tale set in a city where skyscrapers grow like beanstalks.'"
+      },
+      {
+        "q": "Are fairy tales only for young children?",
+        "a": "Not at all. Classic fairy tales were originally for all ages. Specify your preferred tone — from simple and sweet to complex and layered."
+      }
+    ],
+    "relatedGenres": ["fantasy-story-generator", "bedtime-story-generator", "kids-story-generator"],
+    "relatedTopics": ["fairies", "princesses", "magic", "enchanted-forest"],
+    "searchVolume": 110,
+    "sampleStory": {
+      "title": "The Girl Who Planted Stars",
+      "text": "Once upon a time, in a village where the night sky had gone completely dark, a girl named Lila found a seed that glowed silver.\n\nHer grandmother told her: 'That's a star seed, child. Plant it in high ground, water it with a true wish, and a new star will grow.'\n\nLila climbed the tallest hill. She planted the seed, then closed her eyes. 'I wish for light,' she whispered, 'not just for me, but for everyone who's afraid of the dark.'\n\nBy morning, a silver sapling had sprouted. By evening, it was as tall as a house, its branches reaching into the sky. At the very top, a bright new star blinked to life.\n\nThe villagers cheered. But Lila noticed her grandmother had given her a whole pouch of seeds.\n\n'One star is beautiful,' Lila said, 'but a sky full of them is a story.'\n\nSo she planted one star for every person who needed hope. A star for the baker who missed his wife. A star for the little boy who was scared of storms. A star for the old dog who liked to howl at the moon.\n\nAnd if you look up tonight, every star you see? Someone wished it there for you.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "sci-fi-story-generator",
+    "genreId": "sci-fi",
+    "name": "Sci-Fi",
+    "emoji": "🚀",
+    "color": "var(--blue)",
+    "h1": "Free Sci-Fi Story Generator — Create & Listen",
+    "metaTitle": "Sci-Fi Story Generator — Free AI Science Fiction Stories | Playla",
+    "metaDescription": "Free AI sci-fi story generator. Create futuristic tales of space, technology, and beyond. Generate and listen to your sci-fi story instantly.",
+    "promptPlaceholder": "Describe your sci-fi concept... e.g., 'A kid who discovers their school is actually a spaceship'",
+    "promptChips": [
+      "A robot who wants to learn how to dream",
+      "The last library in the universe is on a comet",
+      "A girl finds a phone that calls the future"
+    ],
+    "description": "Science fiction imagines the future, explores technology's impact on humanity, and asks the biggest 'what if' questions. From space operas to near-future thrillers, sci-fi expands what we believe is possible.",
+    "writingTips": [
+      "Ground futuristic technology in a human problem — tech is the setting, not the story",
+      "One big 'what if' per story keeps things focused and powerful",
+      "Show how society changes alongside the technology",
+      "The best sci-fi is about today, disguised as tomorrow"
+    ],
+    "faqs": [
+      {
+        "q": "What kinds of sci-fi stories can I generate?",
+        "a": "Space exploration, time travel, AI and robots, dystopian futures, alien encounters, cyberpunk, and more. Describe your concept and Playla brings it to life."
+      },
+      {
+        "q": "Can I generate kid-friendly sci-fi?",
+        "a": "Yes! Kids love space adventures and friendly robots. Mention the age range in your prompt for perfectly calibrated stories."
+      }
+    ],
+    "relatedGenres": ["fantasy-story-generator", "adventure-story-generator", "mystery-story-generator"],
+    "relatedTopics": ["space", "robots", "time-travel", "aliens"],
+    "searchVolume": 90,
+    "sampleStory": {
+      "title": "The Last Upload",
+      "text": "In 2089, nobody read books anymore. Stories were uploaded directly into your brain — thirty seconds for a novel, emotions included.\n\nTwelve-year-old Kai was the fastest reader at Nexus Academy. He could absorb an entire fantasy trilogy during lunch break. But something was wrong. The stories felt... hollow. Like eating a meal but never feeling full.\n\nOne day, he found a room behind the school library that nobody knew about. Inside was a dusty shelf with actual paper books. He picked one up — 'The Little Prince' — and opened it.\n\nIt took him three days to finish it. Three entire days for a book that was barely a hundred pages. He had to sound out words, imagine the pictures himself, and sometimes he'd read the same sentence four times because it was so beautiful.\n\nWhen he finally closed the book, he was crying. Not the programmed tears of an upload, but real ones. He didn't know why.\n\nKai started sneaking into the hidden room every day. He read slowly, painfully, joyfully. And for the first time in his life, the stories stayed with him — not in his memory banks, but somewhere deeper. Somewhere the uploads couldn't reach.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "funny-story-generator",
+    "genreId": "funny",
+    "name": "Funny",
+    "emoji": "😂",
+    "color": "var(--gold)",
+    "h1": "Free Funny Story Generator — Create & Listen",
+    "metaTitle": "Funny Story Generator — Free AI Comedy Stories | Playla",
+    "metaDescription": "Free AI funny story generator. Create hilarious tales that make you laugh out loud. Generate and listen to your comedy story instantly.",
+    "promptPlaceholder": "Describe something hilarious... e.g., 'A superhero whose only power is making people sneeze'",
+    "promptChips": [
+      "A cat who accidentally becomes mayor of a small town",
+      "A wizard who can only do magic when nobody is looking",
+      "A pirate ship crewed entirely by penguins"
+    ],
+    "description": "Laughter is the best story engine. Funny stories use wordplay, absurd situations, and lovable characters to create joy. Comedy teaches us not to take life too seriously while sneaking in surprisingly deep moments.",
+    "writingTips": [
+      "The funniest stories start with a ridiculous premise played completely straight",
+      "Comedy comes from specificity — 'a poodle named Gerald' is funnier than 'a dog'",
+      "Escalation is key: start absurd, then make it absurder",
+      "End on a laugh, but also on a heart — the best comedy has both"
+    ],
+    "faqs": [
+      {
+        "q": "What kinds of funny stories can I create?",
+        "a": "Slapstick, absurdist comedy, puns, witty dialogue, silly adventures, and more. Describe the type of humour you enjoy and Playla will match it."
+      },
+      {
+        "q": "Are the funny stories kid-appropriate?",
+        "a": "By default, yes! Playla generates clean, family-friendly humour. Kids especially love animal comedy and ridiculous adventure scenarios."
+      }
+    ],
+    "relatedGenres": ["fairy-tale-generator", "adventure-story-generator", "kids-story-generator"],
+    "relatedTopics": ["school", "animals", "food", "superheroes"],
+    "searchVolume": 90,
+    "sampleStory": {
+      "title": "The Penguin Crew",
+      "text": "Captain Waddles had a problem. His pirate ship, the Salty Sardine, was crewed entirely by penguins, and not a single one of them could read a map.\n\n'Land ho!' shouted First Mate Tux, pointing at a cloud.\n\n'That's not land, Tux. That's the sky.'\n\n'Same shape though, innit?'\n\nCaptain Waddles sighed. He'd put out an ad for crew members: 'Seeking brave sailors for adventure on the high seas.' He forgot to specify species.\n\nThe penguins were enthusiastic, he'd give them that. They polished the cannons (then slid down them), they swabbed the deck (then belly-slid across it), and they kept the ship's cat very, very nervous.\n\n'Captain!' called the lookout from the crow's nest. 'I see an island!'\n\n'Is it an actual island or is it another whale?'\n\n'...Fifty-fifty.'\n\nIt was a whale. Again. The whale, whose name was Margaret, was getting quite tired of being mistaken for land. 'Do I look like an island?' she asked.\n\n'You're roughly the same size,' said Captain Waddles diplomatically.\n\nMargaret considered this. 'Fair point. Hop on then. Where are you lot headed?'\n\n'We have absolutely no idea,' said Captain Waddles cheerfully.\n\n'Perfect,' said Margaret. 'Neither do I.'",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "mystery-story-generator",
+    "genreId": "mystery",
+    "name": "Mystery",
+    "emoji": "🔍",
+    "color": "var(--jade)",
+    "h1": "Free Mystery Story Generator — Create & Listen",
+    "metaTitle": "Mystery Story Generator — Free AI Mystery Stories | Playla",
+    "metaDescription": "Free AI mystery story generator. Create gripping whodunits and detective tales. Generate and listen to your mystery story instantly.",
+    "promptPlaceholder": "Describe your mystery... e.g., 'A detective who solves crimes by reading people's grocery lists'",
+    "promptChips": [
+      "A painting in a museum that changes overnight",
+      "Someone is leaving riddles all over the school",
+      "A missing birthday cake and five suspicious guests"
+    ],
+    "description": "Mystery stories are puzzles wrapped in narrative. With clues to follow, suspects to question, and revelations to uncover, they engage the reader's mind while keeping them on the edge of their seat.",
+    "writingTips": [
+      "Plant three clues early on — one obvious, one subtle, one that only makes sense at the end",
+      "Every suspect should have a believable motive",
+      "The solution should be surprising but fair — the reader should be able to figure it out",
+      "Red herrings are fun but use them sparingly"
+    ],
+    "faqs": [
+      {
+        "q": "Can kids solve the mystery stories?",
+        "a": "Yes! Playla creates mysteries with clues that are fun to follow. Great for developing critical thinking and deductive reasoning."
+      },
+      {
+        "q": "What types of mysteries can I generate?",
+        "a": "Whodunits, treasure hunts, missing object mysteries, code-breaking adventures, and more. Describe the type of puzzle you want."
+      }
+    ],
+    "relatedGenres": ["horror-story-generator", "adventure-story-generator", "sci-fi-story-generator"],
+    "relatedTopics": ["detectives", "treasure-hunt", "school", "secret-codes"],
+    "searchVolume": 70,
+    "sampleStory": {
+      "title": "The Lunch Box Enigma",
+      "text": "When Emma opened her lunch box on Monday, her sandwich was gone and in its place was a note: 'Follow the trail of crumbs.'\n\nEmma was not amused. She was, however, very curious.\n\nThe crumbs led from the classroom to the library, where she found her eraser — the one she'd lost last week — sitting on a book about codes. Inside the book, another note: 'The answer is in the music room.'\n\nIn the music room, she found her missing pencil case sitting on a drum, along with note number three: 'Check where stories begin.'\n\n'Where stories begin...' Emma thought. She marched to the reading corner in their classroom. There, behind a stack of comic books, was her sandwich — still fresh, somehow — and a final note.\n\n'Sorry I borrowed your things. I was building a treasure hunt because you said Tuesday was boring. Happy Un-boring Tuesday. — Your secret friend.'\n\nEmma looked around the classroom. In the back row, Noah was very carefully not making eye contact, his ears turning pink.\n\nEmma smiled, broke the sandwich in two, walked over, and handed him half.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "adventure-story-generator",
+    "genreId": "adventure",
+    "name": "Adventure",
+    "emoji": "⚔️",
+    "color": "var(--terra)",
+    "h1": "Free Adventure Story Generator — Create & Listen",
+    "metaTitle": "Adventure Story Generator — Free AI Adventure Stories | Playla",
+    "metaDescription": "Free AI adventure story generator. Create thrilling tales of exploration and discovery. Generate and listen to your adventure story instantly.",
+    "promptPlaceholder": "Describe your adventure... e.g., 'A kid who finds a map inside a library book leading to a hidden city'",
+    "promptChips": [
+      "A brave girl discovers a secret door in the school basement",
+      "Two friends accidentally shrink and must navigate the backyard",
+      "A boy finds a compass that points to whatever you need most"
+    ],
+    "description": "Adventure stories are about the journey — through uncharted territories, past impossible obstacles, toward discoveries that change everything. They remind us that the world is bigger and more wondrous than we imagined.",
+    "writingTips": [
+      "Start with the call to adventure — something disrupts the ordinary world",
+      "Raise the stakes with each obstacle — things should get harder, not easier",
+      "Give the hero a companion who challenges them in a different way",
+      "The real treasure is usually not what the hero expected to find"
+    ],
+    "faqs": [
+      {
+        "q": "What kinds of adventure stories can I create?",
+        "a": "Exploration, treasure hunts, survival stories, journey quests, and daring missions. Set your adventure anywhere from outer space to the ocean floor."
+      },
+      {
+        "q": "Can I create adventure stories for young children?",
+        "a": "Absolutely! Adventures for ages 3-6 feature gentler challenges and friendly companions. Mention the age in your prompt."
+      }
+    ],
+    "relatedGenres": ["fantasy-story-generator", "sci-fi-story-generator", "mystery-story-generator"],
+    "relatedTopics": ["pirates", "treasure-hunt", "jungle", "space", "underwater"],
+    "searchVolume": 20,
+    "sampleStory": {
+      "title": "The Compass That Knew",
+      "text": "Oliver found the compass in his grandfather's attic — brass, dented, and warm to the touch. Unlike normal compasses, this one didn't point north. It pointed to whatever you needed most.\n\nWhen Oliver was thirsty, it pointed to the kitchen. When he missed his dog, it pointed to the park where they used to walk. Useful, but ordinary. Until the day it pointed straight down.\n\n'Down?' Oliver stared at it. He was standing in his backyard.\n\nHe grabbed a shovel. Two feet down, he hit something metal — a trapdoor, rusted but real. Below it, stone steps spiralled into darkness.\n\nThe compass glowed faintly, still pointing down.\n\nOliver climbed down thirty-seven steps (he counted) and found himself in an underground garden. Real plants growing under crystal ceilings that caught sunlight from somewhere far above. In the centre, a stone pedestal with a journal.\n\nHis grandfather's handwriting: 'Dear Oliver, if you're reading this, the compass chose you. This garden has been in our family for two hundred years. Every generation adds something. I added the oak tree. Your grandmother added the lavender.\n\nNow it's your turn. What will you grow?'\n\nOliver looked at the compass. It spun freely now, waiting. The adventure was his to choose.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "short-story-generator",
+    "genreId": "short",
+    "name": "Short Story",
+    "emoji": "📝",
+    "color": "var(--text2)",
+    "h1": "Free Short Story Generator — Create & Listen",
+    "metaTitle": "Short Story Generator — Free AI Short Stories | Playla",
+    "metaDescription": "Free AI short story generator. Create complete stories in minutes across any genre. Generate and listen to your short story instantly.",
+    "promptPlaceholder": "Describe any story idea... e.g., 'A letter that arrives fifty years late changes everything'",
+    "promptChips": [
+      "A stranger leaves a gift on every doorstep in a small town",
+      "A child writes a letter to the ocean and gets a reply",
+      "The last tree on earth starts singing"
+    ],
+    "description": "Short stories pack an entire world into a few hundred words. Every sentence matters, every detail counts, and the ending hits harder because the journey was so brief. Masters of the short form know that less is more.",
+    "writingTips": [
+      "Start as close to the ending as possible — cut everything that isn't essential",
+      "A short story needs one character, one problem, one moment of change",
+      "The last line should reframe everything the reader just experienced",
+      "Read it aloud. If a sentence doesn't earn its place, remove it"
+    ],
+    "faqs": [
+      {
+        "q": "How long are the generated short stories?",
+        "a": "Typically 200-500 words — perfect for a quick read or a bedtime story. You can request longer or shorter in your prompt."
+      },
+      {
+        "q": "Can I choose any genre for my short story?",
+        "a": "Yes! Short story format works with every genre — fantasy, romance, mystery, sci-fi, funny, horror, and more."
+      }
+    ],
+    "relatedGenres": ["funny-story-generator", "mystery-story-generator", "romance-story-generator"],
+    "relatedTopics": ["everyday-life", "memories", "nature", "family"],
+    "searchVolume": 880,
+    "sampleStory": {
+      "title": "The Reply",
+      "text": "When she was six, Maya wrote a letter to the ocean. She put it in a bottle, threw it off the pier, and waited.\n\nShe waited at seven. At eight. By nine, she forgot about it.\n\nAt thirty-six, a package arrived. Inside: her letter, water-stained but legible, and a reply written on a piece of coral-white paper in handwriting that looked like waves.\n\n'Dear Maya, thank you for your letter. I'm sorry it took so long — I had to read it to every fish first, and the octopus insisted on a dramatic reading. Your question: yes, I do get lonely sometimes. But then someone throws me a letter, and I remember that the shore is always reaching for me, the way I'm always reaching for the shore. Yours, The Ocean.'\n\nMaya drove to the pier that afternoon. She stood where she'd stood at six, watching the waves.\n\nThen she took out a pen, wrote a new letter, and threw it in.",
+      "readingTime": 1
+    }
+  },
+  {
+    "slug": "kids-story-generator",
+    "genreId": "kids",
+    "name": "Kids Story",
+    "emoji": "🧸",
+    "color": "var(--jade)",
+    "h1": "Free Kids Story Generator — Create & Listen",
+    "metaTitle": "Kids Story Generator — Free AI Stories for Kids | Playla",
+    "metaDescription": "Free AI kids story generator. Create personalized, age-appropriate stories for children. Generate and listen with narration and illustrations.",
+    "promptPlaceholder": "Describe a story your child would love... e.g., 'A teddy bear who comes alive at night to protect the house'",
+    "promptChips": [
+      "A puppy who wants to learn how to fly",
+      "A child who discovers their toy animals can talk",
+      "A magical school bus that visits different planets"
+    ],
+    "description": "Kids stories are where imagination begins. Colourful characters, exciting adventures, and gentle lessons come together to create the stories children ask to hear again and again.",
+    "writingTips": [
+      "Use vivid, concrete language — kids think in pictures, not abstractions",
+      "Include fun sounds and repetition that kids love to say along with you",
+      "Make the child (or a child-like character) the hero of their own story",
+      "End with warmth — kids need to feel safe and hopeful at the end"
+    ],
+    "faqs": [
+      {
+        "q": "What ages are the kids stories for?",
+        "a": "Playla generates stories for ages 2-12. Specify the age in your prompt and the vocabulary, length, and themes will automatically adjust."
+      },
+      {
+        "q": "Can I personalize stories with my child's name?",
+        "a": "Yes! Just include your child's name in the prompt, like 'A story about Aisha who discovers she can talk to butterflies.'"
+      }
+    ],
+    "relatedGenres": ["bedtime-story-generator", "funny-story-generator", "fairy-tale-generator"],
+    "relatedTopics": ["animals", "school", "family", "toys", "nature"],
+    "searchVolume": 0,
+    "sampleStory": {
+      "title": "Teddy's Night Shift",
+      "text": "Every night when Mia fell asleep, her teddy bear Mr. Buttons opened one button eye, then the other.\n\n'All clear,' he whispered.\n\nThe night shift had begun.\n\nFirst, he checked under the bed. 'No monsters today. Good.' Then the closet. 'Just shoes and one confused sock. Carry on.'\n\nHe waddled to the window and saluted the moon. 'Officer Buttons reporting for duty. One child, sleeping soundly. No bad dreams detected.'\n\nThe moon winked back. She always did.\n\nAt 2 AM, Mia stirred. A bad dream was trying to sneak in — Mr. Buttons could see it, a grey wispy thing shaped like a test paper.\n\n'Oh no you don't.' He grabbed his tiny pillow sword and — POOF — turned the bad dream into a dream about puppies riding bicycles.\n\nMia smiled in her sleep.\n\nAt 5 AM, the first sunbeam crept through the curtain. Mr. Buttons yawned, waddled back to his spot on the pillow, closed both button eyes, and became a regular teddy bear again.\n\nWhen Mia woke up, she hugged him tight. 'I had the best dream, Mr. Buttons. Puppies on bicycles!'\n\nMr. Buttons said nothing. But if you looked very carefully, one button eye winked.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "random-story-generator",
+    "genreId": "random",
+    "name": "Random",
+    "emoji": "🎲",
+    "color": "var(--purple)",
+    "h1": "Free Random Story Generator — Create & Listen",
+    "metaTitle": "Random Story Generator — Free AI Random Stories | Playla",
+    "metaDescription": "Free random story generator powered by AI. Get a surprise story in any genre. Generate and listen to a completely unique tale instantly.",
+    "promptPlaceholder": "Leave it blank for a total surprise, or give a tiny hint... e.g., 'Something unexpected'",
+    "promptChips": [
+      "Surprise me with anything!",
+      "The weirdest story you can imagine",
+      "Mix three genres into one story"
+    ],
+    "description": "Can't decide what you want? Let the Random Story Generator surprise you. It picks a genre, invents a premise, and creates a story you'd never have imagined. Sometimes the best stories are the ones you never planned.",
+    "writingTips": [
+      "The joy of randomness is in the unexpected combinations",
+      "If you get a prompt you love, save it and expand on it later",
+      "Try clicking 'Surprise Me' multiple times — you'll find a gem",
+      "Random doesn't mean lower quality — some of our best stories came from random prompts"
+    ],
+    "faqs": [
+      {
+        "q": "How does the random generator pick stories?",
+        "a": "It randomly selects a genre, combines unexpected elements, and generates a completely unique story. No two random stories are alike."
+      },
+      {
+        "q": "Can I still guide the random story?",
+        "a": "Of course! Leave the prompt blank for a full surprise, or give a small hint like 'something with animals' to guide the randomness."
+      }
+    ],
+    "relatedGenres": ["funny-story-generator", "adventure-story-generator", "fantasy-story-generator"],
+    "relatedTopics": [],
+    "searchVolume": 1300,
+    "sampleStory": {
+      "title": "The Accidental Zoo",
+      "text": "It started when Neel sneezed and a flamingo appeared.\n\n'ACHOO!' — Flamingo.\n'ACHOO ACHOO!' — Two more flamingos.\n\n'This is a problem,' said Neel, staring at three flamingos standing in his living room, judging his furniture choices.\n\nHe tried holding his breath. Bad idea — he sneezed harder and produced a confused zebra.\n\nBy lunchtime, Neel's house contained: seven flamingos, one zebra, four meerkats (from a particularly violent sneezing fit), a tortoise named Gerald (Gerald named himself), and one extremely calm capybara.\n\nHis mother came home from work.\n\n'Neel.'\n'Yes, Amma?'\n'Why is there a zebra eating my curtains?'\n'I can explain.'\n'Can you?'\n'No. Not really.'\n\nThe doctor said it was the strangest case of allergies she'd ever seen. The veterinarian said the animals were perfectly healthy. The zebra said nothing but continued eating curtains.\n\nEventually, Neel's sneezes became a local attraction. People brought tissues and placed orders. 'Can you sneeze me a puppy?' 'How about a parrot?'\n\nNeel couldn't control what appeared, but he sneezed with enthusiasm. His backyard became the world's first sneeze-powered zoo, with free admission and a strict 'no pepper' policy.",
+      "readingTime": 2
+    }
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "slug": "kindness",
+    "name": "Kindness",
+    "emoji": "💝",
+    "defaultGenre": "bedtime",
+    "metaTitle": "Stories About Kindness for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about kindness for kids. Create personalized stories that teach empathy and compassion. Generate and listen instantly.",
+    "description": "Kindness stories show children the power of small, caring actions. Research from the University of British Columbia shows that children who practice kindness experience greater happiness and peer acceptance.",
+    "promptPlaceholder": "Write a story about kindness... e.g., 'A child discovers that small acts of kindness create ripples of joy'",
+    "promptChips": [
+      "A lonely new kid at school finds an unexpected friend",
+      "A grumpy cat learns kindness from a tiny mouse",
+      "A child's kind words turn a rainy day magical"
+    ],
+    "discussionQuestions": [
+      "How did the character show kindness in the story?",
+      "Can you think of a time someone was kind to you?",
+      "What's one kind thing you could do tomorrow?",
+      "Why do you think being kind makes people feel good?"
+    ],
+    "expertInsight": "Dr. Kimberly Schonert-Reichl at the University of British Columbia found that children who regularly practice acts of kindness show increased well-being, peer acceptance, and prosocial behavior.",
+    "relatedThemes": ["empathy", "sharing", "friendship", "gratitude"],
+    "relatedGenres": ["bedtime-story-generator", "fairy-tale-generator", "kids-story-generator"],
+    "relatedTopics": ["school", "animals", "family"],
+    "sampleStory": {
+      "title": "The Kindness Jar",
+      "text": "Ms. Parker's class had a problem. Nobody was talking to the new girl, Anna.\n\nSo Ms. Parker brought in an empty glass jar. 'Every time someone does something kind,' she said, 'we add a marble. When the jar is full, the whole class gets a pizza party.'\n\nThe first marble came from Ryan, who shared his crayons with Anna. The second from Mia, who sat with her at lunch. The third from Dev, who helped her find the library.\n\nBut then something unexpected happened. The marbles started appearing faster. Not because kids wanted pizza — but because they noticed that kindness felt good. Really good.\n\nAnna added a marble when she helped Ryan with math. She added another when she told Mia her drawing was beautiful. The jar filled up in two weeks instead of two months.\n\nAt the pizza party, Ms. Parker asked, 'What did you learn?'\n\nAnna raised her hand. 'That kindness is like a boomerang. You throw it out, and it always comes back.'",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "bravery",
+    "name": "Bravery",
+    "emoji": "🦁",
+    "defaultGenre": "adventure",
+    "metaTitle": "Stories About Bravery for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about bravery for kids. Create personalized stories that teach courage and facing fears. Generate and listen instantly.",
+    "description": "Bravery stories teach children that courage isn't the absence of fear — it's doing the right thing even when you're scared. These stories build resilience and self-confidence.",
+    "promptPlaceholder": "Write a story about bravery... e.g., 'A shy child who stands up for a friend'",
+    "promptChips": [
+      "A small rabbit who ventures into the dark forest to help a friend",
+      "A boy who overcomes his fear of water to save a kitten",
+      "A girl who speaks up when she sees something wrong at school"
+    ],
+    "discussionQuestions": [
+      "What was the character afraid of? How did they overcome it?",
+      "What does bravery mean to you?",
+      "Can you think of a time you were brave?",
+      "Is it okay to be scared and brave at the same time?"
+    ],
+    "expertInsight": "Child psychologist Dr. Dan Peters explains that teaching children about brave role models in stories helps them develop their own courage muscles — one small act at a time.",
+    "relatedThemes": ["perseverance", "self-confidence", "honesty", "responsibility"],
+    "relatedGenres": ["adventure-story-generator", "fantasy-story-generator", "kids-story-generator"],
+    "relatedTopics": ["dragons", "knights", "mountains", "ocean"],
+    "sampleStory": {
+      "title": "The Smallest Voice",
+      "text": "Lily had the smallest voice in her class. When she spoke, people leaned in and said, 'What? Louder, please.'\n\nSo she stopped speaking altogether. It was easier.\n\nBut one day at lunch, she saw Marcus sitting alone. Three older kids had taken his lunch box and were playing keep-away. Everyone saw. Nobody moved.\n\nLily's heart hammered. Her palms went sweaty. Her voice — her tiny, quiet voice — felt stuck.\n\nBut then she thought about how Marcus must feel. And somehow, that was bigger than her fear.\n\n'Give it back.'\n\nIt came out quiet. The older kids laughed. 'What?'\n\nLily took a breath that filled her whole body. 'GIVE. IT. BACK.'\n\nThe cafeteria went silent. Not because she was loud — but because she was shaking and she said it anyway. That kind of voice, people hear.\n\nThe kids dropped the lunch box. Marcus picked it up. He didn't say thank you right away. He just looked at Lily like she'd done something impossible.\n\n'How did you do that?' he whispered.\n\n'I don't know,' Lily whispered back. 'I was terrified.'\n\n'That's what makes it brave,' said Marcus.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "honesty",
+    "name": "Honesty",
+    "emoji": "⭐",
+    "defaultGenre": "moral",
+    "metaTitle": "Stories About Honesty for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about honesty for kids. Create stories that teach truth-telling and integrity. Generate and listen instantly.",
+    "description": "Honesty stories help children understand that telling the truth, even when it's hard, builds trust and self-respect.",
+    "promptPlaceholder": "Write a story about honesty... e.g., 'A child who finds a wallet full of money'",
+    "promptChips": [
+      "A boy who accidentally breaks something and decides to tell the truth",
+      "A magic mirror that shows when someone is lying",
+      "A friendship tested when one friend tells a lie"
+    ],
+    "discussionQuestions": ["Why was it hard for the character to be honest?", "What happened when they told the truth?", "Have you ever had to be honest about something difficult?"],
+    "expertInsight": "Research shows that children who are praised for being honest, rather than punished for lying, develop stronger truth-telling habits over time.",
+    "relatedThemes": ["responsibility", "trust", "friendship", "kindness"],
+    "relatedGenres": ["bedtime-story-generator", "kids-story-generator", "fairy-tale-generator"],
+    "relatedTopics": ["school", "family", "friends"],
+    "sampleStory": {
+      "title": "The Cracked Vase",
+      "text": "Alex's baseball sailed through the air in a perfect arc — and straight through the kitchen window into Grandmother's favourite vase.\n\nCRASH.\n\nThe vase lay in pieces on the floor. Blue ceramic flowers scattered everywhere. Grandmother had brought it from a small shop in Tuscany forty years ago. She polished it every Sunday.\n\nAlex's first thought: blame the cat. His second thought: say the wind did it. His third thought: just hide the pieces.\n\nBut his stomach felt heavy, like he'd swallowed a stone. He knew that feeling. It was the weight of a lie he hadn't even told yet.\n\nWhen Grandmother came home, Alex was sitting on the kitchen floor surrounded by blue ceramic pieces and a tube of glue.\n\n'I broke your vase,' he said. 'I'm trying to fix it but I'm making it worse.'\n\nGrandmother sat down next to him. She picked up a piece, then another. 'The vase was beautiful,' she said. 'But my grandson telling me the truth? That's worth more than a hundred vases.'\n\nThey glued it back together. You could see the cracks — golden lines where the glue caught the light. 'In Japan,' Grandmother said, 'they call this kintsugi. The cracks make it more precious, not less.'\n\nAlex looked at the mended vase. It was more beautiful than before.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "sharing",
+    "name": "Sharing",
+    "emoji": "🤝",
+    "defaultGenre": "fable",
+    "metaTitle": "Stories About Sharing for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about sharing for kids. Create stories that teach generosity and the joy of giving. Generate and listen instantly.",
+    "description": "Sharing stories teach children that giving — whether it's toys, time, or kindness — creates connection and multiplies happiness.",
+    "promptPlaceholder": "Write a story about sharing... e.g., 'Two brothers who discover that sharing always brings more'",
+    "promptChips": [
+      "A rich king who learns that sharing his kingdom makes it bigger",
+      "An ant who shares its food with the whole colony",
+      "Children who learn to share a single playground swing"
+    ],
+    "discussionQuestions": ["What did the character share?", "How did sharing change the story?", "When is sharing easy? When is it hard?"],
+    "expertInsight": "Developmental psychologists find that children begin understanding the concept of fairness and sharing around age 4-5, making this the ideal age for sharing stories.",
+    "relatedThemes": ["kindness", "friendship", "gratitude", "teamwork"],
+    "relatedGenres": ["fairy-tale-generator", "bedtime-story-generator", "kids-story-generator"],
+    "relatedTopics": ["food", "toys", "playground", "family"],
+    "sampleStory": {
+      "title": "Half a Mango",
+      "text": "Kabir had one mango. It was the best mango in the world — golden, sweet-smelling, perfectly ripe. He'd been saving it all day.\n\nThen he saw Zara sitting under the tree, looking at her empty lunch box. No mango. No lunch at all.\n\nKabir looked at his mango. One perfect mango. One empty lunch box.\n\nHe could eat it fast before she noticed. He could say he'd already eaten it. He could walk the other way.\n\nInstead, he sat down next to her and cut the mango in half. 'Here.'\n\nZara's face lit up like someone had turned on the sun. 'Thank you! This is the best mango I've ever had.'\n\nKabir bit into his half. Funny thing — half a mango shared with someone tasted twice as sweet as a whole mango eaten alone.\n\nThe next day, Zara brought two samosas. She gave him one. 'My ammi made extra,' she said with a grin.\n\nFrom that day on, they always shared lunch. Some days Kabir had more, some days Zara did. But neither of them ever ate alone again.",
+      "readingTime": 1
+    }
+  },
+  {
+    "slug": "gratitude",
+    "name": "Gratitude",
+    "emoji": "🙏",
+    "defaultGenre": "bedtime",
+    "metaTitle": "Stories About Gratitude for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about gratitude for kids. Create stories that teach thankfulness and appreciation. Generate and listen instantly.",
+    "description": "Gratitude stories help children notice and appreciate the good things in their lives — from warm meals to loving families to the beauty of a sunset.",
+    "promptPlaceholder": "Write a story about gratitude... e.g., 'A child who writes thank-you notes to everything'",
+    "promptChips": [
+      "A child who discovers a magical 'thank you' garden",
+      "A grumpy troll who learns to say thank you and transforms",
+      "A boy who writes letters of gratitude to the sun, the rain, and the moon"
+    ],
+    "discussionQuestions": ["What was the character grateful for?", "What are three things you're grateful for today?", "How does saying 'thank you' make people feel?"],
+    "expertInsight": "Positive psychology research by Dr. Robert Emmons shows that children who practice gratitude have better physical health, sleep better, and experience more positive emotions.",
+    "relatedThemes": ["kindness", "happiness", "family", "friendship"],
+    "relatedGenres": ["bedtime-story-generator", "fairy-tale-generator", "kids-story-generator"],
+    "relatedTopics": ["nature", "family", "school", "seasons"],
+    "sampleStory": {
+      "title": "Thank You Notes",
+      "text": "Ananya started writing thank-you notes when she was seven. Not to people — to things.\n\n'Dear Rain, thank you for the puddles. They're the best part of my walk to school.'\n\n'Dear Chai, thank you for being warm when mornings are cold.'\n\n'Dear Moon, thank you for showing up even when the sky is cloudy.'\n\nHer brother said she was weird. Her mother said she was wonderful. Ananya didn't mind either way.\n\nThe notes piled up. She wrote them on scraps of paper, on napkins, on the margins of her homework. Thank you to the library for free books. Thank you to her pencil for not giving up. Thank you to the school bus driver for always smiling.\n\nOne day, her teacher asked the class: 'What makes you happy?'\n\nEvery kid listed things they wanted. A new phone. A bigger room. More holidays.\n\nAnanya said: 'The way my dog's tail wags when I come home.'\n\nThe class went quiet.\n\n'That's it?' someone asked.\n\n'That's everything,' said Ananya.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "patience",
+    "name": "Patience",
+    "emoji": "🌱",
+    "defaultGenre": "fable",
+    "metaTitle": "Stories About Patience for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about patience for kids. Create stories that teach waiting and persistence. Generate and listen instantly.",
+    "description": "Patience stories teach children that the best things in life take time — from growing a garden to learning a skill to waiting for a caterpillar to become a butterfly.",
+    "promptPlaceholder": "Write a story about patience... e.g., 'A child who plants a seed and must wait all summer'",
+    "promptChips": [
+      "A caterpillar who wants to skip ahead and be a butterfly now",
+      "A boy learning to bake bread who keeps opening the oven too early",
+      "A young artist whose masterpiece takes an entire year"
+    ],
+    "discussionQuestions": ["What did the character have to wait for?", "What happened when they were patient?", "What's something you had to wait for that was worth it?"],
+    "expertInsight": "Studies on delayed gratification (like the famous marshmallow test) show that children who develop patience tend to have better academic outcomes and stronger social skills.",
+    "relatedThemes": ["perseverance", "self-confidence", "gratitude", "responsibility"],
+    "relatedGenres": ["fairy-tale-generator", "bedtime-story-generator", "kids-story-generator"],
+    "relatedTopics": ["gardening", "cooking", "nature", "seasons"],
+    "sampleStory": {
+      "title": "The Slowest Garden",
+      "text": "Kabir wanted a garden. Not just any garden — the best garden in the entire neighbourhood.\n\nHe planted seeds on Monday. By Tuesday, he was digging them up to check if they'd grown.\n\n'Kabir!' his grandmother scolded. 'You can't rush a seed.'\n\n'But I want flowers NOW.'\n\nGrandmother handed him a watering can. 'Water them. Talk to them. Then walk away.'\n\nKabir watered. He talked. ('Grow faster, please.') He walked away. Then he came back eleven minutes later to check.\n\nNothing.\n\nA week passed. Two weeks. Kabir's friends had already moved on to their next hobby. But Kabir kept watering.\n\nOn day twenty-two, a tiny green shoot broke through the soil. Kabir screamed so loud the neighbours came out.\n\n'It's a PLANT!' he yelled, pointing at a sprout the size of his pinkie.\n\nBy summer, his garden was the wildest, most colourful tangle of flowers on the street. Sunflowers taller than him. Marigolds that glowed like tiny suns. Jasmine that made the whole lane smell like a dream.\n\nHis grandmother sat on the porch, sipping chai, watching him water his flowers with a patience he'd grown along with them.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "forgiveness",
+    "name": "Forgiveness",
+    "emoji": "🕊️",
+    "defaultGenre": "moral",
+    "metaTitle": "Stories About Forgiveness for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about forgiveness for kids. Create stories that teach letting go and healing. Generate and listen instantly.",
+    "description": "Forgiveness stories help children understand that letting go of anger and choosing to forgive is a gift you give yourself as much as others.",
+    "promptPlaceholder": "Write a story about forgiveness... e.g., 'Two best friends who have a big fight and must find their way back'",
+    "promptChips": [
+      "A bear and a fox who fight over honey but learn to make up",
+      "Two sisters who stop talking after a misunderstanding",
+      "A child who forgives a bully and changes everything"
+    ],
+    "discussionQuestions": ["Why was it hard to forgive?", "What happened after forgiveness?", "Does forgiving mean forgetting?"],
+    "expertInsight": "Child therapists note that stories about forgiveness help children process their own conflicts and develop emotional regulation skills.",
+    "relatedThemes": ["kindness", "friendship", "empathy", "honesty"],
+    "relatedGenres": ["bedtime-story-generator", "kids-story-generator", "fairy-tale-generator"],
+    "relatedTopics": ["friends", "family", "school"],
+    "sampleStory": {
+      "title": "The Sorry Bridge",
+      "text": "Ruby and Anna were best friends who lived on opposite sides of a small river. Every day, they met on the wooden bridge in the middle to share stories and snacks.\n\nThen one day, they had a fight. A big one. About something so small that neither could remember what it was later. But the feelings were big, and both girls stomped home and refused to cross the bridge.\n\nDays passed. The bridge stood empty. The river flowed underneath, not caring about their argument.\n\nRuby missed Anna's laugh. Anna missed Ruby's stories. But neither wanted to cross first. Crossing first meant admitting you were wrong, and being wrong felt terrible.\n\nOn the seventh day, they both walked to the bridge at the same time. They stood on opposite ends, staring.\n\n'I'm sorry,' they said together.\n\nThen they laughed. Then they cried a little. Then they sat in the middle of the bridge and shared the snacks they'd both brought — just in case.\n\n'I can't even remember why we fought,' said Ruby.\n\n'Me neither,' said Anna. 'But I remember missing you.'\n\nThey never stopped crossing the bridge after that. Some days they argued. Some days they disagreed. But they always met in the middle.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "perseverance",
+    "name": "Perseverance",
+    "emoji": "💪",
+    "defaultGenre": "adventure",
+    "metaTitle": "Stories About Perseverance for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about perseverance for kids. Create stories that teach never giving up. Generate and listen instantly.",
+    "description": "Perseverance stories show that success comes from trying again and again. These stories build grit and teach children that struggle is part of growth.",
+    "promptPlaceholder": "Write a story about perseverance... e.g., 'A child who fails at baking a cake nine times before getting it right'",
+    "promptChips": [
+      "A turtle who enters a marathon against all odds",
+      "A girl who practices a song a hundred times for the school concert",
+      "A boy who keeps building a treehouse despite it falling down"
+    ],
+    "discussionQuestions": ["How many times did the character try?", "What kept them going?", "What's something you worked hard to learn?"],
+    "expertInsight": "Angela Duckworth's research on grit shows that perseverance and passion for long-term goals is a stronger predictor of success than talent alone.",
+    "relatedThemes": ["bravery", "self-confidence", "patience", "responsibility"],
+    "relatedGenres": ["adventure-story-generator", "kids-story-generator", "funny-story-generator"],
+    "relatedTopics": ["sports", "music", "school", "mountains"],
+    "sampleStory": {
+      "title": "Attempt Number Ten",
+      "text": "Isha wanted to ride a bicycle. Simple. Kids do it every day. How hard could it be?\n\nAttempt 1: Fell immediately. Scraped both knees.\nAttempt 2: Made it three metres. Hit a tree.\nAttempt 3: Forgot how brakes work. Landed in a bush.\n\nHer neighbours watched from their balconies. Some cheered. Some winced. The uncle from 3B brought a first aid kit and just left it outside.\n\nAttempts 4 through 8 were a blur of wobbles, crashes, and increasingly creative bandage patterns. Isha's knees looked like a road map.\n\n'Maybe try something else?' her father suggested gently.\n\n'No,' said Isha, picking up the bicycle for the ninth time.\n\nAttempt 9: She made it all the way to the end of the lane. The neighbours held their breath. Then she turned. She actually turned! And then she fell. But she turned first, and that mattered.\n\nAttempt 10. The lane was quiet. Isha pushed off. The bicycle wobbled, steadied, and then — flew. Not literally, but that's what it felt like. Wind in her hair. Road humming under the wheels. Freedom.\n\nShe rode all the way to the park and back. The neighbours burst into applause. Uncle from 3B packed up his first aid kit.\n\n'How does it feel?' her father asked.\n\n'Like attempt ten was worth attempts one through nine,' said Isha.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "friendship",
+    "name": "Friendship",
+    "emoji": "👫",
+    "defaultGenre": "kids",
+    "metaTitle": "Stories About Friendship for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about friendship for kids. Create heartwarming stories about making and keeping friends. Generate and listen instantly.",
+    "description": "Friendship stories celebrate the bonds that make life richer. They teach children how to be a good friend — through loyalty, understanding, and showing up when it matters.",
+    "promptPlaceholder": "Write a story about friendship... e.g., 'An unlikely friendship between a bookworm and a class clown'",
+    "promptChips": [
+      "A boy who befriends the new kid everyone else ignores",
+      "A dog and a cat who become unlikely best friends",
+      "Two kids who bond over a shared secret at summer camp"
+    ],
+    "discussionQuestions": ["What makes someone a good friend?", "How did the characters become friends?", "What's the nicest thing a friend has done for you?"],
+    "expertInsight": "Social development researchers emphasize that stories about friendship help children develop empathy, conflict resolution skills, and emotional intelligence.",
+    "relatedThemes": ["kindness", "sharing", "empathy", "forgiveness"],
+    "relatedGenres": ["kids-story-generator", "funny-story-generator", "adventure-story-generator"],
+    "relatedTopics": ["school", "playground", "summer-camp", "sports"],
+    "sampleStory": {
+      "title": "The Bench Between Us",
+      "text": "Dev sat on the left side of the bench every lunch break. Zoya sat on the right. They never spoke. They'd been doing this for a month.\n\nDev read comics. Zoya sketched in her notebook. Between them: exactly thirty centimetres of empty bench.\n\nOne windy day, Dev's comic flew out of his hands and landed in Zoya's lap. She looked at the page. 'You read Captain Courage?'\n\n'You know Captain Courage?' Dev's eyes went wide.\n\n'Know him? I draw fan art.' She flipped open her notebook. There was Captain Courage, drawn in Zoya's style — better than the original, Dev thought.\n\n'That's... amazing.'\n\nZoya shrugged, but she was smiling.\n\nThe next day, the thirty centimetres became twenty. Dev brought a second comic to show her. Zoya brought coloured pencils.\n\nBy Friday, the gap was zero. They sat shoulder to shoulder, Dev writing story ideas and Zoya illustrating them. Their first collaboration: a new superhero called Bench Girl, whose power was making invisible walls between people disappear.\n\n'Pretty specific superpower,' said Dev.\n\n'The best ones always are,' said Zoya.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "empathy",
+    "name": "Empathy",
+    "emoji": "❤️",
+    "defaultGenre": "kids",
+    "metaTitle": "Stories About Empathy for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about empathy for kids. Create stories that teach understanding others' feelings. Generate and listen instantly.",
+    "description": "Empathy stories help children walk in someone else's shoes. By understanding different perspectives, children learn compassion and deeper connection.",
+    "promptPlaceholder": "Write a story about empathy... e.g., 'A child who can feel other people's emotions'",
+    "promptChips": [
+      "A magic pair of shoes that lets you feel what others feel",
+      "A boy who learns to listen when his friend is having a bad day",
+      "An alien who comes to Earth and learns about human feelings"
+    ],
+    "discussionQuestions": ["How did the character understand someone else's feelings?", "Have you ever felt what someone else was feeling?", "Why is it important to try to understand how others feel?"],
+    "expertInsight": "Dr. Brené Brown's research shows that empathy is a skill that can be developed through practice and exposure to diverse perspectives — and stories are one of the most powerful empathy-building tools.",
+    "relatedThemes": ["kindness", "friendship", "forgiveness", "sharing"],
+    "relatedGenres": ["kids-story-generator", "bedtime-story-generator", "fairy-tale-generator"],
+    "relatedTopics": ["school", "family", "animals", "friends"],
+    "sampleStory": {
+      "title": "The Feeling Glasses",
+      "text": "When Ravi put on the old glasses he found in the attic, the world looked the same. Trees, houses, sky — no change.\n\nBut then he looked at his mother, and he saw something new: a soft blue glow around her. Not sad-blue. Tired-blue. The blue of someone who'd been working all day and still had dinner to cook.\n\n'Amma, sit down. I'll make the tea.'\n\nHis mother stared at him. 'You've never offered before.'\n\n'I never noticed before.'\n\nAt school, the glasses showed more. His friend Aditya had a flickering orange around him — anxiety about the maths test. The quiet girl in the back row had a deep purple — loneliness.\n\nRavi sat next to the quiet girl at lunch. He didn't say anything profound. Just: 'Nice tiffin box. Is that Pokémon?'\n\nThe purple lightened. Just a shade. But it was enough.\n\nBy evening, Ravi took the glasses off. He could still see the colours — not literally, but he'd learned where to look. In the slump of someone's shoulders. In the way someone laughed a little too loudly. In the silence that meant 'I need someone to ask if I'm okay.'\n\nHe put the glasses back in the attic. He didn't need them anymore.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "self-confidence",
+    "name": "Self-Confidence",
+    "emoji": "✨",
+    "defaultGenre": "kids",
+    "metaTitle": "Stories About Self-Confidence for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about self-confidence for kids. Create stories that teach believing in yourself. Generate and listen instantly.",
+    "description": "Self-confidence stories help children discover that their unique qualities are their greatest strengths. These stories show that believing in yourself is the first step to achieving anything.",
+    "promptPlaceholder": "Write a story about self-confidence... e.g., 'A quiet child who discovers their voice through art'",
+    "promptChips": [
+      "A child who thinks they're ordinary until they discover their hidden talent",
+      "A duckling who learns to love being different",
+      "A girl who enters a competition despite everyone doubting her"
+    ],
+    "discussionQuestions": ["What made the character feel confident?", "What are you really good at?", "How does it feel when someone believes in you?"],
+    "expertInsight": "Carol Dweck's growth mindset research shows that children who believe their abilities can develop through effort are more confident and resilient than those who believe talent is fixed.",
+    "relatedThemes": ["bravery", "perseverance", "creativity", "honesty"],
+    "relatedGenres": ["adventure-story-generator", "kids-story-generator", "funny-story-generator"],
+    "relatedTopics": ["school", "music", "art", "sports"],
+    "sampleStory": {
+      "title": "The Loudest Whisper",
+      "text": "Everyone in Sophie's family was loud. Her mother sang while cooking. Her father debated with the television. Her brother narrated his own life like a sports commentator.\n\nSophie was quiet. So quiet that at family gatherings, relatives would ask, 'Is she shy?' as if she wasn't standing right there.\n\nSophie wasn't shy. She was watching. Listening. Noticing things nobody else did.\n\nFor the school talent show, her brother signed up for a comedy act. Her cousin signed up for singing. Everyone asked Sophie: 'Are you participating?'\n\n'Yes,' she said quietly.\n\n'What's your talent?'\n\n'Noticing.'\n\nOn stage, Sophie stood in front of the whole school with a notebook. She read aloud the things she'd noticed:\n\n'Ms. Garcia always hums when she's happy with our homework. Jake ties his shoelaces in double knots because he's afraid of tripping during soccer. The lunch lady saves the biggest cookie for the kid who says please.'\n\nThe audience went silent. Then someone wiped their eyes. Then someone laughed with recognition. Then the whole hall erupted in the longest applause of the evening.\n\nSophie's whisper had been the loudest thing in the room.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "dealing-with-fear",
+    "name": "Dealing with Fear",
+    "emoji": "😰",
+    "defaultGenre": "bedtime",
+    "metaTitle": "Stories About Overcoming Fear for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about overcoming fear for kids. Create stories that help children face their fears. Generate and listen instantly.",
+    "description": "Fear stories normalize the experience of being scared and show children healthy ways to cope. They learn that fear is natural, but it doesn't have to be in charge.",
+    "promptPlaceholder": "Write a story about overcoming fear... e.g., 'A child afraid of the dark who makes friends with the shadows'",
+    "promptChips": [
+      "A monster under the bed who is more scared than the child",
+      "A girl who confronts her fear of thunderstorms",
+      "A boy afraid of dogs who meets a tiny, gentle puppy"
+    ],
+    "discussionQuestions": ["What was the character afraid of?", "How did they handle their fear?", "What helps you feel brave when you're scared?"],
+    "expertInsight": "Child psychologists recommend using stories to help children process fears in a safe environment, as narrative distance allows them to explore emotions without feeling overwhelmed.",
+    "relatedThemes": ["bravery", "self-confidence", "perseverance", "patience"],
+    "relatedGenres": ["bedtime-story-generator", "kids-story-generator", "adventure-story-generator"],
+    "relatedTopics": ["dark", "thunderstorms", "monsters", "new-experiences"],
+    "sampleStory": {
+      "title": "The Monster Complaint Department",
+      "text": "On the night Anya finally looked under her bed, she didn't find a monster. She found an office.\n\nA small desk. A tiny lamp. A sign that read: 'MONSTER COMPLAINT DEPARTMENT — Now Serving #847.'\n\nBehind the desk sat a furry creature no bigger than a football, with enormous worried eyes. He was filling out paperwork.\n\n'Oh!' He startled when he saw Anya. 'You're not supposed to look down here!'\n\n'You're the monster under my bed?' Anya stared. 'You're... small.'\n\n'Size isn't everything,' the monster huffed. 'I'm very scary when the lights are off. It's all about atmosphere.'\n\n'What's the complaint department for?'\n\nThe monster sighed. 'Children keep complaining that we're too scary. Last week a kid in Brooklyn asked for a less growly monster. A girl in Portland wants one that tells jokes instead of making noises.'\n\n'And you?'\n\nThe monster's big eyes got bigger. 'Honestly? I don't even like being scary. I wanted to work in the Dream Department, making nice dreams. But I failed the entrance exam.'\n\nAnya sat cross-legged on the floor. 'What if... you practiced? I could help.'\n\nThat night, instead of growling, the monster under Anya's bed whispered the beginning of a dream about flying over cloud castles.\n\nAnya fell asleep smiling. And the monster? He finally had the job he always wanted.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "teamwork",
+    "name": "Teamwork",
+    "emoji": "🏆",
+    "defaultGenre": "adventure",
+    "metaTitle": "Stories About Teamwork for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about teamwork for kids. Create stories that teach working together. Generate and listen instantly.",
+    "description": "Teamwork stories show that big problems become manageable when people work together. Each person brings something unique, and the result is always greater than what any individual could achieve alone.",
+    "promptPlaceholder": "Write a story about teamwork... e.g., 'Five animals who must build a bridge together'",
+    "promptChips": [
+      "A group of kids who combine their different talents to win a contest",
+      "Forest animals who must work together to survive a flood",
+      "A class that builds something amazing for the school fair"
+    ],
+    "discussionQuestions": ["How did each team member contribute?", "What would have happened if one person tried to do it alone?", "What's something you accomplished as part of a team?"],
+    "expertInsight": "Collaborative learning research shows that children who work in teams develop stronger communication skills, creative problem-solving abilities, and social awareness.",
+    "relatedThemes": ["friendship", "sharing", "perseverance", "responsibility"],
+    "relatedGenres": ["adventure-story-generator", "kids-story-generator", "funny-story-generator"],
+    "relatedTopics": ["school", "sports", "building", "cooking"],
+    "sampleStory": {
+      "title": "The Bridge Builders",
+      "text": "The river was too wide to jump. On one side: five animals who needed to cross. On the other: the juiciest fruit trees in the forest.\n\nElephant said, 'I'll push rocks into the river to make stepping stones.' He shoved boulders with his enormous head, but the current swept them away.\n\nMonkey said, 'I'll swing vines across.' She tried, but the gap was too wide even for her.\n\nBeaver said, 'I'll build a dam.' She gnawed logs all day, but one beaver couldn't hold back the whole river.\n\nSpider said, 'I can weave cables.' Everyone stared. 'I'm serious. My silk is stronger than steel per gram.'\n\nAnt said, 'And my colony can carry anything, if you give us a design.'\n\nThe five animals looked at each other. Separately, they'd all failed. But together?\n\nElephant placed the foundation stones. Beaver cut the logs to size. Spider wove the support cables. Ant's colony carried and positioned every piece. Monkey connected the high points, swinging between anchors.\n\nBy sunset, a bridge stood across the river — lumpy, asymmetric, and absolutely beautiful.\n\nThe first one to cross? Ant. The smallest one who'd had the biggest idea.\n\n'Who built this bridge?' asked a passing deer.\n\n'We all did,' said five voices at once.",
+      "readingTime": 2
+    }
+  },
+  {
+    "slug": "responsibility",
+    "name": "Responsibility",
+    "emoji": "🎯",
+    "defaultGenre": "kids",
+    "metaTitle": "Stories About Responsibility for Kids — AI Story Generator | Playla",
+    "metaDescription": "Free AI story generator about responsibility for kids. Create stories that teach accountability and reliability. Generate and listen instantly.",
+    "description": "Responsibility stories teach children that being trusted with something — a pet, a task, a promise — is one of the most important ways we grow up.",
+    "promptPlaceholder": "Write a story about responsibility... e.g., 'A child who takes care of a classroom plant and learns about commitment'",
+    "promptChips": [
+      "A boy who promises to feed the neighbour's fish while they're away",
+      "A girl given her first real task at the family shop",
+      "A child who becomes the 'keeper' of a magical creature"
+    ],
+    "discussionQuestions": ["What was the character responsible for?", "What happened when they took it seriously?", "What's something you're responsible for at home?"],
+    "expertInsight": "Developmental research shows that giving children age-appropriate responsibilities builds self-esteem, executive function, and a sense of contributing to their community.",
+    "relatedThemes": ["honesty", "perseverance", "patience", "teamwork"],
+    "relatedGenres": ["kids-story-generator", "adventure-story-generator", "bedtime-story-generator"],
+    "relatedTopics": ["pets", "school", "family", "gardening"],
+    "sampleStory": {
+      "title": "The Fish Named Tuesday",
+      "text": "When the neighbours went on holiday, they asked Ryan to feed their goldfish. 'Just one pinch a day,' Mrs. Wilson said. 'His name is Tuesday.'\n\n'Why Tuesday?'\n\n'Because that's when we got him. Very original, I know.'\n\nDay one: Ryan remembered. One pinch. Easy. Tuesday blew a grateful bubble.\n\nDay two: He almost forgot. Remembered at 11 PM. Sprinted to their house in pyjamas. Tuesday seemed judgmental.\n\nDay three: His friends invited him to play soccer. 'Come straight after,' they said. Ryan thought about it. Then he thought about Tuesday, alone in his bowl, waiting for dinner.\n\n'I'll be there in ten minutes,' he said. He fed Tuesday first. One pinch. Tuesday did a little spin.\n\nDays four through fourteen: Ryan didn't miss a single day. Rain or sun. Tired or energetic. He showed up.\n\nWhen the Wilsons came home, Mrs. Wilson inspected Tuesday. 'He looks... happier,' she said, surprised.\n\n'I talked to him sometimes,' Ryan admitted. 'He's a good listener.'\n\nMrs. Wilson smiled. 'You know what, Ryan? Responsibility suits you.'\n\nRyan grinned. It did feel good — not because anyone made him do it, but because Tuesday counted on him, and he didn't let him down.",
+      "readingTime": 2
+    }
+  }
+]
