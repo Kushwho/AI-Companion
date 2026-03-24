@@ -172,7 +172,7 @@ export default function VoiceChat() {
           <div className="msg-bubble b3" style={{ top: 110, left: -150 }}><span className="msg-icon">😊</span> I&apos;m feeling happy today</div>
           <div className="msg-bubble b6" style={{ top: 130, right: -130 }}><span className="msg-icon">🌙</span> Bedtime story...</div>
           <div className={`sakhi-voice-mascot${mascotExpr ? ` expr-${mascotExpr}` : ''}`} id="sakhiMascot">
-            <Image src="/sakhi-mascot.png" alt="Playla" width={150} height={150} />
+            <Image src="/sakhi-mascot.png" alt="Playla mascot listening during a voice conversation, animated with a gentle pulse to indicate the AI companion is actively engaged" width={150} height={150} />
           </div>
         </div>
         <div className="sakhi-voice-title">Talk to Playla</div>

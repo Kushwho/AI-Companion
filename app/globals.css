@@ -102,6 +102,10 @@ nav.scrolled {
   text-decoration: none;
   transition: color 0.2s;
   position: relative;
+  padding: 12px 4px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-links a:hover {
@@ -1992,6 +1996,10 @@ footer {
   color: var(--text3);
   text-decoration: none;
   transition: color 0.2s;
+  padding: 14px 4px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer-links a:hover {
@@ -2251,7 +2259,8 @@ footer {
 
   .btn.btn-primary {
     font-size: 13px;
-    padding: 10px 22px;
+    padding: 14px 22px;
+    min-height: 48px;
   }
 
   #hero {
@@ -2365,6 +2374,7 @@ footer {
   .faq-q {
     padding: 16px 18px;
     font-size: 14px;
+    min-height: 48px;
   }
 
   .faq-item.open .faq-a {
@@ -2401,9 +2411,10 @@ footer {
 
   .dash-tab {
     flex-direction: row;
-    padding: 12px 16px;
+    padding: 14px 16px;
     gap: 10px;
     min-width: max-content;
+    min-height: 48px;
   }
 
   .dash-tab .dt-icon {
@@ -2670,7 +2681,7 @@ footer {
   .footer-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    gap: 8px 16px;
   }
 }
 

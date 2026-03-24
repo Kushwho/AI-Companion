@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 const colors = [
   { r: 232, g: 101, b: 58 },
@@ -119,7 +120,7 @@ export default function HeroParticles() {
       <div className="orbit orbit-2"><div className="orbit-pip"></div><div className="orbit-pip p2"></div></div>
       <div className="orbit orbit-3"><div className="orbit-pip"></div><div className="orbit-pip p2"></div></div>
       <div className="mascot-body">
-        <img className="mascot-img" src="/sakhi-mascot.png" alt="Playla AI companion mascot character for children" width={280} height={280} />
+        <Image className="mascot-img" src="/sakhi-mascot.png" alt="Playla mascot — a friendly animated owl character that serves as the AI learning companion for children aged 4-12, shown greeting the user on the homepage hero section" width={280} height={280} priority={true} />
       </div>
       <div className="msg-bubble b1"><span className="msg-icon">📖</span> Tell me a story!</div>
       <div className="msg-bubble b2"><span className="msg-icon">🌟</span> I got 95 in maths!</div>

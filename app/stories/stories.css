@@ -134,7 +134,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
+  padding: 12px 16px;
+  min-height: 48px;
   border-radius: 100px;
   font-size: 14px;
   font-weight: 500;
@@ -205,7 +206,8 @@
 }
 
 .prompt-chip {
-  padding: 6px 14px;
+  padding: 12px 14px;
+  min-height: 48px;
   border-radius: 100px;
   font-size: 13px;
   font-weight: 400;
@@ -513,7 +515,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 20px;
+  padding: 14px 20px;
+  min-height: 48px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 500;

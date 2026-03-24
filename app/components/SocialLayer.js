@@ -125,7 +125,7 @@ export default function SocialLayer() {
           ))}
           <div className="sakhi-node" id="playlaCenter">
             <div className="sakhi-avatar">
-              <Image src="/sakhi-mascot.png" alt="Playla" className="sakhi-hub-img" width={42} height={42} />
+              <Image src="/sakhi-mascot.png" alt="Playla mascot icon in the social learning hub, connecting children for collaborative story-telling and group activities" className="sakhi-hub-img" width={42} height={42} />
             </div>
             <div className="sakhi-node-label">Playla Hub</div>
             <div className="sakhi-node-sub">Orchestrating collaboration</div>

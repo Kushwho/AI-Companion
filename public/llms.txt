@@ -17,6 +17,16 @@
 - Multi-child social learning network
 - Parent dashboard with learning, emotional, and social health metrics
 
+## Images
+- **Mascot (hero):** /sakhi-mascot.png — Playla's owl mascot character, a friendly animated figure that greets children on the homepage and appears throughout the app as the AI companion avatar during voice chats and social learning activities.
+- **Parent Dashboard:** The dashboard is rendered as a live interactive UI (not a static image). It displays three tab views: (1) Emotion Trends — weekly mood graphs and stress spike alerts, (2) Learning Mastery — subject heatmaps and homework completion rates, (3) Social Health — friendship network strength and collaboration scores. All data is pattern-based; conversations are never read or sold.
+- **Open Graph preview:** /og-image.png — Social sharing card shown when Playla links are shared on Twitter, LinkedIn, or messaging apps.
+
 ## Links
 - [Home](https://www.playla.org/)
 - [Waitlist](https://www.playla.org/#waitlist)
+- [AI Story Generator](https://www.playla.org/stories)
+- [How It Works](https://www.playla.org/stories/how-it-works)
+- [Stories by Theme](https://www.playla.org/stories/themes)
+- [Stories by Topic](https://www.playla.org/stories/about)
+- [Stories by Age](https://www.playla.org/stories/age)
