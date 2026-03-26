@@ -7,6 +7,8 @@ import StoryBreadcrumbs from '../../components/StoryBreadcrumbs'
 import StoryJsonLd from '../../components/StoryJsonLd'
 import StoryFooterCTA from '../../components/StoryFooterCTA'
 
+export const dynamicParams = true
+
 export function generateStaticParams() {
   return ages.map((a) => ({ range: a.slug }))
 }

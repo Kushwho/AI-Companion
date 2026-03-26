@@ -8,6 +8,8 @@ import StoryJsonLd from '../../components/StoryJsonLd'
 import StoryFAQ from '../../components/StoryFAQ'
 import StoryFooterCTA from '../../components/StoryFooterCTA'
 
+export const dynamicParams = true
+
 export function generateStaticParams() {
   return topics.map((t) => ({ topic: t.slug }))
 }
