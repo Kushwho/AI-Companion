@@ -41,7 +41,7 @@ const jsonLd = {
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/PreOrder', description: 'Free waitlist registration. Founding pricing locked in for early members.' },
       aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', bestRating: '5', ratingCount: '3', reviewCount: '3' },
       review: [
-        { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' }, author: { '@type': 'Person', name: 'Rachel Nguyen' }, reviewBody: "The dashboard showed my daughter's stress spikes every Monday. We fixed it. I'd never have known without Playla." },
+        { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' }, author: { '@type': 'Person', name: 'David Nguyen' }, reviewBody: "The dashboard showed my daughter's stress spikes every Monday. We fixed it. I'd never have known without Playla." },
         { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' }, author: { '@type': 'Person', name: 'Sarah Mitchell' }, reviewBody: 'Playla remembered my son\'s love for space stories from week one. He calls it his best friend.' },
         { '@type': 'Review', reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' }, author: { '@type': 'Person', name: 'Emily Chen' }, reviewBody: 'My son and three friends did their entire science project through the group feature. He came second in class.' },
       ],
