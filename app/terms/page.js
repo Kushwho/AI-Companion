@@ -10,9 +10,27 @@ export const metadata = {
   },
 }
 
+const termsJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://www.playla.org/terms/#webpage',
+  url: 'https://www.playla.org/terms',
+  name: 'Terms of Service — Playla',
+  description:
+    'Terms of Service for Playla, an AI-powered learning companion for children aged 4-12.',
+  isPartOf: { '@id': 'https://www.playla.org/#website' },
+  inLanguage: 'en',
+  dateModified: '2026-03',
+  publisher: { '@id': 'https://www.playla.org/#organization' },
+}
+
 export default function TermsPage() {
   return (
     <div className="privacy-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(termsJsonLd) }}
+      />
       <div className="privacy-nav">
         <Link href="/" className="privacy-back">
           &larr; Back to Playla
