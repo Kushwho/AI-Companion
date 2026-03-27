@@ -21,6 +21,8 @@ export default function Navbar() {
         <li><a href="/#features">Features</a></li>
         <li><Link href="/stories">Stories</Link></li>
         <li><a href="/#dashboard">Dashboard</a></li>
+        <li><Link href="/about">About</Link></li>
+        <li><Link href="/contact">Contact</Link></li>
       </ul>
       <a className="btn btn-primary" href="/#waitlist">Reserve Your Spot</a>
     </nav>

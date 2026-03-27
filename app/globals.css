@@ -1718,6 +1718,25 @@ h2 em {
   color: var(--gold);
   font-size: 14px;
   letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.star-partial {
+  background: linear-gradient(90deg, var(--gold) var(--fill), var(--text3) var(--fill));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.star-rating {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+  -webkit-text-fill-color: var(--text2);
+  letter-spacing: 0;
 }
 
 .testi-text {
@@ -3404,3 +3423,323 @@ footer {
 }
 
 @keyframes dashAnim { to { stroke-dashoffset: -24; } }
+
+/* ─── ABOUT PAGE ─── */
+.about-hero {
+  padding: 140px 48px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero-glow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, var(--terra-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-hero h1 {
+  font-family: var(--font-fraunces), 'Fraunces', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.about-hero h1 em {
+  font-style: italic;
+  color: var(--terra2);
+}
+
+.about-hero-sub {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--text2);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-section {
+  padding: 80px 48px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.about-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.about-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.about-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
+
+.about-mission {
+  text-align: center;
+}
+
+.about-mission h2 {
+  font-family: var(--font-fraunces), 'Fraunces', serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.about-mission h2 em {
+  font-style: italic;
+  color: var(--purple2);
+}
+
+.about-mission-text {
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.7;
+  color: var(--text2);
+  max-width: 720px;
+  margin: 0 auto 16px;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.about-value {
+  text-align: center;
+}
+
+.about-value-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.about-value h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.about-value p {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.about-cta {
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-family: var(--font-fraunces), 'Fraunces', serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.about-cta h2 em {
+  font-style: italic;
+  color: var(--terra2);
+}
+
+.about-cta p {
+  font-size: 16px;
+  color: var(--text2);
+  margin-bottom: 32px;
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* ─── CONTACT PAGE ─── */
+.contact-hero {
+  padding: 140px 48px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero-glow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, var(--purple-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-hero h1 {
+  font-family: var(--font-fraunces), 'Fraunces', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.contact-hero h1 em {
+  font-style: italic;
+  color: var(--purple2);
+}
+
+.contact-hero-sub {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--text2);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-section {
+  padding: 40px 48px 100px;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.contact-info-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.contact-info-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact-info-card p {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.contact-info-card a {
+  color: var(--terra2);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.contact-info-card a:hover {
+  text-decoration: underline;
+}
+
+.contact-email-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-email-address {
+  color: var(--terra2);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-email-hint {
+  font-size: 13px;
+  color: var(--text3);
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+/* ─── RESPONSIVE: ABOUT & CONTACT ─── */
+@media (max-width: 768px) {
+  .about-hero,
+  .contact-hero {
+    padding: 120px 24px 60px;
+  }
+
+  .about-section,
+  .about-cta,
+  .contact-section {
+    padding: 48px 24px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .about-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+}

@@ -10,6 +10,8 @@ export default function sitemap() {
   const staticPages = [
     { url: `${BASE_URL}/`, lastModified: LAST_MODIFIED, priority: 1 },
     { url: `${BASE_URL}/stories`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 1 },
+    { url: `${BASE_URL}/about`, lastModified: LAST_MODIFIED, priority: 0.8 },
+    { url: `${BASE_URL}/contact`, lastModified: LAST_MODIFIED, priority: 0.6 },
     { url: `${BASE_URL}/stories/how-it-works`, lastModified: LAST_MODIFIED, priority: 0.7 },
     { url: `${BASE_URL}/stories/themes`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/stories/about`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.7 },

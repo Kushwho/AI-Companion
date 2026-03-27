@@ -5,9 +5,9 @@ export default function Footer() {
     <footer>
       <div className="footer-logo">Playla</div>
       <div className="footer-links">
-        <a href="#">Child Safety</a>
+        <Link href="/about">About</Link>
         <Link href="/privacy">Privacy</Link>
-        <a href="#">Contact</a>
+        <Link href="/contact">Contact</Link>
       </div>
       <div className="footer-note">COPPA Compliant · Child-Safe by Design</div>
     </footer>
