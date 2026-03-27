@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import { trackWaitlistSignup } from '@/app/lib/analytics'
+import { trackWaitlistSignup } from '@/app/utils/analytics'
 
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4fq8_wezF5FMwVmq-wugUcoWzyxiQSDHD9wF86SZNJL3enDcSk4MMP3LblX2STab2ew/exec'
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { trackAppCtaClick } from '@/app/lib/analytics'
+import { trackAppCtaClick } from '@/app/utils/analytics'
 
 export default function StickyCTA() {
   useEffect(() => {

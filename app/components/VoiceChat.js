@@ -2,7 +2,7 @@
 
 import { useRef, useState, useCallback, useEffect } from 'react'
 import Image from 'next/image'
-import { trackVoiceDemoStarted, trackVoiceDemoEnded } from '@/app/lib/analytics'
+import { trackVoiceDemoStarted, trackVoiceDemoEnded } from '@/app/utils/analytics'
 
 const PLAYLA_BACKEND_URL = 'https://najthngxwe6g3lkyqn707x4f.34-47-239-31.sslip.io'
 
