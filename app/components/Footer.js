@@ -7,6 +7,7 @@ export default function Footer() {
       <div className="footer-links">
         <Link href="/about">About</Link>
         <Link href="/privacy">Privacy</Link>
+        <Link href="/terms">Terms</Link>
         <Link href="/contact">Contact</Link>
       </div>
       <div className="footer-note">COPPA Compliant · Child-Safe by Design</div>
