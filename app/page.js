@@ -1,6 +1,8 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import Safety from './components/Safety'
+import StoriesPreview from './components/StoriesPreview'
 import SocialLayer from './components/SocialLayer'
 import Dashboard from './components/Dashboard'
 import MidCTA from './components/MidCTA'
@@ -22,6 +24,8 @@ export default function Home() {
       <Features />
       <SocialLayer />
       <Dashboard />
+      <StoriesPreview />
+      <Safety />
       <MidCTA />
       <FAQ />
       <Testimonials />

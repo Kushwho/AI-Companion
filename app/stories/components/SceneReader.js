@@ -18,6 +18,7 @@ export default function SceneReader({ story, onNewStory }) {
     setListening(false)
   }, [story])
 
+
   useEffect(() => {
     return () => {
       if (autoAdvanceTimer.current) clearTimeout(autoAdvanceTimer.current)
@@ -42,26 +43,6 @@ export default function SceneReader({ story, onNewStory }) {
     }
   }, [isLastScene])
 
-  // Auto-advance without audio — faster timing
-  useEffect(() => {
-    if (listening && scene?.audio_url) return
-    if (ended) return
-
-    const wordCount = (scene?.story_text || '').split(/\s+/).length
-    const readingTimeSec = Math.min(Math.max(Math.ceil(wordCount / 3.3), 3), 12)
-
-    autoAdvanceTimer.current = setTimeout(() => {
-      if (isLastScene) {
-        setEnded(true)
-      } else {
-        setSceneIndex((i) => i + 1)
-      }
-    }, readingTimeSec * 1000)
-
-    return () => {
-      if (autoAdvanceTimer.current) clearTimeout(autoAdvanceTimer.current)
-    }
-  }, [sceneIndex, isLastScene, ended, listening, scene?.audio_url, scene?.story_text])
 
   const handleListen = () => {
     setListening(true)
