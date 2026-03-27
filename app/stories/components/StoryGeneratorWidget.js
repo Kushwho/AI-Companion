@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react'
+import { trackStoryGenerated } from '@/app/lib/analytics'
 import GenrePills from './GenrePills'
 import PromptChips from './PromptChips'
 import SceneReader from './SceneReader'
@@ -88,6 +89,7 @@ export default function StoryGeneratorWidget({
       const data = await res.json()
       setStory(data)
       setPhase('reading')
+      trackStoryGenerated(prompt.trim(), selectedGenre || 'adventure')
     } catch (err) {
       setError(err.message)
       setPhase('idle')

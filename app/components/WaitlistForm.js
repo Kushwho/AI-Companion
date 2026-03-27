@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
+import { trackWaitlistSignup } from '@/app/lib/analytics'
 
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4fq8_wezF5FMwVmq-wugUcoWzyxiQSDHD9wF86SZNJL3enDcSk4MMP3LblX2STab2ew/exec'
 
@@ -34,6 +35,7 @@ export default function WaitlistForm() {
         body: JSON.stringify({ name: fname, email: femail, age: fage }),
       })
       setSubmitted(true)
+      trackWaitlistSignup('waitlist_form')
     } catch {
       alert('Something went wrong. Please try again.')
       setSubmitting(false)

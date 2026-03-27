@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { trackAppCtaClick } from '@/app/lib/analytics'
 
 export default function StickyCTA() {
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function StickyCTA() {
 
   return (
     <div className="sticky-cta" id="stickyCta">
-      <a className="btn btn-primary-lg" href="#waitlist" style={{ width: '100%', textAlign: 'center' }}>
+      <a className="btn btn-primary-lg" href="#waitlist" style={{ width: '100%', textAlign: 'center' }} onClick={() => trackAppCtaClick('sticky_bottom', 'Reserve Your Spot — Free')}>
         Reserve Your Spot — Free →
       </a>
     </div>

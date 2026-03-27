@@ -1,5 +1,6 @@
 import { Outfit, Fraunces } from 'next/font/google'
 import './globals.css'
+import AnalyticsProvider from './components/AnalyticsProvider'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -65,7 +66,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.variable} ${fraunces.variable}`}>
       <head />
-      <body>{children}</body>
+      <body>
+        {children}
+        <AnalyticsProvider />
+      </body>
     </html>
   )
 }

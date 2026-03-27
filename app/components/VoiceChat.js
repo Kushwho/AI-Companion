@@ -2,6 +2,7 @@
 
 import { useRef, useState, useCallback, useEffect } from 'react'
 import Image from 'next/image'
+import { trackVoiceDemoStarted, trackVoiceDemoEnded } from '@/app/lib/analytics'
 
 const PLAYLA_BACKEND_URL = 'https://najthngxwe6g3lkyqn707x4f.34-47-239-31.sslip.io'
 
@@ -128,6 +129,7 @@ export default function VoiceChat() {
       setStatus('connected')
       setStatusText('Connected — speak to Playla')
       setupVisualizer()
+      trackVoiceDemoStarted()
     } catch (err) {
       console.error('Playla call error:', err)
       setStatus('idle')
@@ -149,6 +151,7 @@ export default function VoiceChat() {
     setStatus('idle')
     setStatusText('Tap the mic to start')
     setMascotExpr('')
+    trackVoiceDemoEnded()
   }, [])
 
   const toggleCall = useCallback(() => {
