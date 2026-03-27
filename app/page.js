@@ -1,19 +1,21 @@
+import dynamic from 'next/dynamic'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
-import Safety from './components/Safety'
-import StoriesPreview from './components/StoriesPreview'
-import SocialLayer from './components/SocialLayer'
-import Dashboard from './components/Dashboard'
-import MidCTA from './components/MidCTA'
-import FAQ from './components/FAQ'
-import Testimonials from './components/Testimonials'
-import WaitlistForm from './components/WaitlistForm'
-import StickyCTA from './components/StickyCTA'
-import Footer from './components/Footer'
-import FadeUpObserver from './components/FadeUpObserver'
-import Tour from './components/Tour'
 import JsonLd from './components/JsonLd'
+
+const Safety = dynamic(() => import('./components/Safety'))
+const StoriesPreview = dynamic(() => import('./components/StoriesPreview'))
+const SocialLayer = dynamic(() => import('./components/SocialLayer'))
+const Dashboard = dynamic(() => import('./components/Dashboard'))
+const MidCTA = dynamic(() => import('./components/MidCTA'))
+const FAQ = dynamic(() => import('./components/FAQ'))
+const Testimonials = dynamic(() => import('./components/Testimonials'))
+const WaitlistForm = dynamic(() => import('./components/WaitlistForm'))
+const StickyCTA = dynamic(() => import('./components/StickyCTA'))
+const Footer = dynamic(() => import('./components/Footer'))
+const FadeUpObserver = dynamic(() => import('./components/FadeUpObserver'))
+const Tour = dynamic(() => import('./components/Tour'))
 
 export default function Home() {
   return (

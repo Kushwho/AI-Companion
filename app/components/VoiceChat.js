@@ -63,7 +63,7 @@ export default function VoiceChat() {
         source.connect(analyserRef.current)
         animateVisualizer()
       }).catch(() => animateFakeVisualizer())
-    } catch { animateFakeVisualizer() }
+    } catch (e) { animateFakeVisualizer() }
   }, [animateVisualizer, animateFakeVisualizer])
 
   const updateEmotion = useCallback((name, score, expression) => {
@@ -106,7 +106,7 @@ export default function VoiceChat() {
         try {
           const { expression, raw_emotion, score } = JSON.parse(data.payload)
           updateEmotion(raw_emotion, score, expression)
-        } catch {}
+        } catch (e) {}
         return JSON.stringify({ received: true })
       })
 
@@ -114,7 +114,7 @@ export default function VoiceChat() {
         try {
           const { topics: t } = JSON.parse(data.payload)
           setTopics(t || [])
-        } catch {}
+        } catch (e) {}
         return JSON.stringify({ received: true })
       })
 
