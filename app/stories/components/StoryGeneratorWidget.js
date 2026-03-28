@@ -28,7 +28,9 @@ export default function StoryGeneratorWidget({
   const [story, setStory] = useState(null)
   const [error, setError] = useState(null)
   const [loadingMsg, setLoadingMsg] = useState(LOADING_MESSAGES[0])
+  const [eta, setEta] = useState(30)
   const msgInterval = useRef(null)
+  const etaInterval = useRef(null)
 
   const activeGenre = useMemo(
     () => genres.find((g) => g.genreId === selectedGenre),
@@ -36,10 +38,11 @@ export default function StoryGeneratorWidget({
   )
   const currentChips = activeGenre?.promptChips || promptChips
 
-  // Cleanup interval on unmount
+  // Cleanup intervals on unmount
   useEffect(() => {
     return () => {
       if (msgInterval.current) clearInterval(msgInterval.current)
+      if (etaInterval.current) clearInterval(etaInterval.current)
     }
   }, [])
 
@@ -60,12 +63,17 @@ export default function StoryGeneratorWidget({
     setPhase('generating')
     setError(null)
     setLoadingMsg(LOADING_MESSAGES[0])
+    setEta(45)
 
     let msgIdx = 0
     msgInterval.current = setInterval(() => {
       msgIdx = (msgIdx + 1) % LOADING_MESSAGES.length
       setLoadingMsg(LOADING_MESSAGES[msgIdx])
     }, 5000)
+
+    etaInterval.current = setInterval(() => {
+      setEta((prev) => (prev > 0 ? prev - 1 : 0))
+    }, 1000)
 
     try {
       const res = await fetch('/api/stories/generate', {
@@ -95,6 +103,7 @@ export default function StoryGeneratorWidget({
       setPhase('idle')
     } finally {
       clearInterval(msgInterval.current)
+      clearInterval(etaInterval.current)
     }
   }, [prompt, selectedGenre, numScenes, childAge])
 
@@ -114,6 +123,9 @@ export default function StoryGeneratorWidget({
         <div className="story-loading">
           <div className="story-loading-spinner" />
           <p className="story-loading-text">{loadingMsg}</p>
+          <p className="story-loading-eta">
+            {eta > 0 ? `Estimated time: ~${eta}s` : 'Taking a bit longer...'}
+          </p>
         </div>
       )}
 
