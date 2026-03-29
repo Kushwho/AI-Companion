@@ -12,6 +12,8 @@ export default function sitemap() {
     { url: `${BASE_URL}/stories`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 1 },
     { url: `${BASE_URL}/about`, lastModified: LAST_MODIFIED, priority: 0.8 },
     { url: `${BASE_URL}/contact`, lastModified: LAST_MODIFIED, priority: 0.6 },
+    { url: `${BASE_URL}/privacy`, lastModified: LAST_MODIFIED, priority: 0.3 },
+    { url: `${BASE_URL}/terms`, lastModified: LAST_MODIFIED, priority: 0.3 },
     { url: `${BASE_URL}/stories/how-it-works`, lastModified: LAST_MODIFIED, priority: 0.7 },
     { url: `${BASE_URL}/stories/themes`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/stories/about`, lastModified: LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.7 },
