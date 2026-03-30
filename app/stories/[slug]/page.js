@@ -7,6 +7,7 @@ import StoryJsonLd from '../components/StoryJsonLd'
 import SampleStoryCard from '../components/SampleStoryCard'
 import StoryFAQ from '../components/StoryFAQ'
 import StoryFooterCTA from '../components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const dynamicParams = true
 
@@ -27,6 +28,12 @@ export async function generateMetadata(props) {
       title: genre.metaTitle,
       description: genre.metaDescription,
       url: `https://www.playla.org/stories/${genre.slug}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: genre.metaTitle,
+      description: genre.metaDescription,
+      images: ['/og-image.png'],
     },
   }
 }
@@ -142,6 +149,7 @@ export default async function GenrePage(props) {
           </section>
         )}
 
+        <CommunityStories />
         <StoryFooterCTA />
       </main>
 

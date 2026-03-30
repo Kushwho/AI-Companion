@@ -5,11 +5,18 @@ import StoryBreadcrumbs from '../components/StoryBreadcrumbs'
 import StoryJsonLd from '../components/StoryJsonLd'
 import StoryFAQ from '../components/StoryFAQ'
 import StoryFooterCTA from '../components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const metadata = {
   title: 'How Playla AI Story Generator Works — Behind the Magic | Playla',
   description: 'Learn how Playla uses AI to create personalized stories with illustrations and audio narration. Safe, creative, and designed for children.',
   alternates: { canonical: '/stories/how-it-works' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How Playla AI Story Generator Works — Behind the Magic | Playla',
+    description: 'Learn how Playla uses AI to create personalized stories with illustrations and audio narration.',
+    images: ['/og-image.png'],
+  },
 }
 
 const faqs = [
@@ -93,6 +100,7 @@ export default function HowItWorksPage() {
           <StoryFAQ faqs={faqs} />
         </section>
 
+        <CommunityStories />
         <StoryFooterCTA />
       </main>
 

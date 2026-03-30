@@ -7,6 +7,7 @@ import StoryBreadcrumbs from '../../components/StoryBreadcrumbs'
 import StoryJsonLd from '../../components/StoryJsonLd'
 import StoryFAQ from '../../components/StoryFAQ'
 import StoryFooterCTA from '../../components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const dynamicParams = true
 
@@ -22,6 +23,12 @@ export async function generateMetadata(props) {
     title: topic.metaTitle,
     description: topic.metaDescription,
     alternates: { canonical: `/stories/about/${topic.slug}` },
+    twitter: {
+      card: 'summary_large_image',
+      title: topic.metaTitle,
+      description: topic.metaDescription,
+      images: ['/og-image.png'],
+    },
   }
 }
 
@@ -111,6 +118,7 @@ export default async function TopicPage(props) {
           <p>Best for ages {topic.ageRange}. Adjust reading level with Playla&apos;s AI.</p>
         </section>
 
+        <CommunityStories />
         <StoryFooterCTA />
       </main>
 

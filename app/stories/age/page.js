@@ -5,11 +5,18 @@ import StoryGeneratorWidget from '../components/StoryGeneratorWidget'
 import StoryBreadcrumbs from '../components/StoryBreadcrumbs'
 import StoryJsonLd from '../components/StoryJsonLd'
 import StoryFooterCTA from '../components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const metadata = {
   title: 'Stories by Age — Age-Appropriate AI Stories for Kids | Playla',
   description: 'Find the perfect AI-generated stories for your child\'s age. From toddlers to tweens, each age group gets stories tailored to their development.',
   alternates: { canonical: '/stories/age' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stories by Age — Age-Appropriate AI Stories for Kids | Playla',
+    description: 'Find the perfect AI-generated stories for your child\'s age. From toddlers to tweens.',
+    images: ['/og-image.png'],
+  },
 }
 
 export default function AgeHubPage() {
@@ -64,6 +71,7 @@ export default function AgeHubPage() {
           </ul>
         </section>
 
+        <CommunityStories />
         <StoryFooterCTA />
       </main>
 

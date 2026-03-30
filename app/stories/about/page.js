@@ -5,11 +5,18 @@ import StoryGeneratorWidget from '../components/StoryGeneratorWidget'
 import StoryBreadcrumbs from '../components/StoryBreadcrumbs'
 import StoryJsonLd from '../components/StoryJsonLd'
 import StoryFooterCTA from '../components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const metadata = {
   title: 'Stories by Topic — Dinosaurs, Space, Pirates & More | Playla',
   description: 'Browse AI-generated stories by topic. Dinosaurs, space, dragons, pirates, robots, and more. Create a personalized story about any topic.',
   alternates: { canonical: '/stories/about' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stories by Topic — Dinosaurs, Space, Pirates & More | Playla',
+    description: 'Browse AI-generated stories by topic. Dinosaurs, space, dragons, pirates, robots, and more.',
+    images: ['/og-image.png'],
+  },
 }
 
 const categories = {
@@ -65,6 +72,7 @@ export default function TopicsHubPage() {
           </section>
         ))}
 
+        <CommunityStories />
         <StoryFooterCTA />
       </main>
 

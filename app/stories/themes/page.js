@@ -5,11 +5,18 @@ import StoryGeneratorWidget from '../components/StoryGeneratorWidget'
 import StoryBreadcrumbs from '../components/StoryBreadcrumbs'
 import StoryJsonLd from '../components/StoryJsonLd'
 import StoryFooterCTA from '../components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const metadata = {
   title: 'Stories by Theme — Kindness, Bravery, Friendship & More | Playla',
   description: 'Browse AI-generated stories by theme. Kindness, bravery, honesty, empathy, perseverance and more. Create personalized stories that teach values.',
   alternates: { canonical: '/stories/themes' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stories by Theme — Kindness, Bravery, Friendship & More | Playla',
+    description: 'Browse AI-generated stories by theme. Kindness, bravery, honesty, empathy, perseverance and more.',
+    images: ['/og-image.png'],
+  },
 }
 
 export default function ThemesHubPage() {
@@ -48,6 +55,7 @@ export default function ThemesHubPage() {
           </div>
         </section>
 
+        <CommunityStories />
         <StoryFooterCTA />
       </main>
 

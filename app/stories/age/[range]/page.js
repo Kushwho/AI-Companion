@@ -6,6 +6,7 @@ import StoryGeneratorWidget from '../../components/StoryGeneratorWidget'
 import StoryBreadcrumbs from '../../components/StoryBreadcrumbs'
 import StoryJsonLd from '../../components/StoryJsonLd'
 import StoryFooterCTA from '../../components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const dynamicParams = true
 
@@ -21,6 +22,12 @@ export async function generateMetadata(props) {
     title: age.metaTitle,
     description: age.metaDescription,
     alternates: { canonical: `/stories/age/${age.slug}` },
+    twitter: {
+      card: 'summary_large_image',
+      title: age.metaTitle,
+      description: age.metaDescription,
+      images: ['/og-image.png'],
+    },
   }
 }
 
@@ -124,6 +131,7 @@ export default async function AgePage(props) {
           </div>
         </section>
 
+        <CommunityStories />
         <StoryFooterCTA />
       </main>
 

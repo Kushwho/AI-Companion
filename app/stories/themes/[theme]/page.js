@@ -8,6 +8,7 @@ import StoryJsonLd from '../../components/StoryJsonLd'
 import SampleStoryCard from '../../components/SampleStoryCard'
 import StoryFAQ from '../../components/StoryFAQ'
 import StoryFooterCTA from '../../components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const dynamicParams = true
 
@@ -23,6 +24,12 @@ export async function generateMetadata(props) {
     title: theme.metaTitle,
     description: theme.metaDescription,
     alternates: { canonical: `/stories/themes/${theme.slug}` },
+    twitter: {
+      card: 'summary_large_image',
+      title: theme.metaTitle,
+      description: theme.metaDescription,
+      images: ['/og-image.png'],
+    },
   }
 }
 
@@ -119,6 +126,7 @@ export default async function ThemePage(props) {
           </section>
         )}
 
+        <CommunityStories />
         <StoryFooterCTA />
       </main>
 

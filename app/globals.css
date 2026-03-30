@@ -2625,6 +2625,312 @@ footer {
   color: var(--text3);
 }
 
+/* ── COMMUNITY STORIES ── */
+
+#community-stories {
+  position: relative;
+}
+
+/* Counter banner */
+.cs-banner {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 48px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cs-banner-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 80% at 50% 0%, rgba(52, 211, 153, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.cs-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cs-banner-stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cs-counter-number {
+  font-family: var(--font-fraunces), "Fraunces", serif;
+  font-size: 52px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--jade), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.cs-banner-label {
+  font-size: 20px;
+  color: var(--text2);
+  font-weight: 500;
+}
+
+.cs-banner-sub {
+  font-size: 15px;
+  color: var(--text3);
+  margin-top: 12px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Story cards grid */
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.cs-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--cs-bg), transparent);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.cs-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cs-color);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cs-card:hover::before {
+  opacity: 1;
+}
+
+.cs-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Badge */
+.cs-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cs-color);
+  background: var(--cs-bg);
+  padding: 4px 12px;
+  border-radius: 100px;
+  z-index: 2;
+}
+
+/* Card header */
+.cs-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cs-genre-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cs-color);
+}
+
+.cs-read-time {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+/* Title & meta */
+.cs-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  font-family: var(--font-fraunces), "Fraunces", serif;
+}
+
+.cs-created-by {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.cs-created-by strong {
+  color: var(--text2);
+}
+
+/* Excerpt */
+.cs-excerpt {
+  position: relative;
+  margin-top: 4px;
+  flex: 1;
+}
+
+.cs-excerpt p {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.8;
+  max-height: 160px;
+  overflow: hidden;
+}
+
+.cs-excerpt-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}
+
+/* Card footer */
+.cs-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+
+.cs-parent-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs-parent-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 0 0 2px var(--border2);
+}
+
+.cs-parent-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cs-parent-loc {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+.cs-card-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cs-hearts {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--terra);
+  font-weight: 600;
+}
+
+.cs-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.cs-star {
+  font-size: 14px;
+}
+
+/* Social proof strip */
+.cs-proof-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+  padding: 20px 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cs-proof-avatars {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.cs-proof-face {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border: 2px solid var(--bg);
+  margin-left: -8px;
+}
+
+.cs-proof-face:first-child {
+  margin-left: 0;
+}
+
+.cs-proof-text {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.cs-proof-text strong {
+  color: var(--jade);
+  font-weight: 700;
+}
+
 /* ── RESPONSIVE ── */
 /* Mobile-first: base styles above are desktop, overrides below handle smaller */
 
@@ -3022,6 +3328,34 @@ footer {
     flex-direction: row;
     gap: 32px;
     padding: 24px 32px;
+  }
+
+  .cs-banner {
+    padding: 28px 20px;
+  }
+
+  .cs-counter-number {
+    font-size: 36px;
+  }
+
+  .cs-banner-label {
+    font-size: 16px;
+  }
+
+  .cs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cs-card-title {
+    font-size: 18px;
+  }
+
+  .cs-proof-strip {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 16px 20px;
   }
 
   footer {

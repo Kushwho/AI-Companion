@@ -6,21 +6,28 @@ import StoryJsonLd from './components/StoryJsonLd'
 import SampleStoryCard from './components/SampleStoryCard'
 import StoryFAQ from './components/StoryFAQ'
 import StoryFooterCTA from './components/StoryFooterCTA'
+import CommunityStories from '@/app/components/CommunityStories'
 
 export const metadata = {
-  title: 'Free AI Story Generator — Create & Listen Instantly | Playla',
+  title: 'Free AI Story Generator & Maker — Unlimited, No Sign Up | Playla',
   description:
-    'Free AI story generator for kids and adults. Choose from fantasy, horror, romance, bedtime and more. Type your idea, generate a unique story, and listen with narration.',
+    'Free AI story generator and story maker for kids and adults — no sign-up required. Use our AI story writer to create unlimited stories with audio narration. Choose from fantasy, horror, romance, bedtime and more.',
   alternates: { canonical: '/stories' },
   openGraph: {
-    title: 'Free AI Story Generator — Create & Listen Instantly | Playla',
-    description: 'Create unique AI stories in any genre. Type your idea and listen instantly.',
+    title: 'Free AI Story Generator & Maker — Unlimited, No Sign Up | Playla',
+    description: 'Free AI story maker and story writer. Create unlimited stories with audio narration — no sign-up required.',
     url: 'https://www.playla.org/stories',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free AI Story Generator & Maker — Unlimited, No Sign Up | Playla',
+    description: 'Free AI story maker and story writer. Create unlimited stories with audio narration — no sign-up required.',
+    images: ['/og-image.png'],
   },
 }
 
 const mainFaqs = [
-  { q: 'Is the AI story generator free?', a: 'Yes! You can generate stories for free. Each story comes with text and optional audio narration at no cost.' },
+  { q: 'Is the AI story generator free?', a: 'Yes! Playla is a completely free AI story maker — no sign-up, no account, no limits. Each story comes with text, illustrations, and audio narration at no cost.' },
   { q: 'What genres can I choose from?', a: 'Fantasy, horror, romance, bedtime, fairy tale, sci-fi, funny, mystery, adventure, short stories, kids stories, and random surprise stories.' },
   { q: 'Can I listen to the stories?', a: 'Yes — every generated story includes audio narration. Just click play and listen to your story come alive.' },
   { q: 'Are the stories safe for children?', a: 'Playla generates age-appropriate content by default. For kids, use the Kids Story or Bedtime genres, or specify the age in your prompt.' },
@@ -48,11 +55,11 @@ export default function StoriesPage() {
         {/* HERO */}
         <div className="story-hero">
           <h1>
-            Free AI Story Generator — <em>Create & Listen</em>
+            Free AI Story Generator & Maker — <em>Create & Listen</em>
           </h1>
           <p className="subtitle">
-            Type your idea, pick a genre, and get a unique story with illustrations
-            and audio narration in seconds.
+            The AI story writer that turns your ideas into illustrated stories with
+            audio narration — unlimited and free, no sign-up required.
           </p>
         </div>
 
@@ -120,6 +127,21 @@ export default function StoriesPage() {
           </ul>
         </section>
 
+        {/* NO SIGN-UP / KEYWORDS */}
+        <section className="story-seo-section">
+          <h2>Unlimited AI Story Maker — No Sign-Up, No Limits</h2>
+          <p>
+            Playla is a free AI story maker and story writer you can use right away — no account,
+            no sign-up, and no limits on how many stories you create. Every story is generated fresh
+            by our AI story generator with custom illustrations and audio narration included.
+          </p>
+          <p>
+            Whether you&apos;re looking for an AI story writer for bedtime tales, a story maker for
+            classroom creativity, or a quick story generator for on-the-go fun — Playla delivers
+            unlimited stories in seconds. Just type your idea and hit generate.
+          </p>
+        </section>
+
         {/* FAQ */}
         <section className="story-seo-section">
           <h2>Frequently Asked Questions</h2>
@@ -155,6 +177,9 @@ export default function StoriesPage() {
             <Link href="/stories/age/8-10" className="related-link">Ages 8-10</Link>
           </div>
         </section>
+
+        {/* COMMUNITY STORIES */}
+        <CommunityStories />
 
         {/* FOOTER CTA */}
         <StoryFooterCTA />
