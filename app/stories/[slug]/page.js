@@ -160,6 +160,9 @@ export default async function GenrePage(props) {
           metaDescription: genre.metaDescription,
           faqs: genre.faqs,
           canonicalUrl: `/stories/${genre.slug}`,
+          sampleStories: genre.sampleStory
+            ? [{ ...genre.sampleStory, genre: genre.name }]
+            : [],
         }}
         breadcrumbs={[
           { label: 'Home', href: '/' },

@@ -61,7 +61,15 @@ export default function ThemesHubPage() {
 
       <StoryJsonLd
         type="hub"
-        data={{ metaDescription: 'Stories by theme for kids', canonicalUrl: '/stories/themes' }}
+        data={{
+          metaDescription: 'Browse AI-generated stories by theme. Kindness, bravery, honesty, empathy, perseverance and more.',
+          canonicalUrl: '/stories/themes',
+          collectionName: 'Stories by Theme',
+          collectionItems: themes.map((t) => ({
+            name: `Stories About ${t.name}`,
+            href: `/stories/themes/${t.slug}`,
+          })),
+        }}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Story Generator', href: '/stories' },

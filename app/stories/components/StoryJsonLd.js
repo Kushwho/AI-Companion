@@ -39,9 +39,28 @@ export default function StoryJsonLd({ type, data, breadcrumbs }) {
       author: { '@type': 'Organization', name: 'Playla' },
       publisher: { '@id': 'https://www.playla.org/#organization' },
       datePublished: '2026-03-24',
-      dateModified: '2026-03-24',
+      dateModified: '2026-03-31',
       mainEntityOfPage: data.canonicalUrl ? `https://www.playla.org${data.canonicalUrl}` : undefined,
       inLanguage: 'en',
+    })
+  }
+
+  // CollectionPage (hub listing pages: themes, topics, age)
+  if (type === 'hub' && data.collectionItems) {
+    graphs.push({
+      '@type': 'CollectionPage',
+      name: data.collectionName,
+      description: data.metaDescription,
+      url: data.canonicalUrl ? `https://www.playla.org${data.canonicalUrl}` : undefined,
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: data.collectionItems.map((item, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: item.name,
+          url: `https://www.playla.org${item.href}`,
+        })),
+      },
     })
   }
 
@@ -57,6 +76,24 @@ export default function StoryJsonLd({ type, data, breadcrumbs }) {
           text: faq.a,
         },
       })),
+    })
+  }
+
+  // CreativeWork for sample stories
+  if (data.sampleStories && data.sampleStories.length > 0) {
+    data.sampleStories.forEach((story) => {
+      graphs.push({
+        '@type': 'CreativeWork',
+        name: story.title,
+        text: story.text,
+        genre: story.genre,
+        author: { '@type': 'Organization', name: 'Playla' },
+        creator: { '@type': 'Organization', name: 'Playla' },
+        inLanguage: 'en',
+        isAccessibleForFree: true,
+        timeRequired: `PT${story.readingTime}M`,
+        audience: { '@type': 'PeopleAudience', suggestedMinAge: 3 },
+      })
     })
   }
 

@@ -137,6 +137,9 @@ export default async function ThemePage(props) {
           metaDescription: theme.metaDescription,
           faqs: theme.faqs,
           canonicalUrl: `/stories/themes/${theme.slug}`,
+          sampleStories: theme.sampleStory
+            ? [{ ...theme.sampleStory, genre: theme.name }]
+            : [],
         }}
         breadcrumbs={[
           { label: 'Home', href: '/' },

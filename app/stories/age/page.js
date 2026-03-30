@@ -77,7 +77,15 @@ export default function AgeHubPage() {
 
       <StoryJsonLd
         type="hub"
-        data={{ metaDescription: 'Stories by age for kids', canonicalUrl: '/stories/age' }}
+        data={{
+          metaDescription: 'Find the perfect AI-generated stories for your child\'s age. From toddlers to tweens.',
+          canonicalUrl: '/stories/age',
+          collectionName: 'Stories by Age',
+          collectionItems: ages.map((a) => ({
+            name: `Stories for Ages ${a.range}`,
+            href: `/stories/age/${a.slug}`,
+          })),
+        }}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Story Generator', href: '/stories' },
